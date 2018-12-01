@@ -2,7 +2,6 @@
  * \file
  * \brief PilhaOperandos.cpp
  */
-/*teste*/
 #include "pilhaOperandos.h"
 
 PilhaOperandos::PilhaOperandos (int maxSize) : realMax(maxSize), max(2*maxSize)
