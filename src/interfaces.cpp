@@ -5,6 +5,9 @@
 
 #include "interfaces.h"
 
+/*!
+ * \brief 
+*/
 unsigned short *readInterfaces (FILE* fp, int length)
 {
 	unsigned short *ret = (unsigned short *) malloc(sizeof(int) * length);
