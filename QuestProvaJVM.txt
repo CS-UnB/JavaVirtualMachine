@@ -1,0 +1,33 @@
+Questionário compilado pelo Michelangelo
+
+
+1 - Outros membros
+a) Descreva o que cada membro do grupo implementou:
+
+
+2 - Sua implementação
+a) Descreva a lógica, nome, parâmetros e principais estruturas de dados das funções que você implementou:
+
+
+3 - Lógica do interpretador 
+a) Descreva a lógica do interpretador e do classloader:
+
+a) Descreva as principais estruturas de dados:
+
+b) Descreva as principais funções:
+
+c) Exemplifique o funcionamento com uma instrução que retorne double.
+
+
+4 - Descreva as estruturas de dados e a gerencia implementada para o controle de:
+a) arrays:
+
+b) objetos:
+
+c) fields:
+
+d) classes: 
+
+
+5 - instruções (logica aritmética, movimentação de dados (load/store), conversão de tipo, criação de objetos, criação de arrays, carga de constantes)
+a) Descreva o fluxo de execução de 10 instruções, considerando os grupos acima:
