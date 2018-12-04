@@ -1,10 +1,18 @@
-/*!
- * \file
- * \brief ConstantPool.cpp
+/**
+ * @file Módulo constantPool
+ * @details Este módulo contém as funções necessárias para a manipulação do pool de constantes.
  */
 
 #include "constantPool.h"
-
+/**
+ * @brief Carrega o pool de constantes
+ * @param constantPool - um ponteiro para o pool de contantes
+ * @param lengthCP - o tamanho do pool de constantes
+ * @param fp - ponteiro para o arquivo .class
+ * @section desc Descrição
+ * 	Função responsável por carregar o pool de constantes e todos os campos a ele relacionados
+ * @return o número de elementos do pool de constantes
+ * */
 int loadConstantPool (cp_info *constantPool, int lengthCP, FILE* fp)
 {
 	int i;
@@ -66,7 +74,13 @@ int loadConstantPool (cp_info *constantPool, int lengthCP, FILE* fp)
 	return i;
 }
 
-
+/**
+ * @brief Retorna a tag referenciada.
+ * @param cp - um ponteiro para o pool de contantes
+ * @param index - um índice para a posição no pool de constantes
+ * @section desc Descrição
+ * 	Função responsável por obter a tag correspondente ao índice informado
+ * */
 string dereferenceIndex (cp_info *cp, U2 index)
 {
 	switch (cp[index].tag)
@@ -93,7 +107,13 @@ string dereferenceIndex (cp_info *cp, U2 index)
 	return "";
 }
 
-
+/**
+ * @brief Imprime o pool de constantes
+ * @param constantPool - um ponteiro para o pool de contantes
+ * @param lengthCP - o tamanho do pool de constantes
+ * @section desc Descrição
+ * 	Função responsável por imprimir na tela o pool de constantes e todos os campos a ele relacionados
+ * */
 void printConstantPool (cp_info *constantPool, int lengthCP) {
 	//int index;
 	cout << "Constant Pool:" << endl;
