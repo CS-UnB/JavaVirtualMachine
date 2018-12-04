@@ -6,10 +6,15 @@
 #include "classe.h"
 #include "pilhaOperandos.h"
 
+/** \fn ClasseEstatica(Leitor* classeLida)
+	\brief Construtor da ClasseEstatica
+
+	\param Leitor informação do class file já carregada na memória
+*/
 ClasseEstatica::ClasseEstatica(Leitor *classeLida)
 {
-	classe = classeLida;
-	int count = classeLida->getFieldsCount();
+	classe = classeLida; ///class file lido
+	int count = classeLida->getFieldsCount(); ///get numero de fields
 	field_info *fields = classeLida->getFields();
 
 	for (int i = 0; i < count; i++)
@@ -60,10 +65,14 @@ ClasseEstatica::ClasseEstatica(Leitor *classeLida)
 	}
 }
 
+/**
+* Retorna as informações de um field
+* @return struct typedElement que contém informações sobre nome do tipo e valor
+*/
 typedElement ClasseEstatica::getField(string s)
 {
-	typedElement ret;
-	ret.type = TYPE_NOT_SET;
+	typedElement field_encontrado;
+	field_encontrado.type = TYPE_NOT_SET;
 
 	for (map<string, typedElement*>::const_iterator i = staticFields.begin(); i != staticFields.end(); i++)
 	{
@@ -73,9 +82,15 @@ typedElement ClasseEstatica::getField(string s)
 	   }
 	}
 
-	return ret;
+	return field_encontrado;
 }
 
+/**
+* Coloca um novo valor pra um field
+* @param s nome do field desejado
+* @param novo tipo para o field
+* @return booleano que indica se o field foi setado com o novo tipo ou não
+*/
 bool ClasseEstatica::setField(string s, typedElement e)
 {
 	for (map<string, typedElement*>::const_iterator i = staticFields.begin(); i != staticFields.end(); i++)
@@ -97,6 +112,12 @@ bool ClasseEstatica::setField(string s, typedElement e)
 	return false;
 }
 
+/**
+* Marca Field como final
+* @param s nome do field desejado
+* @param novo tipo para o field
+* @return booleano que indica se o field foi setado com o novo tipo ou não
+*/
 bool ClasseEstatica::setFinals(string s, typedElement e)
 {
 	for (map<string, typedElement*>::const_iterator i = staticFields.begin(); i != staticFields.end(); i++)
@@ -118,19 +139,30 @@ bool ClasseEstatica::setFinals(string s, typedElement e)
 	return false;
 }
 
+/**
+* Carrega no heap uma instancia da Classe
+* @return objeto do tipo ClasseInstancia
+*/
 ClasseInstancia *ClasseEstatica::getInstance()
 {
-	ClasseInstancia *ret = new ClasseInstancia(this);
-	Heap::addObject(ret);
+	ClasseInstancia *objeto_classe = new ClasseInstancia(this);
+	Heap::addObject(objeto_classe);
 	
-	return ret;
+	return objeto_classe;
 }
 
+/**
+* Retorna o class file
+* @return ponteiro para a instancia de ClasseLeitor que contém as informações salvas na memória
+*/
 Leitor *ClasseEstatica::getDef()
 {
 	return classe;
 }
 
+/** 
+	Lida com operações que manipulam a instância da classe
+*/
 ClasseInstancia::ClasseInstancia(ClasseEstatica* c)
 {
 	this->classe = c;
@@ -184,6 +216,10 @@ ClasseInstancia::ClasseInstancia(ClasseEstatica* c)
 	}	
 }
 
+/**
+* Retorna o field instanciado
+* @return struct typedElement que contém informações sobre nome do tipo e valor
+*/
 typedElement ClasseInstancia::getField(string s)
 {
 	typedElement ret;
@@ -200,11 +236,21 @@ typedElement ClasseInstancia::getField(string s)
 	return ret;
 }
 
+/**
+* Retorna referência a classe estática
+* @return ponteiro para a classe estática
+*/
 ClasseEstatica *ClasseInstancia::getStatic()
 {
 	return classe;
 }
 
+/**
+* Define um field da ClasseInstancia
+* @param s nome do field
+* @param e novo tipo que será atribuido ao field
+* @return booleano indicado se o field foi definido
+*/
 bool ClasseInstancia::setField(string s, typedElement e)
 {
 	for (map<string, typedElement*>::const_iterator i = localFields.begin(); i != localFields.end(); i++)
@@ -226,6 +272,12 @@ bool ClasseInstancia::setField(string s, typedElement e)
 	return false;
 }
 
+/**
+* Marca Field como final
+* @param s nome do field desejado
+* @param novo tipo para o field
+* @return booleano que indica se o field foi setado com o novo tipo ou não
+*/
 bool ClasseInstancia::setFinals(string s, typedElement e)
 {
 	for (map<string, typedElement*>::const_iterator i = localFields.begin(); i != localFields.end(); i++)
@@ -247,6 +299,9 @@ bool ClasseInstancia::setFinals(string s, typedElement e)
 	return false;
 }
 
+/**
+* Mostra todas as classes instanciadas
+*/
 void ClasseInstancia::show()
 {
 	for (map<string, typedElement*>::const_iterator i = localFields.begin(); i != localFields.end(); i++)

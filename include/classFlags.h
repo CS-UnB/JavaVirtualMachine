@@ -7,7 +7,7 @@
 /*! \def FLAGS
 	\brief Macro
 
-	Define used to avoid multiple includes of this file.
+	Define usado para evitar vários includes do arquivo.
 */
 
 #ifndef FLAGS
@@ -21,9 +21,9 @@ using namespace std;
 const string flagNames[] = {"ACC_PUBLIC", "ACC_FINAL", "ACC_SUPER", "ACC_INTERFACE", "ACC_ABSTRACT"};
 
 /*! \fn void showFlags (U2 flags)
-	\brief Function that shows access flags to users.
+	\brief Função que mostra as flags de acesso para os usuários
 
-	\param flags Hex values of the Flags.
+	\param flags Valor hexadecimal das flags
 */
 void showFlags (U2 flags);
 

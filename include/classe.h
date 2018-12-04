@@ -1,8 +1,6 @@
 /*! \file classe.h
-	\brief Definition of class ClasseEstatica and ClasseInstancia.
+	\brief Definição da ClasseEstatica e da ClasseInstancia
 */
-
-
 #ifndef CLASSE_CLASSE
 #define CLASSE_CLASSE
 
@@ -16,9 +14,9 @@ class ClasseInstancia;
 using namespace std;
 
 /*! \class ClasseEstatica
-	\brief Static fields shared between all instances.
+	\brief Fields Estáticos compartilhados por todas as instâncias
 
-	Defines operations that manages static classes.
+	Define operações que manipulam classes estáticas
 */	
 class ClasseEstatica {
 private:
@@ -27,47 +25,47 @@ private:
 
 public:
 	/*! \fn ClasseEstatica(Leitor* classeLida)
-		\brief Constructor of ClasseEstatica.
+		\brief Construtor da ClasseEstatica
 
-		\param Leitor .class information already loaded in memory.
+		\param Leitor informação do class file já carregada na memória
 	*/
 	ClasseEstatica(Leitor*);
 
 
 	/*! \fn typedElement getField(string s)
-		\brief Returns the static field of a class file.
+		\brief Retorna o field estático
 
-		\param s class name.
+		\param s nome da class.
 	*/
 	typedElement getField(string);
 
 
 	/*! \fn bool setField(string s, typedElement e)
-		\brief Define a static field.
+		\brief Define um field estático.
 
-		\param s Class name.
-		\param e Value to be defined.
+		\param s Nome da Classe.
+		\param e Valor que será setado
 	*/
 	bool setField(string, typedElement);
 
 
 	/*! \fn bool setFinals(string s, typedElement e)
-		\brief Mark field as final.
+		\brief Marca campo como final
 
-		\param s Class name.
-		\param e Value to be defined.
+		\param s Nome da classe.
+		\param e Valor que vai ser definido.
 	*/
 	bool setFinals(string, typedElement);
 
 
 	/*! \fn ClasseInstancia *getInstance()
-		\brief Returns a class instance.
+		\brief Retorna a instância da classe
 	*/
 	ClasseInstancia *getInstance();
 
 
 	/*! \fn Leitor *getDef()
-		\brief Returns the info from .class file.
+		\brief Retorna as informações do class file.
 	*/
 	Leitor *getDef();
 };
@@ -77,7 +75,7 @@ public:
 /*! \class ClasseInstancia
 	\brief Class instantiation.
 
-	Handles operations that manage a class instance.
+	Lida com operações que lidam com uma instância da classe
 */	
 class ClasseInstancia {
 private:
@@ -86,47 +84,47 @@ private:
 
 public:
 	/*! \fn ClasseInstancia(ClasseEstatica* c)
-		\brief Constuctor
+		\brief Construtor
 
-		\param c Reference to the ClasseEstatica.
+		\param c Referência para a classe estática
 	*/
 	ClasseInstancia(ClasseEstatica*);
 
 
 	/*! \fn ClasseEstatica *getStatic()
-		\brief Returns a reference to ClasseEstatica.
+		\brief Retorna referência para a classe estatica.
 	*/
 	ClasseEstatica *getStatic();
 
 
 	/*! \fn typedElement getField(string s)
-		\brief Returns instantiated field.
+		\brief Retorna field instanciado
 
-		\param s Class name.
+		\param Nome do field.
 	*/
 	typedElement getField(string);
 
 
 	/*! \fn bool setField(string s, typedElement e)
-		\brief Define a field of the ClasseInstancia.
+		\brief Defina um valor para um field da ClasseInstancia
 
-		\param s Class name.
-		\param e Value to be defined.
+		\param s Nome do field.
+		\param e Valor que será colocado
 	*/
 	bool setField(string, typedElement);
 
 
 	/*! \fn bool setFinals(string s, typedElement e)
-		\brief Define the final field of the ClasseInstancia.
+		\brief Define to final field da Classe Instância
 
-		\param s Class name.
-		\param e Value to be defined.
+		\param s Nome da classe
+		\param e Valor a ser definido
 	*/
 	bool setFinals(string, typedElement);
 
 
 	/*! \fn void show()
-		\brief Show all instantiated classes.
+		\brief Mostra todas as classes instanciadas
 	*/
 	void show();
 };
