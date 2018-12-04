@@ -2,6 +2,13 @@
 #include "frame.h"
 #include "methodArea.h"
 
+
+/**
+ * Funcao principal, dá a opção de escolha entre interpretador e exibidor
+ * 
+ * @param argc, *argv[]
+ * 
+ */
 int main(int argc, char *argv[])
 {
 	if (argc != 3)

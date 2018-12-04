@@ -1,8 +1,3 @@
-/*!
- * \file
- * \brief Operacoes.cpp
- */
-
 #include "operacoes.h"
 
 frame *Operacoes::f = nullptr;

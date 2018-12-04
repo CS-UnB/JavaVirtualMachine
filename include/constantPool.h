@@ -1,10 +1,14 @@
-/*! \file constantPool.h
-	\brief Constant pool
+/** @file constantPool.h
+	@brief Módulo Constant pool
 
-	Stores all informations from a class constant pool.
+	@details Este módulo contém as funções necessárias para a manipulação do pool de constantes.
 */
 
+/** @def CONSTANTPOOL 
+	@brief Macro
 
+	Define uso para evitar a inclusão múltipla de arquivos.
+*/
 #ifndef CONSTANTPOOL
 #define CONSTANTPOOL
 
@@ -12,8 +16,8 @@
 
 using namespace std;
 
-/*! \struct cp_info
-	\brief Holds a constant pool element.
+/** @struct cp_info
+	@brief Possui um elemento pool de constante.
 */	
 typedef struct {
 	U1 tag;
@@ -21,12 +25,11 @@ typedef struct {
 } cp_info;
 
 
-//! Data formats int the constant pool
+/// Formatos de dados no pool de constantes
 const string typeNames[] = {"UTF-8", "-", "Integer", "Float", "Long", "Double", "Class", "String", "Field", "Method", "Interface", "Name and Type"};
 
 
-// Possible types for the constant pool elements
-#define INVALID 99 //< Is a slot that holds the second part of a long or doube
+#define INVALID 99 
 #define UTF8 1
 #define INTEGER 3
 #define FLOAT 4
@@ -40,30 +43,35 @@ const string typeNames[] = {"UTF-8", "-", "Integer", "Float", "Long", "Double", 
 #define NAME_AND_TYPE 12
 
 
-/*! \fn int loadConstantPool (cp_info *constantPool, int lengthCP, FILE* fp)
-		\brief Load the constant pool information to the memory.
-
-		\param constantPool Pointer to the constant pool structure.
-		\param lengthCP Number of elements in the constant pool.
-		\param fp Pointer to the .class file.
+/** @fn int loadConstantPool (cp_info *constantPool, int lengthCP, FILE* fp)
+		@brief Carrega o pool de constantes
+		@param constantPool - um ponteiro para o pool de contantes
+		@param lengthCP - o tamanho do pool de constantes
+		@param fp - ponteiro para o arquivo .class
+		@section desc Descrição
+			Função responsável por carregar o pool de constantes e todos os campos a ele relacionados
+		@return o número de elementos do pool de constantes
 */
 int loadConstantPool (cp_info *constantPool, int lengthCP, FILE* fp);
 
 
-/*! \fn string dereferenceIndex (cp_info *cp, U2 index)
-		\brief Return the data in the index.
+/** @fn string dereferenceIndex (cp_info *cp, U2 index)
+		@brief Retorna os dados no índice.
 
-		\param cp Pointer to the constant pool structure
-		\param index Index of an element in the constant pool.
+		@param cp - um ponteiro para o pool de contantes
+		@param index - um índice para a posição no pool de constantes
+		@section desc Descrição
+			Função responsável por obter os dados correspondentes ao índice informado
 */
 string dereferenceIndex (cp_info *cp, U2 index);
 
 
-/*! \fn void printConstantPool (cp_info *constantPool, int lengthCP)
-		\brief Show all the data in the constant pool.
-
-		\param constantPool Pointer to the constant pool structure.
-		\param lengthCP Number of elements in the constant pool.
+/** @fn void printConstantPool (cp_info *constantPool, int lengthCP)
+		@brief Imprime o pool de constantes
+		@param constantPool - um ponteiro para o pool de contantes
+		@param lengthCP - o tamanho do pool de constantes
+		@section desc Descrição
+			Função responsável por imprimir na tela o pool de constantes e todos os campos a ele relacionados
 */
 void printConstantPool (cp_info *constantPool, int lengthCP);
 

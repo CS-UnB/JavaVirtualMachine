@@ -1,10 +1,11 @@
-/*!
- * \file
- * \brief Methods.cpp
- */
-
 #include "methods.h"
 
+/**
+ * Lê um método do arquivo .class
+ * 
+ * @param *fp ponteiro para o arquivo .class
+ * @param *cp ponteiro para as informações do pool de constantes
+ */
 method_info read_Method (FILE* fp,cp_info *cp) 
 {
 	method_info aux;
@@ -22,6 +23,13 @@ method_info read_Method (FILE* fp,cp_info *cp)
 	return aux;
 }
 
+/**
+ * Lê os métodos do arquivo .class
+ * 
+ * @param *fp ponteiro para o arquivo .class
+ * @param *cp ponteiro para as informações do pool de constantes
+ * @param length quantidade de métodos presente
+ */
 method_info *read_Methods (FILE* fp, int length, cp_info *cp) 
 {
 	method_info *ret = (method_info *) malloc(sizeof(method_info) * length);
@@ -34,9 +42,14 @@ method_info *read_Methods (FILE* fp, int length, cp_info *cp)
 	return ret;
 }
 
+/**
+ * Mostra um método do arquivo .class
+ * 
+ * @param f contém as informações do método
+ * @param *cp ponteiro para as informações do pool de constantes
+ */
 void printMethod (method_info f, cp_info *cp) 
 {
-	
 	cout << "" << endl;
 
 	cout << "\tName: " << dereferenceIndex(cp, f.name_index) << endl;
@@ -54,6 +67,13 @@ void printMethod (method_info f, cp_info *cp)
 	}
 }
 
+/**
+ * Mostra um método do arquivo .class
+ * 
+ * @param f contém as informações do método
+ * @param *cp ponteiro para as informações do pool de constantes
+ * @param index índice do método a ser mostrado
+ */
 void printMethod(method_info f, cp_info *cp, int index) 
 {
 	cout << "\tMethod " << index << ":" << endl;
@@ -72,7 +92,13 @@ void printMethod(method_info f, cp_info *cp, int index)
 	}
 }
 
-
+/**
+ * Mostra todos os métodos do arquivo .class
+ * 
+ * @param *f ponteiro para as informações do método
+ * @param *cp ponteiro para as informações do pool de constantes
+ * @param length quantidade de métodos a serem mostrados
+ */
 void printMethods (method_info *f, cp_info *cp, int length) 
 {
 	for (int i = 0; i < length; i++) 
@@ -81,6 +107,12 @@ void printMethods (method_info *f, cp_info *cp, int length)
 	}
 }
 
+/**
+ * Obtém as access flags dos métodos para print
+ * 
+ * @param flags dos métodos dado method_info.access_flags
+ * 
+ */
 string get_Method_Flags (uint16_t flags) 
 {
 	bool first = true;
