@@ -1,7 +1,6 @@
-/*! \file frame.h
-	\brief Method 
-
-	All the info needed for a method execution.
+/** @file frame.h
+	@brief Contém tudo necessário para a execução de um método.
+	
 */
 
 /** @def FRAME 
@@ -23,12 +22,11 @@ class FrameStack;
 #include "methodArea.h"
 
 /** @struct frame_s
-	@brief Storage structure
+	@brief Estrutura de armazenamento
 
-	Responsible for all the info needed for a method execution.
+	Responsável por todas as informações necessárias para a execução de um método.
 */	
-typedef struct frame_s
-{
+typedef struct frame_s{
 	unsigned char *pc;
 	cp_info *cp;	
 	PilhaOperandos *operandos;
@@ -38,15 +36,15 @@ typedef struct frame_s
 
 
 /** @class FrameStack
-	@brief Stack Frame Class
+	@brief Classe de pilha de frames
 
-	Responsible for all operations that uses the frame.
+	Responsável por todas as operações que usam o frame.
 */	
 class FrameStack {
 private:
 	std::stack<frame*> threads;
 	/** @fn bool nextInstruction()
-		@brief Updates PC, if we can't update more, pop current method
+		@brief Atualiza o PC, se não for possível atualizar, dá um pop no método atual
 	*/
 	bool nextInstruction();
 	/** @var int opcode
@@ -55,47 +53,47 @@ private:
 	int opcode;
 
 	/** @fn void startPC(frame *f)
-		@brief Puts PC in initial position
+		@brief Põe o PC na posição inicial
 
-		\param f Structure that contains all the info for a method execution.
+		@param f Estrutura do tipo frame.
 	*/
 	void startPC(frame*);
 public:
 	/** @fn FrameStack (Leitor l)
-		@brief Frame Stack Builder
+		@brief Contrutor da pilha de frame
 
-		@param l What we read from .class file passed by the prompt line
+		@param l O que é lido do arquivo .class.
 	*/
 	FrameStack (Leitor*);
 
 	/** @fn void setArguments(std::vector<typedElement> param);
-		@brief Adds a frame on the top of the stack
-		@param Array with the arguments to be copied onto local variables array
+		@brief Configura os argumentos.
+		@param Vetor com os argumentos a serem copiados para o vetor de variáveis locais
 	*/
 	void setArguments(std::vector<typedElement>);
 
 	/** @fn void execute();
-		@brief Executes the current method and the called methods
+		@brief Executa o método atual e os métodos chamados.
 	*/
 	void execute();
 
 	/** @fn void addFrame(method_info m, cp_info *cp);
-		@brief Adds a frame on the top of the stack
-		@param m The method where will be created the frame
-		@param cp A pointer class method constant pool
+		@brief Adiciona um frame no topo da pilha.
+		@param m Método no qual o frame será criado.
+		@param cp Um ponteiro para o pool de constantes.
 	*/
 	
 	void addFrame(method_info, cp_info*);
 
 	/** @fn void addFrame(method_info m, cp_info *cp);
-		@brief Adds a frame on the top of the stack
-		@param m Ponteir to the method where will be created the frame
-		@param cp A ponteir to the class method constant pool
+		@brief Adiciona um frame no topo da pilha.
+		@param m Ponteiro para o método no qual o frame será criado.
+		@param cp Um ponteiro para o pool de constantes.
 	*/
 	void addFrame(method_info*, cp_info*);
 
 	/** @fn void pop()
-		@brief Pop current method.
+		@brief Dá um pop no método atual.
 	*/
 	void pop();
 };
