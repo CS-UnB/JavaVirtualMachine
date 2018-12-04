@@ -1,13 +1,5 @@
-/*! \file classeLeitor.h
-	\brief Reader and Exhibitor
-
-	It has all informations about the .class that makes reading, can display it or not.
-*/
-
-/*! \def CLASSE_LEITOR
-	\brief Macro
-
-	Define used to avoid multiple inclusions of this file
+/*! \file classe.h
+	\brief Definição da ClasseLeitor
 */
 #ifndef CLASSE_LEITOR
 #define CLASSE_LEITOR
@@ -29,7 +21,10 @@ class Leitor;
 #include "methods.h"
 #include "methodArea.h"
 
-//defines for possible errors
+/**
+ * MACROS para os possíves erros encontrados
+ * 
+ */
 #define MISSING_ARGUMENT 1
 #define CANT_OPEN 2
 #define INVALID_FILE 3
@@ -38,168 +33,169 @@ class Leitor;
 #define INVALID_EXTENSION 6
 #define MISSING_MAIN 7
 
-/*! \class Leitor
-	\brief All reading/exhibition functions
-
-	Contains all functions to realize reading and exhibition of .class informations
-*/
+/**
+ * @file classeLeitor.h
+ * @author  Bruno Cordeiro 
+ * @version 1.0
+ *
+ * @section DESCRIPTION
+ *
+ * A classe Leitor contém o necessário para ler o bytecode, exibilo e armazena-lo em memoria
+ */
 class Leitor {
 public:
-	/*! \fn Leitor(char *in)
-		\brief Reader constructor.
-
-		\param in Path of .class file.
+	/** 
+		\fn Construtor de leitura
+		@param in caminho do arquivo .class.
 	*/
 	Leitor(char *in);
 
-	/*! \fn Leitor(char *in)
-		\brief Reader constructor.
-
-		\param in Path of .class file.
+	/** 
+		\fn Construtor de leitura
+		@param in caminho do arquivo .class.
 	*/
 	Leitor(std::string in);
 
-	/*! \fn int run()
-		\brief Loads all .class informations and display them
+	/** \fn int run()
+		\brief Carrega todas as informções do class file e as imprime
 	*/
 	int run();
 
-	/*! \fn int load()
-		\brief Loads all .class informations
+	/** \fn int load()
+		\brief Carrega todas as informações do class file
 	*/
 	int load();
 
-	/*! \fn bool printGeneralInformation()
-		\brief Display .class general informations
+	/** \fn bool printGeneralInformation()
+		\brief Imprime informações gerais do .class
 	*/
 	void printGeneralInformation();
 
-	/*! \fn bool show()
-		\brief Display all .class informations
+	/** \fn bool show()
+		\brief Imprime todas as informações do .class
 	*/
 	bool show();
 
-	/*! \fn bool validExtension ()
-		\brief Verify if extension it is .class
+	/** \fn bool validExtension ()
+		\brief Verifica se a extensão do arquivo é .class
 	*/
 	bool validExtension ();
 
-	/*! \fn bool hasMain()
-		\brief Verify if .class has main function
+	/** \fn bool hasMain()
+		\brief Verifica se o .class possui função main
 	*/
 	bool hasMain();
 
-	/*! \fn method_info getMain()
-		\brief Returns method that it is main
+	/** \fn method_info getMain()
+		\brief Retorna o método main
 	*/
 	method_info getMain();
 
-	/*! \fn bool hasClinit()
-		\brief Verify if .class has method <clinit>
+	/** \fn bool hasClinit()
+		\brief Verifica se o .class tem o método <clinit>
 	*/
 	bool hasClinit();
 
-	/*! \fn method_info getClinit()
-		\brief Returns the <clinit> method
+	/** \fn method_info getClinit()
+		\brief Retorna o método <clinit>
 	*/
 	method_info getClinit();
 
-	/*! \fn bool checkThisClass ()
-		\brief Verify if defined class name is equal to class name without extensions
+	/** \fn bool checkThisClass ()
+		\brief Verifica se a class definida é igual ao nome da classe sem extensões 
 	*/
 	bool checkThisClass ();
 
 
-	/*! \fn int getStatus()
-		\brief Returns reading status, informing to called method what happened
+	/** \fn int getStatus()
+		\brief Retorna o status lido, informando para o método que chamou o que aconteceu
 	*/
 	int getStatus();
 
-	/*! \fn cp_info *getCP()
-		\brief Returns a reference to constant pool
+	/** \fn cp_info *getCP()
+		\brief Retorna referencia a constant pool
 	*/
 	cp_info *getCP() const;
 
-	/*! \fn U2 getLengthCP()
-		\brief Gets size of .class Constant Pool
+	/** \fn U2 getLengthCP()
+		\brief Retorna o valor do tamanho da constant pool
 	*/
 	U2 getLengthCP();
 
-	/*! \fn char *getPath()
-		\brief Gets path to .class directory
+	/** \fn char *getPath()
+		\brief Pega o caminho do arquivo .class
 	*/
 	char *getPath();
 
-	/*! \fn method_info *getMethods()
-		\brief Gets all .class methods
+	/** \fn method_info *getMethods()
+		\brief Retorna todos os métodos
 	*/
 	method_info *getMethods();
 
-	/*! \fn U2 getMethodsCount()
-		\brief Gets all .class methods
+	/** \fn U2 getMethodsCount()
+		\brief Retorna o numero de methods
 	*/
 	U2 getMethodsCount();
 
-	/*! \fn U2 getThis_class()
-		\brief Returns an index from constant pool that points to string with class name
+	/** \fn U2 getThis_class()
+		\brief Retorna um índice da constant pool que aponta para string com nome da class
 	*/
 	U2 getThis_class();
 
-	/*! \fn U2 getSuper_class()
-		\brief Returns an index from constant pool that points to string with superclass name
+	/** \fn U2 getSuper_class()
+		\brief Retorna um índice da constant pool que aponta para string com nome da superclass
 	*/
 	U2 getSuper_class();
 
-	/*! \fn U2 getFieldsCount()
-		\brief Returns number of fields from .class file
+	/** \fn U2 getFieldsCount()
+		\brief Retorna número de fields
 	*/
 	U2 getFieldsCount();
 
-	/*! \fn U2 getFields()
-		\brief Gets all .class fields
+	/** \fn U2 getFields()
+		\brief Retorna todos os fields
 	*/
 	field_info *getFields();
 
 
-	/*! \fn U2 getField()
-		\brief Gets a field from .class
+	/** \fn U2 getField()
+		\brief Retorna um field
 
-		\param field_name Field's desired name
+		\param field_name nome do field desejado
 	*/
 	field_info *getField(string field_name);
 
 
-	/*! \fn U2 getMethod(ClasseInstancia* i, string name, string descriptor)
-		\brief Returns method_info the reader contains the method with name and descriptor specified
+	/** \fn U2 getMethod(ClasseInstancia* i, string name, string descriptor)
+		\brief Retorna o method info
 
-		\param name Method's name to be searched
-		\param descriptor Method's descriptor to be searched
+		\param name Nome do method desejado
+		\param descriptor Descritor do method desejado
 	*/
 	method_info* getMethod(string name, string descriptor);
 
 
-	/*! \fn U2 getClassThatHasSerachedMethod(string name, string descriptor)
-		\brief Returns pointer to reader from class that contains method found on getMethod
-
-		\param name Method's name to be searched
-		\param descriptor Method's descriptor to be searched
+	/** \fn U2 getClassThatHasSerachedMethod(string name, string descriptor)
+		\brief Retorna o ponteiro para o leitor do .class que contém o método encontrado em getMethod
+	
+		\param name Nome do method desejado
+		\param descriptor Descritor do method desejado
 	*/
 	Leitor* getClassThatHasSerachedMethod(string name, string descriptor);
 
 private:
-	/*! \fn bool findMain()
-		\brief Finds which .class methods is main
+	/** \fn bool findMain()
+		\brief Encontro em qual method está a main
 	*/
 	bool findMain();
 
-	/*! \fn bool findMain()
-		\brief Finds which .class methods is <clinit>, in case he exists
+	/** \fn bool findMain()
+		\brief Encontra em qual method esta a <clinit>, se existir
 	*/
 	bool findClinit();
 
-	/*! \fn string getError(int)
-		\brief Returns the string that contains an error message corresponding to the index that receives as parameter
-	
+	/** \fn string getError(int)
+		\brief Retorna a string que contém uma mensagem de erro correspondente ao índice que recebe como parâmetro
 		\param error Index that localizes the string that contains the error message
 	*/
 	string getError(int);

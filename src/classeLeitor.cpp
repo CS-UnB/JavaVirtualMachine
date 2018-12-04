@@ -1,179 +1,213 @@
-/*!
- * \file
- * \brief ClasseLeitor.cpp
- */
-
+/* 
+	Classe que irá realizar a leitura do bytecode e salvar as informações do class file
+*/
 #include "classeLeitor.h"
 
+
+/**
+* Construtor que configura um objeto da classe Leitor com o nome do arquivo passado.
+* 
+* @param in argumento passado como nome do arquivo na inicializacao do programa
+*/
 Leitor::Leitor(char *in) 
 {
 	if (in) 
-	{
+	{	//associa o nome do arquivo passado a variavel filename
 		fileName = in;
 	}
 	status = -1;
 }
 
+/**
+* Construtor que configura um objeto da classe Leitor com o nome do arquivo passado.
+* 
+* @param in argumento passado como nome do arquivo na inicializacao do programa
+*/
 Leitor::Leitor(std::string in) 
 {
+	//verifica se o arquivo passado é vazio
 	if (!in.empty()) 
 	{
+		//copia para fileName o nome do arquivo lido
 		fileName = new char[in.size() + 1];
 		std::copy(in.begin(), in.end(), fileName);
-		fileName[in.size()] = 0;
+		fileName[in.size()] = 0; 
 	}
 	status = -1;
 }
 
+/**
+* Armazenador e exibidor do programa
+* @return variavel status que indica se houve erro no programa
+*/
 int Leitor::run() 
 {	
+	//carrega o bytecode na classe e verifica se nao retornou erro
 	if(load() == 0) 
 	{
+		//imprime o bytecode lido
 		show();
 	}
 
+	//retorna o status que indica se houve erro na leitura ou nao
 	return this->status;
 }
 
+/**
+* Carrega o class file na classe
+* @return variavel status que indica se houve erro no programa
+*/
 int Leitor::load() 
 {
 	int checkCP;
 
-	//checks if file has been passed and it is valid
+	//verifica se o arquivo passado existe
 	if (!fileName) 
 	{
+		//imprime "Argumento passado invalido!"
 		printf("%s\n", getError(MISSING_ARGUMENT).c_str());
-		//cerr << getError(MISSING_ARGUMENT);
 		return (status = MISSING_ARGUMENT);
 	}
 
-	//checks if file has .class extension
+	//verifica se o arquivo possui a extensao .class
 	if (!validExtension()) 
 	{
+		// imprime "ERRO: O arquivo deve ter a extensao .class!\n"
 		printf("%s\n", getError(INVALID_EXTENSION).c_str());
-		//cerr << getError(INVALID_EXTENSION);
 		return (status = INVALID_EXTENSION);
 	}
 
+	//abre o arquivo para leitura
 	fp = fopen(fileName, "rb");
 
-	//checks if file has been succesfully opened
+	//verifica se o arquivo conseguiu ser aberto para leitura
 	if (fp == NULL) 
 	{
+		//imprime "ERRO: nao foi possivel abrir o arquivo ..."
 		printf("%s\n", getError(CANT_OPEN).c_str());
-		//cerr << getError(CANT_OPEN);
 		return (status = CANT_OPEN);
 	}
 
-	//checks if assignment from file 0xcafebabe is ready
-	if (readU4(fp) != 0xcafebabe) 
+	//verifica se o arquivo comeca com o magic number
+	if (readU4(fp) != 0xcafebabe) //le 32 bits
 	{
+		//se nao possui 0xcafebabe o arquivo é invalido
 		printf("%s\n", getError(INVALID_FILE).c_str());
-		//cerr << getError(INVALID_FILE);
 		return (status = INVALID_FILE);
 	}
 
-	//reads minor version
+	//armazena o minor version
 	minVersion = readU2(fp);
 
-	//reads major version
+	//armazena major version
 	majVersion = readU2(fp);
 	
-	//reads number of constants on constant pool
+	//le o numero de constantes na constant pool
 	lengthCP = readU2(fp);
 
-	//loads Constant Pool on Memmory
+	//carrega a ConstantPool na memoria chamando o metodo que se encontra na classe da constantPool
 	constantPool = (cp_info *) malloc(sizeof(cp_info) * lengthCP);
 	checkCP = loadConstantPool(constantPool, lengthCP, fp);
 
-	//checks if all elements have been readed
+	//verifica se todos os elementos foram lidos
 	if (checkCP != lengthCP) 
 	{
+		//se todos n tiverem sido lidos entao alguma constante tem um tipo nao conhecido
 		cerr << getError(UNKNOWN_TYPE);
 		return (status = UNKNOWN_TYPE);
 	}
 
-	//reads access flags from class
+	//le as Flags de acesso
 	accessFlags = readU2(fp);
 
-	//reads class defined by file
+	//le a classe definida pelo arquivo
 	this_class = readU2(fp);
 
+	//verifica se o nome do arquivo bate com o nome da class definida no bytecode
 	if (!checkThisClass()) 
 	{
 		cerr << getError(INVALID_NAME);
 		return (status = INVALID_NAME);
 	}
 
-	//reads superclass from file
+	//armazena informacao sobre a superclass
 	super_class = readU2(fp);
 
-	//reads number of interfaces
+	//le o numero de interfaces
 	interfacesCount = readU2(fp);
 
-	//loads interfaces
+	//carrega as interfaces
 	interfaces = readInterfaces(fp, interfacesCount);
 
-	//reads number of fields
+	//le o numero de fields
 	fieldsCount = readU2(fp);
 
-	//loads fields
+	//carrega os fields na memoria
 	fields = readFields(fp, fieldsCount,constantPool);
 
-	//reads number of methods
+	//le o numero de metodos
 	methodsCount = readU2(fp);
 
-	//loads methods
+	//carrega os metodos na memoria
 	methods = read_Methods(fp, methodsCount,constantPool);
 
-	//loads number of attributes
+	//le o numero de atributos
 	attributesCount = readU2(fp);
 
-	//loads attributes
+	//carrega atributos
 	attributes = readAttributes(fp, constantPool, attributesCount);
 
-	//checks if has main method on this class
+	//verifica se o metodo main esta entre os metodos lidos no bytecode
 	foundMain = findMain();
 
-	//checks if has method <clinit>
+	//verifica se existe o metodo <clinit>
 	foundClinit = findClinit();
 
-	//close file after reading has been finished
+	//fecha o arquivo
 	fclose(fp);
 	fp = NULL;
 
+	//se nao houve nenhum erro retorna 0
 	return (status = 0);
 }
 
+/**
+* Impressão do programa
+* @return true ou false dependendo se a variavel status indicar que houve erro na leitura
+*/
 bool Leitor::show() 
 {
-	//check if file has been read
+	//verifica se o arquivo foi lido
 	if (status != 0) 
 	{
 		return false;
 	}
 
-	//show .class general information
+	//imprime as informacoes basicas lidas
 	printGeneralInformation();
 
-	//show constant pool while dereferencing
+	//chama o metodo que se encontra na classe constantPool para imprimir as constantes
 	printConstantPool(constantPool, lengthCP);
 
-	//show read interfaces
+	//chama o metodo que se encontra na classe interfaces para imprimi-las
 	printInterfaces(interfaces, constantPool, interfacesCount);
 
-	//show present fields
+	//chama o metodo que se encontra na classe fields para imprimir os fields
 	printFields(fields, constantPool, fieldsCount);
 
-	//show present methods
+	//chama o metodo que se encontra na classe methods para imprimir os metodos
 	printMethods(methods, constantPool, methodsCount);
 
-	//show presente attributes
+	//chama o metodo que se encontra na classe attributes para imprimir os atributos
 	printAttributes(attributes, constantPool, attributesCount);
 
 	return true;
 }
 
+/**
+* Exibidor do programa
+* @return variavel status que indica se houve erro no programa
+*/
 void Leitor::printGeneralInformation ()
 {
 	cout << "" << endl;
@@ -184,13 +218,13 @@ void Leitor::printGeneralInformation ()
 
 	cout << "Constant pool count:\t " << lengthCP << endl;
 
-	//mostra as flags setadas
+	//imprime as flags 
 	showFlags(accessFlags);
 			
-	//dereferencia o indice apontado e o mostra
+	//imprime a classe e o indice apontado
 	cout << "This class:\t\t cp info #" << this_class << " <" << dereferenceIndex(constantPool, this_class) << ">" << endl;
 
-	//dereferencia o indice apontado e o mostra
+	//imprime a super classe e o indice apontado
 	cout << "Super class:\t\t cp info #" << super_class << " <" << dereferenceIndex(constantPool, super_class) << ">" << endl;	
 	
 	cout << "Interfaces count:\t " << interfacesCount << endl;
@@ -204,6 +238,10 @@ void Leitor::printGeneralInformation ()
 	cout << "" << endl;
 }
 
+/**
+* Lê os ultimos caracteres do arquivo pra ver se formam a extensao .class
+* @return booleano que indica se existe o .class
+*/
 bool Leitor::validExtension () 
 {
 	string aux = "", auxFilename(this->fileName);
@@ -220,62 +258,87 @@ bool Leitor::validExtension ()
 	return aux == ".class";
 }
 
+/**
+* verifia se o metodo main existe nos metodos lidos no bytecode
+* @return booleano que indica se existe o metodo main
+*/
 bool Leitor::findMain () 
 {
-	bool ret = false;
+	bool encontrou = false;
 
 	for (int i = 0; i < methodsCount; i++) 
 	{
 		int name = methods[i].name_index, desc = methods[i].descriptor_index, flags = methods[i].access_flags;
 		
+		//verifica se o nome do metodo se encontra dentro das referencias das constantes
 		if ("main" == dereferenceIndex(constantPool, name)) 
 		{
+			//verifica se o descritor do metodo esta correto
 			if ("([Ljava/lang/String;)V" == dereferenceIndex(constantPool, desc)) 
 			{
 				if ((flags & 0x09) == 0x09) 
 				{
 					mainMethod = i;
-					ret = true;
+					encontrou = true;
 					break;
 				}
 			}
 		}
 	}
 
-	return ret;
+	//se encontrou a main retorna true
+	return encontrou;
 }
 
+/**
+* verifia se o metodo clinit existe nos metodos lidos no bytecode
+* @return booleano que indica se existe o metodo clinit
+*/
 bool Leitor::findClinit() 
 {
-	bool ret = false;
+	bool encontrou = false;
 
 	for (int i = 0; i < methodsCount; i++) 
 	{
+		//pega o nome do metodo
 		int name = methods[i].name_index;
-		// int desc = methods[i].descriptor_index, flags = methods[i].access_flags;
 		
+		//verifica se o nome do metodo se encontra nas constantes
 		if ("<clinit>" == dereferenceIndex(constantPool, name)) 
 		{
 			clinit = i;
-			ret = true;
+			encontrou = true;
 			break;
 		}
 	}
 
-	return ret;
+	return encontrou;
 }
 
-
+/**
+* verifia se o metodo main foi encontrado
+* @return booleano que indica se existe o metodo main
+*/
 bool Leitor::hasMain () 
 {
+	//retorna valor de foundMain
 	return foundMain;
 }
 
+/**
+* verifia se o metodo clinit foi encontrado
+* @return booleano que indica se existe o metodo clinit
+*/
 bool Leitor::hasClinit () 
 {
+	//retorna o valor de foundClinit
 	return foundClinit;
 }
 
+/**
+* Retorna o metodo main no formato da struct method_info
+* @return struct method_info contendo informações sobre o método
+*/
 method_info Leitor::getMain() 
 {
 	if (foundMain) 
@@ -288,11 +351,19 @@ method_info Leitor::getMain()
 	}
 }
 
+/**
+* Retorna o metodo clinit no formato da struct method_info
+* @return struct method_info contendo informações sobre o método
+*/
 method_info Leitor::getClinit() 
 {
 	return methods[clinit];
 }
 
+/**
+* Verifica se a .class lida no bytecode é a mesma que foi declarada no nome do arquivo
+* @return booleano indicando se a .class está correta
+*/
 bool Leitor::checkThisClass () 
 {
 	int auxPos;
@@ -300,10 +371,10 @@ bool Leitor::checkThisClass ()
 	string auxFilename(this->fileName);
 	string auxClass = dereferenceIndex(this->constantPool, this->this_class);
 	
-	//removes extension
+	//remove extensao .class
 	auxFilename = auxFilename.substr(0, auxFilename.size()-6);
 	
-	//removes names from folders on Windows
+	//remove nomes de pastas no Windows
 	auxPos = auxFilename.find("\\");
 
 	while(auxPos >= 0 && (unsigned int) auxPos <= auxFilename.size()) 
@@ -312,7 +383,7 @@ bool Leitor::checkThisClass ()
 		auxPos = auxFilename.find("\\");
 	}
 
-	//removes names from folders on linux
+	//remove nomes de pastas no Linux
 	auxPos = auxFilename.find("/");
 	while(auxPos >= 0 && (unsigned int) auxPos <= auxFilename.size()) 
 	{
@@ -320,30 +391,23 @@ bool Leitor::checkThisClass ()
 		auxPos = auxFilename.find("/");
 	}
 
-	//removes names from folders on Windows 
-	auxPos = auxClass.find("\\");
-	while(auxPos >= 0 && (unsigned int) auxPos <= auxClass.size()) 
-	{
-		auxClass = auxClass.substr(auxPos+1);
-		auxPos = auxClass.find("\\");
-	}
-
-	//removes names from folders on linux
-	auxPos = auxClass.find("/");
-	while(auxPos >= 0 && (unsigned int) auxPos <= auxClass.size()) 
-	{
-		auxClass = auxClass.substr(auxPos+1);
-		auxPos = auxClass.find("/");
-	}
-
 	return (auxClass == auxFilename);
 }
 
+/**
+* Retorna a variavel status que indica se houve erro na leitura do bytecode
+* @return status
+*/
 int Leitor::getStatus () 
 {
 	return status;
 }
 
+/**
+* Verifica qual foi o erro encontrado pelo programa
+* @param error MACRO com o erro que foi encontrado
+* @return string contendo informação sobre o tipo de erro encontrado
+*/
 string Leitor::getError (int error) 
 {
 	string ret = "";
@@ -373,23 +437,35 @@ string Leitor::getError (int error)
 	return ret;
 }
 
+/**
+* método para pegar a constant pool lida
+* @return Retorna a array com a constant pool
+*/
 cp_info* Leitor::getCP () const 
 {
 	return constantPool;
 }
 
+/**
+* método para pegar a constant pool lida
+* @return Retorna a array com a constant pool
+*/
 U2 Leitor::getLengthCP () 
 {
 	return lengthCP;
 }
 
+/**
+* Verifica o caminho mais o nome do arquivo dependendo do sistema operacional
+* @return Retorna a string com o caminho total do arquivo
+*/
 char *Leitor::getPath () 
 {
 	string path= "", auxFilename(this->fileName);
-	char *ret;
+	char *caminho_arquivo;
 	int auxPos;
 
-	//navigates on folders on Windows 
+	//navega pelas pastas do windows
 	auxPos = path.find("\\");
 	while(auxPos >= 0 && (unsigned int) auxPos <= path.size()) 
 	{
@@ -398,7 +474,7 @@ char *Leitor::getPath ()
 		auxPos = auxFilename.find("\\");
 	}
 
-	//navigates on folders on linux
+	//navega pelas pastas do linux
 	auxPos = auxFilename.find("/");
 	while(auxPos >= 0 && (unsigned int) auxPos <= auxFilename.size()) 
 	{
@@ -407,50 +483,79 @@ char *Leitor::getPath ()
 		auxPos = auxFilename.find("/");
 	}
 
-	//copy result to return path
-	ret = (char *) malloc(sizeof(char) * (path.size() + 1));
+	//copia o resulta para a string caminho_arquivo
+	caminho_arquivo = (char *) malloc(sizeof(char) * (path.size() + 1));
 	for (unsigned int i = 0; i < path.size(); i++) 
 	{
-		ret[i] = path[i];
+		caminho_arquivo[i] = path[i];
 	}
-	ret[path.size()] = '\0';
+	caminho_arquivo[path.size()] = '\0';
 
-	return ret;
+	return caminho_arquivo;
 }
 
+/**
+* Retorna a array contendo os métodos
+* @return array do tipo method_info
+*/
 method_info *Leitor::getMethods() 
 {
 	return methods;
 }
 
+/**
+* Retorna o número de methods
+* @return uint16_t indicando o numero de metodos
+*/
 U2 Leitor::getMethodsCount() 
 {
 	return methodsCount;
 }
 
+/**
+* Retorna a variavel que indica o this_class
+* @return uint16_t this_class
+*/
 U2 Leitor::getThis_class() 
 {
 	return this_class;
 }
 
+/**
+* Retorna a variável que indica o super_class
+* @return uint16_t super_class
+*/
 U2 Leitor::getSuper_class() 
 {
 	return super_class;
 }
 
+/**
+* Retorna o número de fields
+* @return uint16_t indicando o numero de fields
+*/
 U2 Leitor::getFieldsCount() 
 {
 	return fieldsCount;
 }
 
+/**
+* Retorna a array com as fields lidas
+* @return a array da struct field_info
+*/
 field_info *Leitor::getFields() 
 {
 	return fields;
 }
 
+/**
+* Retorna um field
+* @param field_name nome do field que deseja retornar 
+* @return struct field_info com a informação da field passada no parâmetro
+*/
 field_info* Leitor::getField(string field_name) 
 {
-
+	//percorre a array com as fields  ate encontrar field desejada
 	for(int i = 0; i < getFieldsCount(); i++) 
 	{
 		if(dereferenceIndex(constantPool, fields[i].name_index) == field_name )
@@ -462,6 +567,12 @@ field_info* Leitor::getField(string field_name)
 
 }
 
+/**
+* Retorna um method
+* @param name nome do method 
+* @param descriptor descritor do method
+* @return struct field_info com a informação da field passada no parâmetro
+*/
 method_info* Leitor::getMethod(string name, string descriptor)
 {
 	method_info method;
@@ -491,6 +602,12 @@ method_info* Leitor::getMethod(string name, string descriptor)
 	}
 }
 
+/**
+* Retorna a classe do metodo que esta sendo procurado
+* @param name nome do method 
+* @param descriptor descritor do method
+* @return classe Leitor
+*/
 Leitor* Leitor::getClassThatHasSerachedMethod(string name, string descriptor)
 {
 	method_info* method;
