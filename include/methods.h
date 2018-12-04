@@ -7,7 +7,6 @@
 
 using namespace std;
 
-//struct to store methods
 typedef struct 
 {
 	uint16_t access_flags;
