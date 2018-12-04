@@ -1,0 +1,25 @@
+##Arquivo frame.cpp
+
+Criação do FrameStack: aloca memória do tamanho de um frame, cria a pilha de operandos e as variáveis locais, coloca o PC na posição inicial dos métodos com startPC. Inclui a referência ao frame na área de métodos com MethodArea::setFrameStack.
+
+A lista de operandos está agora implementada como um vetor de operações. Para executar uma instrução que está no FrameStack se usa o método "execute", dentro deste método ele executa as instruções enquanto elas existirem utilizando "Operacoes::run(opcode)".
+
+Para buscar as instruções é usada a função FrameStack::nextInstruction(), que não recebe nenhum parâmetro. A função vê se a pilha está vazia, se sim retorna falso, caso não, verifica se tem mais instruções, se sim aponta para o próximo opcode e incrementa o PC, retornando verdadeiro.
+
+A funçaõ addFrame tem o mesmo comportamento da criação de um frame, só qu adiciona ele no topo da pilha.
+
+##Arquivo fields.cpp
+
+Possui a função printFields que recebe os campos existentes e os imprime na tela. Ela faz isso por meio da função printField que imprime cada campo, por sua vez, essa segunda faz uso das funções getFieldFlags e dereferenceIndex (do arquivo constantPool). A função getFieldFlags vê qual é a flag do campo em questão(public, private, protected, etc).
+
+##Arquivo heap.cpp
+
+Possui apenas uma classe e um método. Possui a classe Heap que é declarda como um vetor de ClasseInstancia, seu único método é adicionar um objeto no Heap.
+
+## Arquivo constantPool.cpp
+
+Este arquivo é responsável por carregar o pool de contantes para o programa e também por imprimir na tela tais informações. A função loadConstantPool é a responsável por carregar o pool de constantes, ela verifica o tipo do campo e então lê o dado de acordo com esse tipo. Caso o tipo não esteja definido a função é encerrada. O retorno da função é o número de elementos.
+
+A função dereferenceIndex (usada para imprimir os campos) é a responsável por retornar a informação do campo no formato correto para a leitura do usuário.
+
+A função printConstantPool é a responsável por imprimir o pool de contantes de acordo com o definido nas requisições da implementação e no formato correto.

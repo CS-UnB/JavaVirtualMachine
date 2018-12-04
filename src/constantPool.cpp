@@ -11,17 +11,17 @@ int loadConstantPool (cp_info *constantPool, int lengthCP, FILE* fp)
 
 	for (i = 1; i < lengthCP; i++)
 	{
-		// Read the tag
+		// Retorna a tag
 		constantPool[i].tag = readU1(fp);
 		
-		// Check the field type
+		// Checa o tipo do campo
 		if (!(constantPool[i].tag > 0) && !(constantPool[i].tag <= 12) && !(constantPool[i].tag != 2))
 		{
-			// If it doesn't know the type end the function
+			// Se não sabe o tipo, termina a função
 			return i;
 		}
 	
-		// Read the data according with the tag
+		// Lê o dado de acordo com o tipo
 		switch (constantPool[i].tag)
 		{
 			case UTF8:
@@ -62,7 +62,7 @@ int loadConstantPool (cp_info *constantPool, int lengthCP, FILE* fp)
 		}
 	}
 
-	// Return the number of readed elements
+	// Retorna o número de elementos
 	return i;
 }
 
