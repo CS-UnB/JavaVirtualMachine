@@ -4,10 +4,10 @@
 	All the info needed for a method execution.
 */
 
-/*! \def FRAME 
-	\brief Macro
+/** @def FRAME 
+	@brief Macro
 
-	Define used to avoid multiple icludes of this file.
+	Define uso para evitar a inclusão múltipla de arquivos.
 */
 #ifndef FRAME
 #define FRAME

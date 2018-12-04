@@ -1,13 +1,13 @@
-/*! \file fields.h
-	\brief Class field
+/** @file fields.h
+	@brief Classe field
 
 	Field used at archives with .class format
 */
 
-/*! \def FIELDS 
-	\brief Macro
+/** @def FIELDS 
+	@brief Macro
 
-	Define used to avoid multiple includes of archive.
+	Define uso para evitar a inclusão múltipla de arquivos.
 */
 #ifndef FIELDS
 #define FIELDS
