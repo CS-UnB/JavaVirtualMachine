@@ -1,6 +1,6 @@
 /*!
- * \file
- * \brief PilhaOperandos.cpp
+ * \file PilhaOperandos.cpp
+ * \brief Pilha de operandos
  */
 #include "pilhaOperandos.h"
 
@@ -29,14 +29,14 @@ element PilhaOperandos::top_value()
 	//first slot of stack
 	ret.i = this->elementos.top();
 
-	//checks if is necessary to put one more slot together 
+	//checks if is necessary to put one more slot together
 	if (this->tipos.top() == TYPE_LONG || this->tipos.top() == TYPE_DOUBLE || (this->tipos.top() == TYPE_REFERENCE && bits64))
 	{
 		uint32_t aux = ret.i;
 		this->elementos.pop();
 		ret.l = int64_t((int64_t(ret.i)<<32) + this->elementos.top());
 		this->elementos.push(aux);
-	}	
+	}
 
 	return ret;
 }
@@ -197,7 +197,7 @@ void PilhaOperandos::push(bool x)
 	if (this->size() == max)
 	{
 		throw std::out_of_range("Excedeu o limite maximo da pilha!");
-	}	
+	}
 
 	element aux;
 	aux.b = x;
@@ -218,14 +218,14 @@ void PilhaOperandos::push(int *x)
 	if (this->size()+bits64 >= max)
 	{
 		throw std::out_of_range("Passou do limite maximo da pilha!");
-	}	
+	}
 
 	element aux;
 	aux.pi = x;
 	this->tipos.push(TYPE_REFERENCE);
 	if (!typePushed)
 	{
-		this->tiposReais.push(RT_REFERENCE);	
+		this->tiposReais.push(RT_REFERENCE);
 	}
 	this->elementos.push(aux.i);
 	if (bits64)

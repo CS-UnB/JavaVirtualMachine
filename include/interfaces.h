@@ -1,7 +1,7 @@
 /*! \file interfaces.h
-	\brief Interfaces 
+	\brief Interfaces
 
-	Handle the .class interface information
+	Manipula as informações de interface do .class
 */
 
 #ifndef INTERFACES
@@ -31,7 +31,7 @@ void printInterfaces (unsigned short *interfaces, cp_info *cp, int length);
 
 
 /*! \fn printInterface (unsigned short interface, cp_info *cp)
-	\brief Show information from a especific interface 
+	\brief Show information from a especific interface
 
 	\param interface Index of the constant pool.
 	\param cp Pointer to the constant pool.

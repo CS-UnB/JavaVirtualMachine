@@ -1,7 +1,7 @@
 /*! \file pilhaOperandos.h
-	\brief Operands Stack
+	\brief Pilha de operandos
 
-	Stack responsible for stores operands on JVM 
+	Pilha responsável por armazenar os operandos da JVM
 */
 
 /*! \def PILHAOPERANDOS
@@ -34,8 +34,8 @@
 	\brief Operand Stack's Class
 
 	Responsible for manipulation on the operands stack
-*/	
-class PilhaOperandos 
+*/
+class PilhaOperandos
 {
 private:
 	//stack for stored values
@@ -73,7 +73,7 @@ public:
 	element pop();
 
 	/*! \fn element pop()
-		\brief 
+		\brief
 		\brief Unstacks the top's operands return it's types
 	*/
 	typedElement popTyped();
@@ -82,7 +82,7 @@ public:
 		\brief Function to receives the top formatted in string
 	*/
 	std::string getString();
-	
+
 	/*! \fn void push(int x)
 		\brief Function that empiles a x value of integer type
 

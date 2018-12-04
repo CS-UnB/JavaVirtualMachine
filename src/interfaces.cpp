@@ -1,13 +1,11 @@
 /*!
- * \file
- * \brief Interfaces.cpp
+ * \file Interfaces.cpp
+ * \brief Interfaces
  */
 
 #include "interfaces.h"
 
-/*!
- * \brief 
-*/
+
 unsigned short *readInterfaces (FILE* fp, int length)
 {
 	unsigned short *ret = (unsigned short *) malloc(sizeof(int) * length);
@@ -25,7 +23,7 @@ void printInterfaces (unsigned short *interfaces, cp_info *cp, int length)
 {
 	for (int i = 0; i < length; i++)
 	{
-		printInterface(interfaces[i], cp, i);		
+		printInterface(interfaces[i], cp, i);
 	}
 }
 
