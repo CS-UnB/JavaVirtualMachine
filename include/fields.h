@@ -1,13 +1,13 @@
-/*! \file fields.h
-	\brief Class field
+/** @file fields.h
+	@brief Classe field
 
 	Field used at archives with .class format
 */
 
-/*! \def FIELDS 
-	\brief Macro
+/** @def FIELDS 
+	@brief Macro
 
-	Define used to avoid multiple includes of archive.
+	Define uso para evitar a inclusão múltipla de arquivos.
 */
 #ifndef FIELDS
 #define FIELDS
@@ -18,10 +18,10 @@
 
 using namespace std;
 
-/*! \struct field_info
-	\brief Storage struct.
+/** @struct field_info
+	@brief Struct de armazenamento.
 
-	Struct responsable to store declared fields.
+	Struct responsável por armazenar os campos declarados.
 */
 
 typedef struct {
@@ -32,50 +32,50 @@ typedef struct {
 	attribute_info *attributes;
 } field_info;
 
-/*! \fn string getFieldFlags(unsigned short flags)
-	\brief Function to show fields flags
+/** @fn string getFieldFlags(unsigned short flags)
+	@brief Função para mostrar as flags dos campos
 
-	\param flags Flags in hexadecimal that will be converted to string.
+	@param flags Flags em haxadecimal que serão convertidas para string.
 */
 
 string getFieldFlags (unsigned short flags);
 
-/*! \fn field_info readField (FILE* fp, cp_info *cp)
-	\brief Function to read a field
+/** @fn field_info readField (FILE* fp, cp_info *cp)
+	@brief Função que lê um campo
 
-	\param fp Pointer to .class archive.
-	\param cp Pointer to constant pool.
+	@param fp Ponteiro para arquivo .class.
+	@param cp Ponteiro para pool de constantes.
 */
 
 field_info readField (FILE* fp, cp_info *cp);
 
 
-/*! \fn field_info *readFields (FILE* fp, int length,cp_info *cp)
-	\brief Function that alloc field_info space and call readField lenght vezes
+/** @fn field_info *readFields (FILE* fp, int length,cp_info *cp)
+	@brief Função que aloca field_info espaço e chama readField "lenght" vezes
 	
 
-	\param fp Pointer to .class archive.
-	\param cp Pointer to constant pool.
-	\param length Define number of calls of readField.
+	@param fp Ponteiro para arquivo .class.
+	@param cp Ponteiro para pool de constantes.
+	@param length Define o número de chamadas à readField.
 */
 field_info *readFields (FILE* fp, int length,cp_info *cp);
 
 
-/*! \fn void printField (field_info f, cp_info *cp)
-	\brief Function to show a field with array index.
+/** @fn void printField (field_info f, cp_info *cp)
+	@brief Função que imprime um campo.
 
-	\param f Struct with field informations.
-	\param index Index of vector that contains a field.
-	\param cp Pointer to constant pool.
+	@param f Struct com informações do campo.
+	@param index Índice do vetor que contém um campo.
+	@param cp Ponteiro para pool de constantes.
 */
 void printField (field_info f, cp_info *cp, int index);
 
-/*! \fn void printFields (field_info *f, cp_info *cp, int length)
-	\brief Function that invokes printField lenght times
+/** @fn void printFields (field_info *f, cp_info *cp, int length)
+	@brief Fuunção que chama printField o número de vezes determinado por "length"
 
-	\param f Struct that contains field infos. 
-	\param cp Pointer to constant pool.
-	\param length Define number of calls of printField.
+	@param f Struct que contém informação dos campos. 
+	@param cp Ponteiro para pool de constantes.
+	@param length Define o número de chamadas à printField.
 */
 void printFields (field_info *f, cp_info *cp, int length);
 

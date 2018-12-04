@@ -1,12 +1,11 @@
-/*!
- * \file
- * \brief ConstantPool.cpp
+/**
+ * @file constantPool.cpp
+ * @details Este módulo contém as funções necessárias para a manipulação do pool de constantes.
  */
 
 #include "constantPool.h"
 
-int loadConstantPool (cp_info *constantPool, int lengthCP, FILE* fp)
-{
+int loadConstantPool (cp_info *constantPool, int lengthCP, FILE* fp){
 	int i;
 
 	for (i = 1; i < lengthCP; i++)
@@ -66,9 +65,7 @@ int loadConstantPool (cp_info *constantPool, int lengthCP, FILE* fp)
 	return i;
 }
 
-
-string dereferenceIndex (cp_info *cp, U2 index)
-{
+string dereferenceIndex (cp_info *cp, U2 index){
 	switch (cp[index].tag)
 	{
 		case UTF8:
@@ -93,8 +90,7 @@ string dereferenceIndex (cp_info *cp, U2 index)
 	return "";
 }
 
-
-void printConstantPool (cp_info *constantPool, int lengthCP) {
+void printConstantPool (cp_info *constantPool, int lengthCP){
 	//int index;
 	cout << "Constant Pool:" << endl;
 	

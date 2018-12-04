@@ -1,41 +1,30 @@
-/*!
- * \file
- * \brief Fields.cpp
+/**
+ * @file fields.cpp
+ * @details Módulo responsável pela manipulação dos campos existentes no arquivo .class
  */
 
 #include "fields.h"
 
-void printField (field_info f, cp_info *cp, int index)
- {
-	cout << "\tField " << index << ":" << endl;
-	//printf("\tField %d : \n", index);
-
-	cout << "\t" << getFieldFlags(f.accessFlags);
-	//TESTEEEEprintf("\t%s\n", getFieldFlags(f.accessFlags).c_str());
-	
-	cout << "\t\tNome: " << dereferenceIndex(cp, f.name_index) << endl;
-	//printf("\t\tNome: %s\n",  dereferenceIndex(cp, f.name_index).c_str());
-
-	cout << "\t\tDescitor: " << dereferenceIndex(cp, f.descriptor_index) << endl;
-	//printf("\tDescritor: %s\n", dereferenceIndex(cp, f.descriptor_index).c_str());
-
-	cout << "\t\tNumero de Atributos: " << (int) f.attributes_count << endl;
+void printField (field_info f, cp_info *cp, int index){
+	printf("\tField %d : \n", index);
+	printf("\t%s", getFieldFlags(f.accessFlags).c_str());
+	printf("\t\tNome: %s\n",  dereferenceIndex(cp, f.name_index).c_str());
+	printf("\t\tDescritor: %s\n", dereferenceIndex(cp, f.descriptor_index).c_str());
+	printf("\t\tNumero de Atributos: %d\n", (int) f.attributes_count);
 
 	for (int i = 0; i < f.attributes_count; i++) {
-		cout << "Atributo " << i << ": ";
+		printf("\t\t\tAtributo %d:", i);
 		printAttribute(f.attributes[i], cp);
 	}
 }
 
-void printFields (field_info *f, cp_info *cp, int length)
-{
+void printFields (field_info *f, cp_info *cp, int length){
 	for (int i = 0; i < length; i++) {
 		printField(f[i], cp, i);
 	}
 }
 
-field_info readField (FILE* fp,cp_info* cp) 
-{
+field_info readField (FILE* fp,cp_info* cp) {
 	field_info ret;
 
 	ret.accessFlags = readU2(fp) & 0X0df;
@@ -50,8 +39,7 @@ field_info readField (FILE* fp,cp_info* cp)
 	return ret;
 }
 
-field_info *readFields (FILE* fp, int length,cp_info* cp) 
-{
+field_info *readFields (FILE* fp, int length,cp_info* cp) {
 	field_info *ret = (field_info *) malloc(sizeof(field_info) * length);
 
 	for (int i = 0; i < length; i++) {
@@ -60,8 +48,7 @@ field_info *readFields (FILE* fp, int length,cp_info* cp)
 	return ret;
 }
 
-string getFieldFlags (unsigned short flags) 
-{
+string getFieldFlags (unsigned short flags) {
 	bool first = true;
 	string ret = "";
 
