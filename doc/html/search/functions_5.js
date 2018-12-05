@@ -1,7 +1,7 @@
 var searchData=
 [
   ['get',['get',['../classLocalVariables.html#a4abbb4a732d7dd0f11a147b79c15ae10',1,'LocalVariables']]],
-  ['get_5fmethod_5fflags',['get_Method_Flags',['../methods_8cpp.html#a6f0da5275a37af91a66e57918a31f186',1,'methods.cpp']]],
+  ['get_5fmethod_5fflags',['get_Method_Flags',['../methods_8cpp.html#a6f0da5275a37af91a66e57918a31f186',1,'get_Method_Flags(uint16_t flags):&#160;methods.cpp'],['../methods_8h.html#a6f0da5275a37af91a66e57918a31f186',1,'get_Method_Flags(uint16_t flags):&#160;methods.cpp']]],
   ['getclass',['getClass',['../classMethodArea.html#a81670949394fd7400fe8c006d010385e',1,'MethodArea']]],
   ['getclassthathasserachedmethod',['getClassThatHasSerachedMethod',['../classLeitor.html#a568b259f176676472196ad0fb127c4f2',1,'Leitor']]],
   ['getclinit',['getClinit',['../classLeitor.html#a4c64b307c9690ba25f04e911e07fe5a3',1,'Leitor']]],

@@ -1,3 +1,6 @@
+/** \file methodArea.h
+*	\brief
+*/
 #ifndef METHOD_AREA
 #define METHOD_AREA
 

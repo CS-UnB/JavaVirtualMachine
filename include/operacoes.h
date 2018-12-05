@@ -1,3 +1,6 @@
+/** \file operacoes.h
+*	\brief
+*/
 #ifndef OPERACOES
 #define OPERACOES
 

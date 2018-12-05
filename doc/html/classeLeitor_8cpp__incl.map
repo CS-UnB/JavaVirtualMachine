@@ -6,12 +6,12 @@
 <area shape="rect" id="node16" href="$fields_8h.html" title="Classe field. " alt="" coords="680,229,744,256"/>
 <area shape="rect" id="node17" href="$attributes_8h.html" title="Atributos a serem usados na execuçao da JVM. " alt="" coords="630,304,717,331"/>
 <area shape="rect" id="node18" href="$interfaces_8h.html" title="Interfaces. " alt="" coords="211,304,301,331"/>
-<area shape="rect" id="node19" href="$methods_8h_source.html" title="methods.h" alt="" coords="320,229,403,256"/>
-<area shape="rect" id="node20" href="$methodArea_8h_source.html" title="methodArea.h" alt="" coords="1318,155,1421,181"/>
+<area shape="rect" id="node19" href="$methods_8h.html" title="methods.h" alt="" coords="320,229,403,256"/>
+<area shape="rect" id="node20" href="$methodArea_8h.html" title="methodArea.h" alt="" coords="1318,155,1421,181"/>
 <area shape="rect" id="node21" href="$frame_8h.html" title="Contém tudo necessário para a execução de um método. " alt="" coords="1152,229,1219,256"/>
 <area shape="rect" id="node28" href="$classe_8h.html" title="Definição da ClasseEstatica e da ClasseInstancia. " alt="" coords="1643,379,1714,405"/>
 <area shape="rect" id="node22" href="$pilhaOperandos_8h.html" title="Pilha de operandos. " alt="" coords="981,304,1104,331"/>
 <area shape="rect" id="node25" href="$localVariables_8h.html" title="Local Variables. " alt="" coords="1128,304,1243,331"/>
-<area shape="rect" id="node27" href="$operacoes_8h_source.html" title="operacoes.h" alt="" coords="1317,304,1411,331"/>
+<area shape="rect" id="node27" href="$operacoes_8h.html" title="operacoes.h" alt="" coords="1317,304,1411,331"/>
 <area shape="rect" id="node29" href="$heap_8h.html" title="Definição do Heap. " alt="" coords="1648,453,1709,480"/>
 </map>

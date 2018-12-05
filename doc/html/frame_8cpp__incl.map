@@ -3,15 +3,15 @@
 <area shape="rect" id="node3" href="$classeLeitor_8h.html" title="classeLeitor.h" alt="" coords="594,155,697,181"/>
 <area shape="rect" id="node10" href="$baseTypes_8h.html" title="Tipos Base Tipos básicos utilizados para implementarmos a JVM. " alt="" coords="571,453,669,480"/>
 <area shape="rect" id="node18" href="$attributes_8h.html" title="Atributos a serem usados na execuçao da JVM. " alt="" coords="153,304,239,331"/>
-<area shape="rect" id="node21" href="$methodArea_8h_source.html" title="methodArea.h" alt="" coords="1023,229,1126,256"/>
+<area shape="rect" id="node21" href="$methodArea_8h.html" title="methodArea.h" alt="" coords="1023,229,1126,256"/>
 <area shape="rect" id="node27" href="$pilhaOperandos_8h.html" title="Pilha de operandos. " alt="" coords="1321,304,1444,331"/>
 <area shape="rect" id="node30" href="$localVariables_8h.html" title="Local Variables. " alt="" coords="1468,304,1583,331"/>
-<area shape="rect" id="node32" href="$operacoes_8h_source.html" title="operacoes.h" alt="" coords="1124,155,1217,181"/>
+<area shape="rect" id="node32" href="$operacoes_8h.html" title="operacoes.h" alt="" coords="1124,155,1217,181"/>
 <area shape="rect" id="node15" href="$constantPool_8h.html" title="Módulo Constant pool. " alt="" coords="448,379,557,405"/>
 <area shape="rect" id="node16" href="$classFlags_8h.html" title="Class Flags. " alt="" coords="75,379,171,405"/>
 <area shape="rect" id="node17" href="$fields_8h.html" title="Classe field. " alt="" coords="443,229,507,256"/>
 <area shape="rect" id="node19" href="$interfaces_8h.html" title="Interfaces. " alt="" coords="315,304,405,331"/>
-<area shape="rect" id="node20" href="$methods_8h_source.html" title="methods.h" alt="" coords="265,229,348,256"/>
+<area shape="rect" id="node20" href="$methods_8h.html" title="methods.h" alt="" coords="265,229,348,256"/>
 <area shape="rect" id="node22" href="$classe_8h.html" title="Definição da ClasseEstatica e da ClasseInstancia. " alt="" coords="1226,304,1297,331"/>
 <area shape="rect" id="node23" href="$heap_8h.html" title="Definição do Heap. " alt="" coords="1109,379,1171,405"/>
 </map>

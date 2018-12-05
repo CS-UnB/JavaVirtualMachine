@@ -1,8 +1,8 @@
 <map id="include/frame.h" name="include/frame.h">
 <area shape="rect" id="node2" href="$frame_8cpp.html" title="src/frame.cpp" alt="" coords="5,80,108,107"/>
 <area shape="rect" id="node3" href="$main_8cpp.html" title="src/main.cpp" alt="" coords="77,229,175,256"/>
-<area shape="rect" id="node4" href="$methodArea_8h_source.html" title="include/methodArea.h" alt="" coords="291,80,439,107"/>
-<area shape="rect" id="node9" href="$operacoes_8h_source.html" title="include/operacoes.h" alt="" coords="510,304,649,331"/>
+<area shape="rect" id="node4" href="$methodArea_8h.html" title="include/methodArea.h" alt="" coords="291,80,439,107"/>
+<area shape="rect" id="node9" href="$operacoes_8h.html" title="include/operacoes.h" alt="" coords="510,304,649,331"/>
 <area shape="rect" id="node5" href="$classeLeitor_8h.html" title="include/classeLeitor.h" alt="" coords="235,155,383,181"/>
 <area shape="rect" id="node6" href="$classeLeitor_8cpp.html" title="classeLeitor.cpp " alt="" coords="199,229,338,256"/>
 <area shape="rect" id="node7" href="$classe_8h.html" title="Definição da ClasseEstatica e da ClasseInstancia. " alt="" coords="363,229,479,256"/>
