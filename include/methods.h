@@ -1,3 +1,6 @@
+/** \file methods.h
+*	\brief
+*/
 #ifndef METHOD
 #define METHOD
 

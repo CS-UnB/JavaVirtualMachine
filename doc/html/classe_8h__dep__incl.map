@@ -1,7 +1,7 @@
 <map id="include/classe.h" name="include/classe.h">
 <area shape="rect" id="node2" href="$classe_8cpp.html" title="classe.cpp " alt="" coords="33,80,139,107"/>
-<area shape="rect" id="node3" href="$operacoes_8h_source.html" title="include/operacoes.h" alt="" coords="163,80,302,107"/>
-<area shape="rect" id="node8" href="$methodArea_8h_source.html" title="include/methodArea.h" alt="" coords="231,229,379,256"/>
+<area shape="rect" id="node3" href="$operacoes_8h.html" title="include/operacoes.h" alt="" coords="163,80,302,107"/>
+<area shape="rect" id="node8" href="$methodArea_8h.html" title="include/methodArea.h" alt="" coords="231,229,379,256"/>
 <area shape="rect" id="node11" href="$heap_8h.html" title="Definição do Heap. " alt="" coords="454,80,561,107"/>
 <area shape="rect" id="node4" href="$operacoes_8cpp.html" title="src/operacoes.cpp" alt="" coords="5,155,135,181"/>
 <area shape="rect" id="node5" href="$frame_8h.html" title="Contém tudo necessário para a execução de um método. " alt="" coords="159,155,269,181"/>

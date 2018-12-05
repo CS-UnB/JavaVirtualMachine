@@ -1,0 +1,16 @@
+<map id="include/operacoes.h" name="include/operacoes.h">
+<area shape="rect" id="node2" href="$frame_8h.html" title="Contém tudo necessário para a execução de um método. " alt="" coords="1179,80,1246,107"/>
+<area shape="rect" id="node21" href="$methodArea_8h.html" title="methodArea.h" alt="" coords="1648,229,1751,256"/>
+<area shape="rect" id="node22" href="$classe_8h.html" title="Definição da ClasseEstatica e da ClasseInstancia. " alt="" coords="1648,304,1719,331"/>
+<area shape="rect" id="node3" href="$classeLeitor_8h.html" title="classeLeitor.h" alt="" coords="1161,155,1264,181"/>
+<area shape="rect" id="node10" href="$baseTypes_8h.html" title="Tipos Base Tipos básicos utilizados para implementarmos a JVM. " alt="" coords="980,453,1077,480"/>
+<area shape="rect" id="node18" href="$attributes_8h.html" title="Atributos a serem usados na execuçao da JVM. " alt="" coords="915,304,1001,331"/>
+<area shape="rect" id="node27" href="$pilhaOperandos_8h.html" title="Pilha de operandos. " alt="" coords="379,304,502,331"/>
+<area shape="rect" id="node30" href="$localVariables_8h.html" title="Local Variables. " alt="" coords="117,304,231,331"/>
+<area shape="rect" id="node15" href="$constantPool_8h.html" title="Módulo Constant pool. " alt="" coords="1182,379,1291,405"/>
+<area shape="rect" id="node16" href="$classFlags_8h.html" title="Class Flags. " alt="" coords="678,379,774,405"/>
+<area shape="rect" id="node17" href="$fields_8h.html" title="Classe field. " alt="" coords="1063,229,1127,256"/>
+<area shape="rect" id="node19" href="$interfaces_8h.html" title="Interfaces. " alt="" coords="1077,304,1167,331"/>
+<area shape="rect" id="node20" href="$methods_8h.html" title="methods.h" alt="" coords="1213,229,1295,256"/>
+<area shape="rect" id="node23" href="$heap_8h.html" title="Definição do Heap. " alt="" coords="1647,379,1709,405"/>
+</map>
