@@ -11,40 +11,40 @@
 #include "constantPool.h"
 #include "baseTypes.h"
 
-/*! \fn unsigned short *readInterfaces (FILE *fp, int length)
-	\brief Load the interfaces to the memory
-
-	\param fp Pointer to the .class file
-	\param length Number of interfaces
+/** @fn unsigned short *readInterfaces (FILE *fp, int length)
+	@brief Carrega as interfaces na memória a partir do arquivo class.
+	@param flags Flags em haxadecimal que serão convertidas para string.
+	@param fp Ponteiro para o arquivo class.
+	@param length Numero de interfaces a serem lidas.
 */
 unsigned short *readInterfaces (FILE *fp, int length);
 
 
-/*! \fn void printInterfaces (unsigned short *interfaces, cp_info *cp, int length)
-	\brief Show all interfaces from the file
+/** @fn void printInterfaces (unsigned short *interfaces, cp_info *cp, int length)
+	@brief Mostra todas as interfaces do arquivo.
 
-	\param interfaces Array of interfaces.
-	\param cp Pointer to the constant pool.
-	\param length Number of interfaces.
+	@param interfaces Array de interfaces.
+	@param cp Ponteiro para a constantpool.
+	@param length Número de interfaces.
 */
 void printInterfaces (unsigned short *interfaces, cp_info *cp, int length);
 
 
-/*! \fn printInterface (unsigned short interface, cp_info *cp)
-	\brief Show information from a especific interface
+/** @fn printInterface (unsigned short interface, cp_info *cp)
+	@brief Mostra informações de uma interface específica.
 
-	\param interface Index of the constant pool.
-	\param cp Pointer to the constant pool.
+	@param interface Indice do constantpool.
+	@param cp Ponteiro para a constantpool.
 */
 void printInterface (unsigned short interface, cp_info *cp);
 
 
-/*! \fn printInterface (unsigned short interface, cp_info *cp, int index)
-	\brief Show information from a especific interface with the interface index
+/** @fn printInterface (unsigned short interface, cp_info *cp, int index)
+	@brief Mostra informação de uma interface específica com o índice da interface.
 
-	\param interface Index of the constant pool.
-	\param cp Pointer to the constant pool.
-	\param index Index of the specific interface.
+	@param interface Indice do constantpool.
+	@param cp Ponteiro para o constantpool.
+	@param index Indice da interface específica.
 */
 void printInterface (unsigned short interface, cp_info *cp, int index);
 

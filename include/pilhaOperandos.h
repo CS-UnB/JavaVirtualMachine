@@ -4,12 +4,6 @@
 	Pilha responsável por armazenar os operandos da JVM
 */
 
-/*! \def PILHAOPERANDOS
-	\brief Macro
-
-	Define used to avoid multiple inclusions on this file
-*/
-
 #ifndef PILHAOPERANDOS
 #define PILHAOPERANDOS
 
@@ -30,128 +24,131 @@
 #define TYPE_REFERENCE 6
 
 
-/*! \class PilhaOperandos
-	\brief Operand Stack's Class
+/** @class PilhaOperandos
+	@brief Classe da pilha de operandos
 
-	Responsible for manipulation on the operands stack
+	Responsável por armazenar e manipular a pilha de operandos
 */
 class PilhaOperandos
 {
 private:
-	//stack for stored values
+	//pilha para os valores armazenados
 	std::stack<uint32_t> elementos;
-	//stack for types of stored values
+
+	//pilha para o tipo dos valores armazenados
 	std::stack<uint8_t> tipos;
-	//stack for types of stored values
+
+	//pilha para o tipo dos valores armazenados
 	std::stack<uint8_t> tiposReais;
+
 	bool typePushed;
-	//variable to know if system has 64 bits
+
+	//variavel para determinar se o sistema tem 64 bits
 	static const bool bits64 = (sizeof(int*) == 8);
-	//variable to know if maximum stack size
+
+	//variavel para determinar tamanho máximo da pilha
 	const int realMax;
 public:
-	/*! \fn PilhaOperandos(int maxSize)
-		\brief Constructor
-
-		\param maxSize Indicates maximum size of operands stack
+	/** @fn PilhaOperandos(int maxSize)
+		@brief Construtor
+		@param maxSize Indica tamanho máximo da pilha de operandos
 	*/
 	PilhaOperandos(int);
 
-	/*! \fn uint8_t top_type()
-		\brief Recovers type of operands stack's top
+	/** @fn uint8_t top_type()
+		@brief Recupera o tipo do topo da pilha de operandos
 	*/
 	uint8_t top_type();
 
-	/*! \fn element top_value()
-		\brief Recovers value from operand's stack's top
+	/** @fn element top_value()
+		@brief Recupera o valor do topo da pilha de operandos
 	*/
 	element top_value();
 
-	/*! \fn element pop()
-		\brief Unstacks the top's operand
+	/** @fn element pop()
+		@brief Desempilha o topo da pilha de operandos e retorna em um elemento de valor
 	*/
 	element pop();
 
-	/*! \fn element pop()
-		\brief
-		\brief Unstacks the top's operands return it's types
+	/** @fn element pop()
+		@brief Desempilha o topo da pilha de operandos e retorna em um elemento tipado
 	*/
 	typedElement popTyped();
 
-	/*! \fn std::string getString()
-		\brief Function to receives the top formatted in string
+	/** @fn std::string getString()
+		@brief Retorna o topo da pilha de operandos formatado em uma string
 	*/
 	std::string getString();
 
-	/*! \fn void push(int x)
-		\brief Function that empiles a x value of integer type
+	/** @fn void push(int x)
+		@brief Empilha um valor de tipo inteiro
 
-		\param x Value to be stacked on stack
+		@param x Valor a ser empilhado
 	*/
 	void push(int);
 
-	/*! \fn void push(long x)
-		\brief Function that stacks a x value of long type
+	/** @fn void push(long x)
+		@brief Empilha um valor de tipo long
 
-		\param x Value to be stacked on stack
+		@param x Valor a ser empilhado
 	*/
 	void push(int64_t);
 
-	/*! \fn void push(float x)
-		\brief Function that stacks a x value of float type
+	/** @fn void push(float x)
+		@brief Empilha um valor de tipo float
 
-		\param x Value to be stacked on stack
+		@param x Valor a ser empilhado
 	*/
 	void push(float);
 
-	/*! \fn void push(double x)
-		\brief Function that stacks a x value of double type
+	/** @fn void push(double x)
+		@brief Empilha um valor de tipo double
 
-		\param x Value to be stacked on stack
+		@param x Valor a ser empilhado
 	*/
 	void push(double);
 
-	/*! \fn void push(bool x)
-		\brief Function that stacks a x value of boolean type
+	/** @fn void push(bool x)
+		@brief Empilha um valor de tipo double
 
-		\param x Value to be stacked on stack
+		@param x Valor a ser empilhado
 	*/
 	void push(bool);
 
-	/*! \fn void push(int *x)
-		\brief Function that stacks a x vlaue of an integer reference
+	/** @fn void push(int *x)
+		@brief Empilha um valor de tipo referencia
 
-		\param x Reference to be stacked on the stack
+		@param x Referencia a ser empilhada
 	*/
 	void push(int*);
 
-	/*! \fn void push(typedElement te)
-		\brief Function that stacks an typed element, calling the adequate function
+	/** @fn void push(typedElement te)
+		@brief Empilha um elemento tipado, chamando a função adequada ao tipo
 
-		\param x Element typed to be stacked on stack
+		@param x Elemento tipado a ser empilhado
 	*/
 	void push(typedElement);
 
-	/*! \fn void push(element x, uint8_t tipo)
-		\brief Function checks the element type that must be added and calls the adequate function
+	/** @fn void push(element x, uint8_t tipo)
+		@brief Verifica o tipo do elemento que deve ser empilhado e chama a função adequada
 
-		\param x Typed element to be stacked on stack
-		\param tipo Type of past element
+		@param x Elemento a ser empilhado
+		@param tipo Tipo do elemento a ser empilhado
 	*/
 	void push(element, uint8_t);
 
-	/*! \fn int size()
-		\brief Function that verifys the size of operands stack
+	/** @fn int size()
+		@brief Verifica o tamanho da pilha de operandos
 	*/
 	int size();
 
-	/*! \fn int getMaxSize()
-		\brief Function that returns maximum size of operands stack
+	/** @fn int getMaxSize()
+		@brief Retorna o tamanho máximo da pilha de operandos
 	*/
 	int getMaxSize();
 
-	/*! \fn bool empty()
-		\brief Function that returns if stack is empty or not
+	/** @fn bool empty()
+		@brief Retorna se a pilha está vazia (1) ou não (0)
 	*/
 	bool empty();
 
