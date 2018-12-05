@@ -1,38 +1,32 @@
-# Java Virtual Machine ( JVM )
-[![Documentation](https://codedocs.xyz/gustavohfc/JVM.svg)](https://codedocs.xyz/gustavohfc/JVM/)
-________________________________________________________________________________________________________________________________________
+# Software Básico
+# Projeto da JVM
 
-## How to execute : 
+# André Luis Souto 				14/0016261
+# Bruno Cordeiro Mendes 		15/0007094
+# Michelangelo da Rocha Machado	14/0156089
+# Otto Kristian von Sperling	12/0131510
+# Victor Fabre Figueiredo       15/0022948
 
-### Windows 
-
-- Going to the directory ***JVM*** and use the command:
-
-> mingw32-make 
-
-- After this you can use to execute ***interpreter*** :
-
-> jvm -i "nameOfFile.class" 
-
-- Or to execute ***exhibitor***, use:
-
-> jvm -e "nameOfFile.class" 
  
-### Linux
+# Caso esteja no Linux, rodar da seguinte forma:
 
-- After you clone the project, you need to stay inside the ***JVM*** folder and use the next command line on console:
+1) Vá para o diretório da JVM e digite no terminal:
+	 make 
 
-> $ make 
+2) Para usar o interpretador, digite:
+	 ./jvm i "nameOfFile.class"
 
-- After this you can use to execute ***interpreter*** :
+3) Para usar o exibidor, digite:
+	 ./jvm e "nameOfFile.class"
 
-> ./jvm i "nameOfFile.class"
+# Caso esteja no Windows, rodar da seguinte forma:
 
-- Or to execute ***exhibitor***, use:
+1) Vá para o diretório da jvm e digite no terminal para compilar:
+	 mingw32-make 
 
-> ./jvm e "nameOfFile.class"
+2) Para executar o interpretador, digite:
+	 jvm -i "nameOfFile.class" 
 
+3) Para executar o exibidor, digite:
+	 jvm -e "nameOfFile.class" 
 
-## About JVM :
-
-- [Documentation](https://docs.oracle.com/javase/specs/jvms/se7/html/index.html)
