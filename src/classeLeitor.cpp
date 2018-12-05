@@ -347,7 +347,7 @@ method_info Leitor::getMain()
 	} 
 	else 
 	{
-		throw runtime_error("Nao foi encontrado um metodo main!");
+		throw runtime_error("Nao foi encontrado um metodo main!\n");
 	}
 }
 
