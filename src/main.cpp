@@ -7,7 +7,12 @@
  * Funcao principal, dá a opção de escolha entre interpretador e exibidor
  * 
  * @param argc, *argv[]
- * 
+ * @section Integrantes:
+ * 	André Luis Souto 		14/0016261
+	Bruno Cordeiro Mendes 		15/0007094
+	Michelangelo da Rocha Machado	14/0156089
+	Otto Kristian von Sperling	12/0131510
+	Victor Fabre Figueiredo         15/0022948
  */
 int main(int argc, char *argv[])
 {
