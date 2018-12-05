@@ -1,5 +1,3 @@
-# TODO: Recompile when header file changes
-
 SRC_DIR = src
 INC_DIR = ./include
 OBJ_DIR = obj
