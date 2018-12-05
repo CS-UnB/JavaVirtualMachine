@@ -7,13 +7,18 @@
  * Funcao principal, dá a opção de escolha entre interpretador e exibidor
  * 
  * @param argc, *argv[]
- * 
+ * @section Integrantes:
+ * 	André Luis Souto 		14/0016261
+	Bruno Cordeiro Mendes 		15/0007094
+	Michelangelo da Rocha Machado	14/0156089
+	Otto Kristian von Sperling	12/0131510
+	Victor Fabre Figueiredo         15/0022948
  */
 int main(int argc, char *argv[])
 {
 	if (argc != 3)
 	{
-		printf("Parametros invalidos, o programa deve ser executado com: %s [-e ou -i] caminho_arquivo", argv[0]);
+		printf("Parametros invalidos, o programa deve ser executado com: %s [-e ou -i] caminho_arquivo\n", argv[0]);
 		return 1;
 	}
 
@@ -29,7 +34,7 @@ int main(int argc, char *argv[])
 
 		if (!leitor.hasMain())
 		{
-			printf("O arquivo %s nao possui metodo main", argv[2]);
+			printf("O arquivo %s nao possui metodo main\n", argv[2]);
 			return -1;
 		}
 		else if (leitor.getStatus())
@@ -45,7 +50,7 @@ int main(int argc, char *argv[])
 	}
 	else
 	{
-		printf("Parametros invalidos, o programa deve ser executado com: %s [-e ou -i] caminho_arquivo", argv[0]);
+		printf("Parametros invalidos, o programa deve ser executado com: %s [-e ou -i] caminho_arquivo\n", argv[0]);
 		return 1;
 	}
 
