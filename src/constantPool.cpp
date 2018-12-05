@@ -1,3 +1,7 @@
+/*!
+ * \file
+ * \brief constantPool.cpp
+ */
 /**
  * @file constantPool.cpp
  * @details Este módulo contém as funções necessárias para a manipulação do pool de constantes.

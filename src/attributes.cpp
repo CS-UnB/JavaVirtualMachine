@@ -1,6 +1,6 @@
 /*!
  * \file
- * \brief Attributes.cpp
+ * \brief attributes.cpp
  */
 
 #include "attributes.h"

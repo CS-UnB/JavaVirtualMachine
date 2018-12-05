@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['pilhaoperandos_2eh',['pilhaOperandos.h',['../pilhaOperandos_8h.html',1,'']]]
+  ['main_2ecpp',['main.cpp',['../main_8cpp.html',1,'']]],
+  ['methods_2ecpp',['methods.cpp',['../methods_8cpp.html',1,'']]]
 ];

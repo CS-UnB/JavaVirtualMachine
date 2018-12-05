@@ -2,7 +2,7 @@
 \label{classPilhaOperandos}\index{Pilha\+Operandos@{Pilha\+Operandos}}
 
 
-Operand Stack\textquotesingle{}s Class.  
+Classe da pilha de operandos.  
 
 
 
@@ -13,49 +13,40 @@ Operand Stack\textquotesingle{}s Class.
 \begin{DoxyCompactItemize}
 \item 
 \hyperlink{classPilhaOperandos_ab17dc4822af4e7e7c0962152d93547c6}{Pilha\+Operandos} (int)
-\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classPilhaOperandos_ab44ede250e434c1bb17f21d787977f20}\label{classPilhaOperandos_ab44ede250e434c1bb17f21d787977f20}} 
+\begin{DoxyCompactList}\small\item\em Construtor. \end{DoxyCompactList}\item 
 uint8\+\_\+t \hyperlink{classPilhaOperandos_ab44ede250e434c1bb17f21d787977f20}{top\+\_\+type} ()
-\begin{DoxyCompactList}\small\item\em Recovers type of operands stack\textquotesingle{}s top. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classPilhaOperandos_a2fadf264a2a34fc52f89ef7e1e62f19b}\label{classPilhaOperandos_a2fadf264a2a34fc52f89ef7e1e62f19b}} 
+\begin{DoxyCompactList}\small\item\em Recupera o tipo do topo da pilha de operandos. \end{DoxyCompactList}\item 
 \hyperlink{unionelement__u}{element} \hyperlink{classPilhaOperandos_a2fadf264a2a34fc52f89ef7e1e62f19b}{top\+\_\+value} ()
-\begin{DoxyCompactList}\small\item\em Recovers value from operand\textquotesingle{}s stack\textquotesingle{}s top. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Recupera o valor do topo da pilha de operandos. \end{DoxyCompactList}\item 
 \hyperlink{unionelement__u}{element} \hyperlink{classPilhaOperandos_a17a3e3f5e3caad834db7653b2c17ef24}{pop} ()
-\begin{DoxyCompactList}\small\item\em Unstacks the top\textquotesingle{}s operand. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classPilhaOperandos_a9dd3f7998df13b3bef6f13a1edecf3a4}\label{classPilhaOperandos_a9dd3f7998df13b3bef6f13a1edecf3a4}} 
-\hyperlink{structtypedElement__s}{typed\+Element} {\bfseries pop\+Typed} ()
+\begin{DoxyCompactList}\small\item\em Desempilha o topo da pilha de operandos e retorna em um elemento de valor. \end{DoxyCompactList}\item 
+\hyperlink{structtypedElement__s}{typed\+Element} \hyperlink{classPilhaOperandos_a9dd3f7998df13b3bef6f13a1edecf3a4}{pop\+Typed} ()
 \item 
-\mbox{\Hypertarget{classPilhaOperandos_a26d2bb2bcaf156c09ed688958a6f00e2}\label{classPilhaOperandos_a26d2bb2bcaf156c09ed688958a6f00e2}} 
 std\+::string \hyperlink{classPilhaOperandos_a26d2bb2bcaf156c09ed688958a6f00e2}{get\+String} ()
-\begin{DoxyCompactList}\small\item\em Function to receives the top formatted in string. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Retorna o topo da pilha de operandos formatado em uma string. \end{DoxyCompactList}\item 
 void \hyperlink{classPilhaOperandos_aebcb6ec63863f3f273f2ded4331de26a}{push} (int)
-\begin{DoxyCompactList}\small\item\em Function that empiles a x value of integer type. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classPilhaOperandos_a6f8e84e9eeaac29d5607d0e87d7a566a}\label{classPilhaOperandos_a6f8e84e9eeaac29d5607d0e87d7a566a}} 
-void {\bfseries push} (int64\+\_\+t)
+\begin{DoxyCompactList}\small\item\em Empilha um valor de tipo inteiro. \end{DoxyCompactList}\item 
+void \hyperlink{classPilhaOperandos_a6f8e84e9eeaac29d5607d0e87d7a566a}{push} (int64\+\_\+t)
 \item 
 void \hyperlink{classPilhaOperandos_ab696a021a389db273c043bedf1e5f4d6}{push} (float)
-\begin{DoxyCompactList}\small\item\em Function that stacks a x value of float type. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Empilha um valor de tipo float. \end{DoxyCompactList}\item 
 void \hyperlink{classPilhaOperandos_a4b55bb7ee498ded849f19702e602fe85}{push} (double)
-\begin{DoxyCompactList}\small\item\em Function that stacks a x value of double type. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Empilha um valor de tipo double. \end{DoxyCompactList}\item 
 void \hyperlink{classPilhaOperandos_a76e6e4b9d47f9e549e4a9d76aef6d89d}{push} (bool)
-\begin{DoxyCompactList}\small\item\em Function that stacks a x value of boolean type. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Empilha um valor de tipo double. \end{DoxyCompactList}\item 
 void \hyperlink{classPilhaOperandos_aef0bd19eae8107546d419aba6d7c2d47}{push} (int $\ast$)
-\begin{DoxyCompactList}\small\item\em Function that stacks a x vlaue of an integer reference. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Empilha um valor de tipo referencia. \end{DoxyCompactList}\item 
 void \hyperlink{classPilhaOperandos_a2a8591e6f42cee7186ee70e0fa998208}{push} (\hyperlink{structtypedElement__s}{typed\+Element})
-\begin{DoxyCompactList}\small\item\em Function that stacks an typed element, calling the adequate function. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Empilha um elemento tipado, chamando a funÁ„o adequada ao tipo. \end{DoxyCompactList}\item 
 void \hyperlink{classPilhaOperandos_a7879a301351feee2cd4bbd7639e44822}{push} (\hyperlink{unionelement__u}{element}, uint8\+\_\+t)
-\begin{DoxyCompactList}\small\item\em Function checks the element type that must be added and calls the adequate function. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classPilhaOperandos_a3db3fb4dd085cd2f7454a92e93b7ad3c}\label{classPilhaOperandos_a3db3fb4dd085cd2f7454a92e93b7ad3c}} 
+\begin{DoxyCompactList}\small\item\em Verifica o tipo do elemento que deve ser empilhado e chama a funÁ„o adequada. \end{DoxyCompactList}\item 
 int \hyperlink{classPilhaOperandos_a3db3fb4dd085cd2f7454a92e93b7ad3c}{size} ()
-\begin{DoxyCompactList}\small\item\em Function that verifys the size of operands stack. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classPilhaOperandos_a6de0f5994b22c1c0b3d903e233bbf6fe}\label{classPilhaOperandos_a6de0f5994b22c1c0b3d903e233bbf6fe}} 
+\begin{DoxyCompactList}\small\item\em Verifica o tamanho da pilha de operandos. \end{DoxyCompactList}\item 
 int \hyperlink{classPilhaOperandos_a6de0f5994b22c1c0b3d903e233bbf6fe}{get\+Max\+Size} ()
-\begin{DoxyCompactList}\small\item\em Function that returns maximum size of operands stack. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classPilhaOperandos_a4099bf8202558794b12086c410da3e16}\label{classPilhaOperandos_a4099bf8202558794b12086c410da3e16}} 
+\begin{DoxyCompactList}\small\item\em Retorna o tamanho m·ximo da pilha de operandos. \end{DoxyCompactList}\item 
 bool \hyperlink{classPilhaOperandos_a4099bf8202558794b12086c410da3e16}{empty} ()
-\begin{DoxyCompactList}\small\item\em Function that returns if stack is empty or not. \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{classPilhaOperandos_ab0f7d8632714842751483b7463e34efb}\label{classPilhaOperandos_ab0f7d8632714842751483b7463e34efb}} 
-void {\bfseries print\+A\+LL} ()
+\begin{DoxyCompactList}\small\item\em Retorna se a pilha est· vazia (1) ou n„o (0) \end{DoxyCompactList}\item 
+void \hyperlink{classPilhaOperandos_ab0f7d8632714842751483b7463e34efb}{print\+A\+LL} ()
 \end{DoxyCompactItemize}
 \subsection*{Campos de Dados}
 \begin{DoxyCompactItemize}
@@ -66,9 +57,9 @@ const int {\bfseries max}
 
 
 \subsection{Descri√ß√£o detalhada}
-Operand Stack\textquotesingle{}s Class. 
+Classe da pilha de operandos. 
 
-Responsible for manipulation on the operands stack 
+Respons·vel por armazenar e manipular a pilha de operandos 
 
 \subsection{Documenta√ß√£o dos Construtores \& Destrutor}
 \mbox{\Hypertarget{classPilhaOperandos_ab17dc4822af4e7e7c0962152d93547c6}\label{classPilhaOperandos_ab17dc4822af4e7e7c0962152d93547c6}} 
@@ -79,17 +70,49 @@ Responsible for manipulation on the operands stack
 
 
 
-Constructor. 
+Construtor. 
+
+Construtor
 
 
 \begin{DoxyParams}{Par√¢metros}
-{\em max\+Size} & Indicates maximum size of operands stack \\
+{\em max\+Size} & Indica tamanho m·ximo da pilha de operandos \\
 \hline
 \end{DoxyParams}
 
 
 \subsection{Documenta√ß√£o dos m√©todos}
-\mbox{\Hypertarget{classPilhaOperandos_a17a3e3f5e3caad834db7653b2c17ef24}\label{classPilhaOperandos_a17a3e3f5e3caad834db7653b2c17ef24}} 
+\mbox{\Hypertarget{classPilhaOperandos_a4099bf8202558794b12086c410da3e16}\label{classPilhaOperandos_a4099bf8202558794b12086c410da3e16}} 
+\index{Pilha\+Operandos@{Pilha\+Operandos}!empty@{empty}}
+\index{empty@{empty}!Pilha\+Operandos@{Pilha\+Operandos}}
+\subsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily bool Pilha\+Operandos\+::empty (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna se a pilha est· vazia (1) ou n„o (0) 
+
+returna 1 se a pilha de valores estiver vazia, 0 caso contrÔøΩrio \mbox{\Hypertarget{classPilhaOperandos_a6de0f5994b22c1c0b3d903e233bbf6fe}\label{classPilhaOperandos_a6de0f5994b22c1c0b3d903e233bbf6fe}} 
+\index{Pilha\+Operandos@{Pilha\+Operandos}!get\+Max\+Size@{get\+Max\+Size}}
+\index{get\+Max\+Size@{get\+Max\+Size}!Pilha\+Operandos@{Pilha\+Operandos}}
+\subsubsection{\texorpdfstring{get\+Max\+Size()}{getMaxSize()}}
+{\footnotesize\ttfamily int Pilha\+Operandos\+::get\+Max\+Size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o tamanho m·ximo da pilha de operandos. 
+
+Retorna valor mÔøΩximo da pilha de operandos \mbox{\Hypertarget{classPilhaOperandos_a26d2bb2bcaf156c09ed688958a6f00e2}\label{classPilhaOperandos_a26d2bb2bcaf156c09ed688958a6f00e2}} 
+\index{Pilha\+Operandos@{Pilha\+Operandos}!get\+String@{get\+String}}
+\index{get\+String@{get\+String}!Pilha\+Operandos@{Pilha\+Operandos}}
+\subsubsection{\texorpdfstring{get\+String()}{getString()}}
+{\footnotesize\ttfamily std\+::string Pilha\+Operandos\+::get\+String (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o topo da pilha de operandos formatado em uma string. 
+
+Auxiliar do print\+All, imprime a string correspondente ao tipo do elemento \mbox{\Hypertarget{classPilhaOperandos_a17a3e3f5e3caad834db7653b2c17ef24}\label{classPilhaOperandos_a17a3e3f5e3caad834db7653b2c17ef24}} 
 \index{Pilha\+Operandos@{Pilha\+Operandos}!pop@{pop}}
 \index{pop@{pop}!Pilha\+Operandos@{Pilha\+Operandos}}
 \subsubsection{\texorpdfstring{pop()}{pop()}}
@@ -97,118 +120,182 @@ Constructor.
 
 
 
-Unstacks the top\textquotesingle{}s operand. 
+Desempilha o topo da pilha de operandos e retorna em um elemento de valor. 
 
-Unstacks the top\textquotesingle{}s operands return it\textquotesingle{}s types. \mbox{\Hypertarget{classPilhaOperandos_aebcb6ec63863f3f273f2ded4331de26a}\label{classPilhaOperandos_aebcb6ec63863f3f273f2ded4331de26a}} 
+Desempilha o topo da pilha de operandos e retorna em um elemento tipado.
+
+Retorna e remove topo da pilha de valores e da pop na pilha de tipos \mbox{\Hypertarget{classPilhaOperandos_a9dd3f7998df13b3bef6f13a1edecf3a4}\label{classPilhaOperandos_a9dd3f7998df13b3bef6f13a1edecf3a4}} 
+\index{Pilha\+Operandos@{Pilha\+Operandos}!pop\+Typed@{pop\+Typed}}
+\index{pop\+Typed@{pop\+Typed}!Pilha\+Operandos@{Pilha\+Operandos}}
+\subsubsection{\texorpdfstring{pop\+Typed()}{popTyped()}}
+{\footnotesize\ttfamily \hyperlink{structtypedElement__s}{typed\+Element} Pilha\+Operandos\+::pop\+Typed (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Retorna estrutura com valor e tipo associados e da pop na pilha de valores e na de tipos \mbox{\Hypertarget{classPilhaOperandos_ab0f7d8632714842751483b7463e34efb}\label{classPilhaOperandos_ab0f7d8632714842751483b7463e34efb}} 
+\index{Pilha\+Operandos@{Pilha\+Operandos}!print\+A\+LL@{print\+A\+LL}}
+\index{print\+A\+LL@{print\+A\+LL}!Pilha\+Operandos@{Pilha\+Operandos}}
+\subsubsection{\texorpdfstring{print\+A\+L\+L()}{printALL()}}
+{\footnotesize\ttfamily void Pilha\+Operandos\+::print\+A\+LL (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+Percorre e imprime toda a pilha de operandos \mbox{\Hypertarget{classPilhaOperandos_aebcb6ec63863f3f273f2ded4331de26a}\label{classPilhaOperandos_aebcb6ec63863f3f273f2ded4331de26a}} 
 \index{Pilha\+Operandos@{Pilha\+Operandos}!push@{push}}
 \index{push@{push}!Pilha\+Operandos@{Pilha\+Operandos}}
-\subsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [1/7]}}
+\subsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [1/8]}}
 {\footnotesize\ttfamily void Pilha\+Operandos\+::push (\begin{DoxyParamCaption}\item[{int}]{x }\end{DoxyParamCaption})}
 
 
 
-Function that empiles a x value of integer type. 
+Empilha um valor de tipo inteiro. 
+
+Empilha um int na pilha de valores e seu tipo na pilha de tipos
 
 
 \begin{DoxyParams}{Par√¢metros}
-{\em x} & Value to be stacked on stack \\
+{\em x} & Valor a ser empilhado \\
 \hline
 \end{DoxyParams}
-\mbox{\Hypertarget{classPilhaOperandos_ab696a021a389db273c043bedf1e5f4d6}\label{classPilhaOperandos_ab696a021a389db273c043bedf1e5f4d6}} 
+\mbox{\Hypertarget{classPilhaOperandos_a6f8e84e9eeaac29d5607d0e87d7a566a}\label{classPilhaOperandos_a6f8e84e9eeaac29d5607d0e87d7a566a}} 
 \index{Pilha\+Operandos@{Pilha\+Operandos}!push@{push}}
 \index{push@{push}!Pilha\+Operandos@{Pilha\+Operandos}}
-\subsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [2/7]}}
+\subsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [2/8]}}
+{\footnotesize\ttfamily void Pilha\+Operandos\+::push (\begin{DoxyParamCaption}\item[{int64\+\_\+t}]{\+\_\+x }\end{DoxyParamCaption})}
+
+Empilha um long na pilha de valores e seu tipo na pilha de tipos \mbox{\Hypertarget{classPilhaOperandos_ab696a021a389db273c043bedf1e5f4d6}\label{classPilhaOperandos_ab696a021a389db273c043bedf1e5f4d6}} 
+\index{Pilha\+Operandos@{Pilha\+Operandos}!push@{push}}
+\index{push@{push}!Pilha\+Operandos@{Pilha\+Operandos}}
+\subsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [3/8]}}
 {\footnotesize\ttfamily void Pilha\+Operandos\+::push (\begin{DoxyParamCaption}\item[{float}]{x }\end{DoxyParamCaption})}
 
 
 
-Function that stacks a x value of float type. 
+Empilha um valor de tipo float. 
+
+Empilha um float na pilha de valores e seu tipo na pilha de tipos
 
 
 \begin{DoxyParams}{Par√¢metros}
-{\em x} & Value to be stacked on stack \\
+{\em x} & Valor a ser empilhado \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classPilhaOperandos_a4b55bb7ee498ded849f19702e602fe85}\label{classPilhaOperandos_a4b55bb7ee498ded849f19702e602fe85}} 
 \index{Pilha\+Operandos@{Pilha\+Operandos}!push@{push}}
 \index{push@{push}!Pilha\+Operandos@{Pilha\+Operandos}}
-\subsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [3/7]}}
+\subsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [4/8]}}
 {\footnotesize\ttfamily void Pilha\+Operandos\+::push (\begin{DoxyParamCaption}\item[{double}]{x }\end{DoxyParamCaption})}
 
 
 
-Function that stacks a x value of double type. 
+Empilha um valor de tipo double. 
+
+Empilha um double na pilha de valores e seu tipo na pilha de tipos
 
 
 \begin{DoxyParams}{Par√¢metros}
-{\em x} & Value to be stacked on stack \\
+{\em x} & Valor a ser empilhado \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classPilhaOperandos_a76e6e4b9d47f9e549e4a9d76aef6d89d}\label{classPilhaOperandos_a76e6e4b9d47f9e549e4a9d76aef6d89d}} 
 \index{Pilha\+Operandos@{Pilha\+Operandos}!push@{push}}
 \index{push@{push}!Pilha\+Operandos@{Pilha\+Operandos}}
-\subsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [4/7]}}
+\subsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [5/8]}}
 {\footnotesize\ttfamily void Pilha\+Operandos\+::push (\begin{DoxyParamCaption}\item[{bool}]{x }\end{DoxyParamCaption})}
 
 
 
-Function that stacks a x value of boolean type. 
+Empilha um valor de tipo double. 
+
+Empilha um bool na pilha de valores e seu tipo na pilha de tipos
 
 
 \begin{DoxyParams}{Par√¢metros}
-{\em x} & Value to be stacked on stack \\
+{\em x} & Valor a ser empilhado \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classPilhaOperandos_aef0bd19eae8107546d419aba6d7c2d47}\label{classPilhaOperandos_aef0bd19eae8107546d419aba6d7c2d47}} 
 \index{Pilha\+Operandos@{Pilha\+Operandos}!push@{push}}
 \index{push@{push}!Pilha\+Operandos@{Pilha\+Operandos}}
-\subsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [5/7]}}
+\subsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [6/8]}}
 {\footnotesize\ttfamily void Pilha\+Operandos\+::push (\begin{DoxyParamCaption}\item[{int $\ast$}]{x }\end{DoxyParamCaption})}
 
 
 
-Function that stacks a x vlaue of an integer reference. 
+Empilha um valor de tipo referencia. 
+
+Empilha uma referencia na pilha de valores e seu tipo na pilha de tipos
 
 
 \begin{DoxyParams}{Par√¢metros}
-{\em x} & Reference to be stacked on the stack \\
+{\em x} & Referencia a ser empilhada \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classPilhaOperandos_a2a8591e6f42cee7186ee70e0fa998208}\label{classPilhaOperandos_a2a8591e6f42cee7186ee70e0fa998208}} 
 \index{Pilha\+Operandos@{Pilha\+Operandos}!push@{push}}
 \index{push@{push}!Pilha\+Operandos@{Pilha\+Operandos}}
-\subsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [6/7]}}
+\subsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [7/8]}}
 {\footnotesize\ttfamily void Pilha\+Operandos\+::push (\begin{DoxyParamCaption}\item[{\hyperlink{structtypedElement__s}{typed\+Element}}]{te }\end{DoxyParamCaption})}
 
 
 
-Function that stacks an typed element, calling the adequate function. 
+Empilha um elemento tipado, chamando a funÁ„o adequada ao tipo. 
+
+Empilha valor e tipo de estrutura com valor e tipo associados
 
 
 \begin{DoxyParams}{Par√¢metros}
-{\em x} & Element typed to be stacked on stack \\
+{\em x} & Elemento tipado a ser empilhado \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{classPilhaOperandos_a7879a301351feee2cd4bbd7639e44822}\label{classPilhaOperandos_a7879a301351feee2cd4bbd7639e44822}} 
 \index{Pilha\+Operandos@{Pilha\+Operandos}!push@{push}}
 \index{push@{push}!Pilha\+Operandos@{Pilha\+Operandos}}
-\subsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [7/7]}}
+\subsubsection{\texorpdfstring{push()}{push()}\hspace{0.1cm}{\footnotesize\ttfamily [8/8]}}
 {\footnotesize\ttfamily void Pilha\+Operandos\+::push (\begin{DoxyParamCaption}\item[{\hyperlink{unionelement__u}{element}}]{x,  }\item[{uint8\+\_\+t}]{tipo }\end{DoxyParamCaption})}
 
 
 
-Function checks the element type that must be added and calls the adequate function. 
+Verifica o tipo do elemento que deve ser empilhado e chama a funÁ„o adequada. 
+
+Chama a funÔøΩÔøΩo para empilhar de acordo com o tipo do elemento recebido
 
 
 \begin{DoxyParams}{Par√¢metros}
-{\em x} & Typed element to be stacked on stack \\
+{\em x} & Elemento a ser empilhado \\
 \hline
-{\em tipo} & Type of past element \\
+{\em tipo} & Tipo do elemento a ser empilhado \\
 \hline
 \end{DoxyParams}
+\mbox{\Hypertarget{classPilhaOperandos_a3db3fb4dd085cd2f7454a92e93b7ad3c}\label{classPilhaOperandos_a3db3fb4dd085cd2f7454a92e93b7ad3c}} 
+\index{Pilha\+Operandos@{Pilha\+Operandos}!size@{size}}
+\index{size@{size}!Pilha\+Operandos@{Pilha\+Operandos}}
+\subsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily int Pilha\+Operandos\+::size (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
 
+
+
+Verifica o tamanho da pilha de operandos. 
+
+Retorna o tamanho da pilha de valores \mbox{\Hypertarget{classPilhaOperandos_ab44ede250e434c1bb17f21d787977f20}\label{classPilhaOperandos_ab44ede250e434c1bb17f21d787977f20}} 
+\index{Pilha\+Operandos@{Pilha\+Operandos}!top\+\_\+type@{top\+\_\+type}}
+\index{top\+\_\+type@{top\+\_\+type}!Pilha\+Operandos@{Pilha\+Operandos}}
+\subsubsection{\texorpdfstring{top\+\_\+type()}{top\_type()}}
+{\footnotesize\ttfamily uint8\+\_\+t Pilha\+Operandos\+::top\+\_\+type (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Recupera o tipo do topo da pilha de operandos. 
+
+Retorna topo da pilha de tipos \mbox{\Hypertarget{classPilhaOperandos_a2fadf264a2a34fc52f89ef7e1e62f19b}\label{classPilhaOperandos_a2fadf264a2a34fc52f89ef7e1e62f19b}} 
+\index{Pilha\+Operandos@{Pilha\+Operandos}!top\+\_\+value@{top\+\_\+value}}
+\index{top\+\_\+value@{top\+\_\+value}!Pilha\+Operandos@{Pilha\+Operandos}}
+\subsubsection{\texorpdfstring{top\+\_\+value()}{top\_value()}}
+{\footnotesize\ttfamily \hyperlink{unionelement__u}{element} Pilha\+Operandos\+::top\+\_\+value (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Recupera o valor do topo da pilha de operandos. 
+
+Retorna topo da pilha de valores 
 
 A documenta√ß√£o para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
 \item 
 include/\hyperlink{pilhaOperandos_8h}{pilha\+Operandos.\+h}\item 
-src/pilha\+Operandos.\+cpp\end{DoxyCompactItemize}
+src/\hyperlink{pilhaOperandos_8cpp}{pilha\+Operandos.\+cpp}\end{DoxyCompactItemize}

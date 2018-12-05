@@ -1,3 +1,7 @@
+/*!
+ * \file main.cpp
+ * \brief 
+ */
 #include "classeLeitor.h"
 #include "frame.h"
 #include "methodArea.h"

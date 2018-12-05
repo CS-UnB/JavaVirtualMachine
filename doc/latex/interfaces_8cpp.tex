@@ -1,0 +1,89 @@
+\hypertarget{interfaces_8cpp}{}\section{ReferÃªncia ao ficheiro src/interfaces.cpp}
+\label{interfaces_8cpp}\index{src/interfaces.\+cpp@{src/interfaces.\+cpp}}
+
+
+Interfaces.  
+
+
+{\ttfamily \#include \char`\"{}interfaces.\+h\char`\"{}}\newline
+Diagrama de dependÃªncias de inclusÃ£o para interfaces.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{interfaces_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{FunÃ§Ãµes}
+\begin{DoxyCompactItemize}
+\item 
+unsigned short $\ast$ \hyperlink{interfaces_8cpp_a4cfdd916a94be1d8b2accd3fbeb85137}{read\+Interfaces} (F\+I\+LE $\ast$fp, int length)
+\begin{DoxyCompactList}\small\item\em Carrega as interfaces na memória a partir do arquivo class. \end{DoxyCompactList}\item 
+void \hyperlink{interfaces_8cpp_a6ec7de60877b4db37aecdb7cf818c863}{print\+Interfaces} (unsigned short $\ast$interfaces, \hyperlink{structcp__info}{cp\+\_\+info} $\ast$cp, int length)
+\begin{DoxyCompactList}\small\item\em Mostra todas as interfaces do arquivo. \end{DoxyCompactList}\item 
+void \hyperlink{interfaces_8cpp_a322d540c713562622b3708da7da2bc78}{print\+Interface} (unsigned short interface, \hyperlink{structcp__info}{cp\+\_\+info} $\ast$cp, int index)
+\begin{DoxyCompactList}\small\item\em Mostra informação de uma interface específica com o índice da interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{DescriÃ§Ã£o detalhada}
+Interfaces. 
+
+
+
+\subsection{DocumentaÃ§Ã£o das funÃ§Ãµes}
+\mbox{\Hypertarget{interfaces_8cpp_a322d540c713562622b3708da7da2bc78}\label{interfaces_8cpp_a322d540c713562622b3708da7da2bc78}} 
+\index{interfaces.\+cpp@{interfaces.\+cpp}!print\+Interface@{print\+Interface}}
+\index{print\+Interface@{print\+Interface}!interfaces.\+cpp@{interfaces.\+cpp}}
+\subsubsection{\texorpdfstring{print\+Interface()}{printInterface()}}
+{\footnotesize\ttfamily print\+Interface (\begin{DoxyParamCaption}\item[{unsigned short}]{interface,  }\item[{\hyperlink{structcp__info}{cp\+\_\+info} $\ast$}]{cp,  }\item[{int}]{index }\end{DoxyParamCaption})}
+
+
+
+Mostra informação de uma interface específica com o índice da interface. 
+
+
+\begin{DoxyParams}{ParÃ¢metros}
+{\em interface} & Indice do constantpool. \\
+\hline
+{\em cp} & Ponteiro para o constantpool. \\
+\hline
+{\em index} & Indice da interface específica. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interfaces_8cpp_a6ec7de60877b4db37aecdb7cf818c863}\label{interfaces_8cpp_a6ec7de60877b4db37aecdb7cf818c863}} 
+\index{interfaces.\+cpp@{interfaces.\+cpp}!print\+Interfaces@{print\+Interfaces}}
+\index{print\+Interfaces@{print\+Interfaces}!interfaces.\+cpp@{interfaces.\+cpp}}
+\subsubsection{\texorpdfstring{print\+Interfaces()}{printInterfaces()}}
+{\footnotesize\ttfamily void print\+Interfaces (\begin{DoxyParamCaption}\item[{unsigned short $\ast$}]{interfaces,  }\item[{\hyperlink{structcp__info}{cp\+\_\+info} $\ast$}]{cp,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+Mostra todas as interfaces do arquivo. 
+
+
+\begin{DoxyParams}{ParÃ¢metros}
+{\em interfaces} & Array de interfaces. \\
+\hline
+{\em cp} & Ponteiro para a constantpool. \\
+\hline
+{\em length} & Número de interfaces. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{interfaces_8cpp_a4cfdd916a94be1d8b2accd3fbeb85137}\label{interfaces_8cpp_a4cfdd916a94be1d8b2accd3fbeb85137}} 
+\index{interfaces.\+cpp@{interfaces.\+cpp}!read\+Interfaces@{read\+Interfaces}}
+\index{read\+Interfaces@{read\+Interfaces}!interfaces.\+cpp@{interfaces.\+cpp}}
+\subsubsection{\texorpdfstring{read\+Interfaces()}{readInterfaces()}}
+{\footnotesize\ttfamily unsigned short $\ast$ read\+Interfaces (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+Carrega as interfaces na memória a partir do arquivo class. 
+
+
+\begin{DoxyParams}{ParÃ¢metros}
+{\em flags} & Flags em haxadecimal que serão convertidas para string. \\
+\hline
+{\em fp} & Ponteiro para o arquivo class. \\
+\hline
+{\em length} & Numero de interfaces a serem lidas. \\
+\hline
+\end{DoxyParams}

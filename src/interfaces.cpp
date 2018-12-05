@@ -1,5 +1,5 @@
 /*!
- * \file Interfaces.cpp
+ * \file interfaces.cpp
  * \brief Interfaces
  */
 
