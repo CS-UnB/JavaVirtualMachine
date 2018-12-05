@@ -1,3 +1,8 @@
+/*!
+ * \file
+ * \brief Attributes.cpp
+ */
+
 #include "attributes.h"
 
 t_exception_table* readExceptionHandler(FILE* fp)
