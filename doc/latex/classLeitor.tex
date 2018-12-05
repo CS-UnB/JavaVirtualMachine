@@ -1,0 +1,430 @@
+\hypertarget{classLeitor}{}\section{Referência à classe Leitor}
+\label{classLeitor}\index{Leitor@{Leitor}}
+\subsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classLeitor_a0a1e8b666d75c2fd2c112affc0a8f55a}{Leitor} (char $\ast$in)
+\item 
+\hyperlink{classLeitor_a0ab1016df547c6e5081607b916eb7825}{Leitor} (std\+::string in)
+\item 
+int \hyperlink{classLeitor_a82a5ba05f6445e0c56f15eddecef21a3}{run} ()
+\begin{DoxyCompactList}\small\item\em Carrega todas as informções do class file e as imprime. \end{DoxyCompactList}\item 
+int \hyperlink{classLeitor_a69b1505dbce4cfdbb9fcb7e70ca639e6}{load} ()
+\begin{DoxyCompactList}\small\item\em Carrega todas as informações do class file. \end{DoxyCompactList}\item 
+void \hyperlink{classLeitor_a61890be2d648f47fcc6817ac8c751660}{print\+General\+Information} ()
+\begin{DoxyCompactList}\small\item\em Imprime informações gerais do .class. \end{DoxyCompactList}\item 
+bool \hyperlink{classLeitor_a1f50a340fba40d773af019975a3ab385}{show} ()
+\begin{DoxyCompactList}\small\item\em Imprime todas as informações do .class. \end{DoxyCompactList}\item 
+bool \hyperlink{classLeitor_a64ccb4aca8b2c665b79ace09a3423b77}{valid\+Extension} ()
+\begin{DoxyCompactList}\small\item\em Verifica se a extensão do arquivo é .class. \end{DoxyCompactList}\item 
+bool \hyperlink{classLeitor_a737ca7d70af56cab2c01fbfca0c774f7}{has\+Main} ()
+\begin{DoxyCompactList}\small\item\em Verifica se o .class possui função main. \end{DoxyCompactList}\item 
+\hyperlink{structmethod__info}{method\+\_\+info} \hyperlink{classLeitor_a462716ecacea891a2e07e77eec0dabe7}{get\+Main} ()
+\begin{DoxyCompactList}\small\item\em Retorna o método main. \end{DoxyCompactList}\item 
+bool \hyperlink{classLeitor_a31934be87590ff3732b3117ebe96cc34}{has\+Clinit} ()
+\begin{DoxyCompactList}\small\item\em Verifica se o .class tem o método $<$clinit$>$ \end{DoxyCompactList}\item 
+\hyperlink{structmethod__info}{method\+\_\+info} \hyperlink{classLeitor_a4c64b307c9690ba25f04e911e07fe5a3}{get\+Clinit} ()
+\begin{DoxyCompactList}\small\item\em Retorna o método $<$clinit$>$ \end{DoxyCompactList}\item 
+bool \hyperlink{classLeitor_a46501dcb0e924524b6354f5459503ce8}{check\+This\+Class} ()
+\begin{DoxyCompactList}\small\item\em Verifica se a class definida é igual ao nome da classe sem extensões. \end{DoxyCompactList}\item 
+int \hyperlink{classLeitor_a55c4c9df6771ce70388001a064f28256}{get\+Status} ()
+\begin{DoxyCompactList}\small\item\em Retorna o status lido, informando para o método que chamou o que aconteceu. \end{DoxyCompactList}\item 
+\hyperlink{structcp__info}{cp\+\_\+info} $\ast$ \hyperlink{classLeitor_a95bd2e9979122b1d742ce2e0dd6c4a4b}{get\+CP} () const
+\begin{DoxyCompactList}\small\item\em Retorna referencia a constant pool. \end{DoxyCompactList}\item 
+U2 \hyperlink{classLeitor_a53b7aac0c6d2b75104c6d53abd23b37e}{get\+Length\+CP} ()
+\begin{DoxyCompactList}\small\item\em Retorna o valor do tamanho da constant pool. \end{DoxyCompactList}\item 
+char $\ast$ \hyperlink{classLeitor_a28757ad7042926102520d2f28387acfe}{get\+Path} ()
+\begin{DoxyCompactList}\small\item\em Pega o caminho do arquivo .class. \end{DoxyCompactList}\item 
+\hyperlink{structmethod__info}{method\+\_\+info} $\ast$ \hyperlink{classLeitor_aa08c48544276f3c849eb138576d9f1b3}{get\+Methods} ()
+\begin{DoxyCompactList}\small\item\em Retorna todos os métodos. \end{DoxyCompactList}\item 
+U2 \hyperlink{classLeitor_a1bf5bcc94ae930802de39077836d6566}{get\+Methods\+Count} ()
+\begin{DoxyCompactList}\small\item\em Retorna o numero de methods. \end{DoxyCompactList}\item 
+U2 \hyperlink{classLeitor_a96d06888c1e8d4a6516c5e5f36d49801}{get\+This\+\_\+class} ()
+\begin{DoxyCompactList}\small\item\em Retorna um índice da constant pool que aponta para string com nome da class. \end{DoxyCompactList}\item 
+U2 \hyperlink{classLeitor_ab70e078103dc971808b62ab08cbfb4fa}{get\+Super\+\_\+class} ()
+\begin{DoxyCompactList}\small\item\em Retorna um índice da constant pool que aponta para string com nome da superclass. \end{DoxyCompactList}\item 
+U2 \hyperlink{classLeitor_a59287cad03c19ca411b7befce0008870}{get\+Fields\+Count} ()
+\begin{DoxyCompactList}\small\item\em Retorna número de fields. \end{DoxyCompactList}\item 
+\hyperlink{structfield__info}{field\+\_\+info} $\ast$ \hyperlink{classLeitor_a32f5a9515e24523f3f4016141de5cc9d}{get\+Fields} ()
+\begin{DoxyCompactList}\small\item\em Retorna todos os fields. \end{DoxyCompactList}\item 
+\hyperlink{structfield__info}{field\+\_\+info} $\ast$ \hyperlink{classLeitor_a1c0eb678858e00efa9c18d63832d3dff}{get\+Field} (string field\+\_\+name)
+\begin{DoxyCompactList}\small\item\em Retorna um field. \end{DoxyCompactList}\item 
+\hyperlink{structmethod__info}{method\+\_\+info} $\ast$ \hyperlink{classLeitor_a721a60b281566287c7845c52a667ecc1}{get\+Method} (string name, string descriptor)
+\begin{DoxyCompactList}\small\item\em Retorna o method info. \end{DoxyCompactList}\item 
+\hyperlink{classLeitor}{Leitor} $\ast$ \hyperlink{classLeitor_a568b259f176676472196ad0fb127c4f2}{get\+Class\+That\+Has\+Serached\+Method} (string name, string descriptor)
+\begin{DoxyCompactList}\small\item\em Retorna o ponteiro para o leitor do .class que contém o método encontrado em get\+Method. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classLeitor_a0a1e8b666d75c2fd2c112affc0a8f55a}\label{classLeitor_a0a1e8b666d75c2fd2c112affc0a8f55a}} 
+\index{Leitor@{Leitor}!Leitor@{Leitor}}
+\index{Leitor@{Leitor}!Leitor@{Leitor}}
+\subsubsection{\texorpdfstring{Leitor()}{Leitor()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Leitor\+::\+Leitor (\begin{DoxyParamCaption}\item[{char $\ast$}]{in }\end{DoxyParamCaption})}
+
+Construtor que configura um objeto da classe \hyperlink{classLeitor}{Leitor} com o nome do arquivo passado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em in} & argumento passado como nome do arquivo na inicializacao do programa \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLeitor_a0ab1016df547c6e5081607b916eb7825}\label{classLeitor_a0ab1016df547c6e5081607b916eb7825}} 
+\index{Leitor@{Leitor}!Leitor@{Leitor}}
+\index{Leitor@{Leitor}!Leitor@{Leitor}}
+\subsubsection{\texorpdfstring{Leitor()}{Leitor()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Leitor\+::\+Leitor (\begin{DoxyParamCaption}\item[{std\+::string}]{in }\end{DoxyParamCaption})}
+
+Construtor que configura um objeto da classe \hyperlink{classLeitor}{Leitor} com o nome do arquivo passado.
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em in} & argumento passado como nome do arquivo na inicializacao do programa \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentação dos métodos}
+\mbox{\Hypertarget{classLeitor_a46501dcb0e924524b6354f5459503ce8}\label{classLeitor_a46501dcb0e924524b6354f5459503ce8}} 
+\index{Leitor@{Leitor}!check\+This\+Class@{check\+This\+Class}}
+\index{check\+This\+Class@{check\+This\+Class}!Leitor@{Leitor}}
+\subsubsection{\texorpdfstring{check\+This\+Class()}{checkThisClass()}}
+{\footnotesize\ttfamily bool Leitor\+::check\+This\+Class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Verifica se a class definida é igual ao nome da classe sem extensões. 
+
+Verifica se a .class lida no bytecode é a mesma que foi declarada no nome do arquivo \begin{DoxyReturn}{Retorna}
+booleano indicando se a .class está correta 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLeitor_a568b259f176676472196ad0fb127c4f2}\label{classLeitor_a568b259f176676472196ad0fb127c4f2}} 
+\index{Leitor@{Leitor}!get\+Class\+That\+Has\+Serached\+Method@{get\+Class\+That\+Has\+Serached\+Method}}
+\index{get\+Class\+That\+Has\+Serached\+Method@{get\+Class\+That\+Has\+Serached\+Method}!Leitor@{Leitor}}
+\subsubsection{\texorpdfstring{get\+Class\+That\+Has\+Serached\+Method()}{getClassThatHasSerachedMethod()}}
+{\footnotesize\ttfamily U2 Leitor\+::get\+Class\+That\+Has\+Serached\+Method (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{string}]{descriptor }\end{DoxyParamCaption})}
+
+
+
+Retorna o ponteiro para o leitor do .class que contém o método encontrado em get\+Method. 
+
+Retorna a classe do metodo que esta sendo procurado 
+\begin{DoxyParams}{Parâmetros}
+{\em name} & nome do method \\
+\hline
+{\em descriptor} & descritor do method \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+classe \hyperlink{classLeitor}{Leitor}
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & Nome do method desejado \\
+\hline
+{\em descriptor} & Descritor do method desejado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLeitor_a4c64b307c9690ba25f04e911e07fe5a3}\label{classLeitor_a4c64b307c9690ba25f04e911e07fe5a3}} 
+\index{Leitor@{Leitor}!get\+Clinit@{get\+Clinit}}
+\index{get\+Clinit@{get\+Clinit}!Leitor@{Leitor}}
+\subsubsection{\texorpdfstring{get\+Clinit()}{getClinit()}}
+{\footnotesize\ttfamily \hyperlink{structmethod__info}{method\+\_\+info} Leitor\+::get\+Clinit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o método $<$clinit$>$ 
+
+Retorna o metodo clinit no formato da struct \hyperlink{structmethod__info}{method\+\_\+info} \begin{DoxyReturn}{Retorna}
+struct \hyperlink{structmethod__info}{method\+\_\+info} contendo informações sobre o método 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLeitor_a95bd2e9979122b1d742ce2e0dd6c4a4b}\label{classLeitor_a95bd2e9979122b1d742ce2e0dd6c4a4b}} 
+\index{Leitor@{Leitor}!get\+CP@{get\+CP}}
+\index{get\+CP@{get\+CP}!Leitor@{Leitor}}
+\subsubsection{\texorpdfstring{get\+C\+P()}{getCP()}}
+{\footnotesize\ttfamily \hyperlink{structcp__info}{cp\+\_\+info} $\ast$ Leitor\+::get\+CP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna referencia a constant pool. 
+
+método para pegar a constant pool lida \begin{DoxyReturn}{Retorna}
+Retorna a array com a constant pool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLeitor_a1c0eb678858e00efa9c18d63832d3dff}\label{classLeitor_a1c0eb678858e00efa9c18d63832d3dff}} 
+\index{Leitor@{Leitor}!get\+Field@{get\+Field}}
+\index{get\+Field@{get\+Field}!Leitor@{Leitor}}
+\subsubsection{\texorpdfstring{get\+Field()}{getField()}}
+{\footnotesize\ttfamily U2 Leitor\+::get\+Field (\begin{DoxyParamCaption}\item[{string}]{field\+\_\+name }\end{DoxyParamCaption})}
+
+
+
+Retorna um field. 
+
+Retorna um field 
+\begin{DoxyParams}{Parâmetros}
+{\em field\+\_\+name} & nome do field que deseja retornar \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+struct \hyperlink{structfield__info}{field\+\_\+info} com a informação da field passada no parâmetro
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parâmetros}
+{\em field\+\_\+name} & nome do field desejado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLeitor_a32f5a9515e24523f3f4016141de5cc9d}\label{classLeitor_a32f5a9515e24523f3f4016141de5cc9d}} 
+\index{Leitor@{Leitor}!get\+Fields@{get\+Fields}}
+\index{get\+Fields@{get\+Fields}!Leitor@{Leitor}}
+\subsubsection{\texorpdfstring{get\+Fields()}{getFields()}}
+{\footnotesize\ttfamily U2 Leitor\+::get\+Fields (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna todos os fields. 
+
+Retorna a array com as fields lidas \begin{DoxyReturn}{Retorna}
+a array da struct \hyperlink{structfield__info}{field\+\_\+info} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLeitor_a59287cad03c19ca411b7befce0008870}\label{classLeitor_a59287cad03c19ca411b7befce0008870}} 
+\index{Leitor@{Leitor}!get\+Fields\+Count@{get\+Fields\+Count}}
+\index{get\+Fields\+Count@{get\+Fields\+Count}!Leitor@{Leitor}}
+\subsubsection{\texorpdfstring{get\+Fields\+Count()}{getFieldsCount()}}
+{\footnotesize\ttfamily U2 Leitor\+::get\+Fields\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna número de fields. 
+
+Retorna o número de fields \begin{DoxyReturn}{Retorna}
+uint16\+\_\+t indicando o numero de fields 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLeitor_a53b7aac0c6d2b75104c6d53abd23b37e}\label{classLeitor_a53b7aac0c6d2b75104c6d53abd23b37e}} 
+\index{Leitor@{Leitor}!get\+Length\+CP@{get\+Length\+CP}}
+\index{get\+Length\+CP@{get\+Length\+CP}!Leitor@{Leitor}}
+\subsubsection{\texorpdfstring{get\+Length\+C\+P()}{getLengthCP()}}
+{\footnotesize\ttfamily U2 Leitor\+::get\+Length\+CP (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o valor do tamanho da constant pool. 
+
+método para pegar a constant pool lida \begin{DoxyReturn}{Retorna}
+Retorna a array com a constant pool 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLeitor_a462716ecacea891a2e07e77eec0dabe7}\label{classLeitor_a462716ecacea891a2e07e77eec0dabe7}} 
+\index{Leitor@{Leitor}!get\+Main@{get\+Main}}
+\index{get\+Main@{get\+Main}!Leitor@{Leitor}}
+\subsubsection{\texorpdfstring{get\+Main()}{getMain()}}
+{\footnotesize\ttfamily \hyperlink{structmethod__info}{method\+\_\+info} Leitor\+::get\+Main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o método main. 
+
+Retorna o metodo main no formato da struct \hyperlink{structmethod__info}{method\+\_\+info} \begin{DoxyReturn}{Retorna}
+struct \hyperlink{structmethod__info}{method\+\_\+info} contendo informações sobre o método 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLeitor_a721a60b281566287c7845c52a667ecc1}\label{classLeitor_a721a60b281566287c7845c52a667ecc1}} 
+\index{Leitor@{Leitor}!get\+Method@{get\+Method}}
+\index{get\+Method@{get\+Method}!Leitor@{Leitor}}
+\subsubsection{\texorpdfstring{get\+Method()}{getMethod()}}
+{\footnotesize\ttfamily U2 Leitor\+::get\+Method (\begin{DoxyParamCaption}\item[{string}]{name,  }\item[{string}]{descriptor }\end{DoxyParamCaption})}
+
+
+
+Retorna o method info. 
+
+Retorna um method 
+\begin{DoxyParams}{Parâmetros}
+{\em name} & nome do method \\
+\hline
+{\em descriptor} & descritor do method \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+struct \hyperlink{structfield__info}{field\+\_\+info} com a informação da field passada no parâmetro
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parâmetros}
+{\em name} & Nome do method desejado \\
+\hline
+{\em descriptor} & Descritor do method desejado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLeitor_aa08c48544276f3c849eb138576d9f1b3}\label{classLeitor_aa08c48544276f3c849eb138576d9f1b3}} 
+\index{Leitor@{Leitor}!get\+Methods@{get\+Methods}}
+\index{get\+Methods@{get\+Methods}!Leitor@{Leitor}}
+\subsubsection{\texorpdfstring{get\+Methods()}{getMethods()}}
+{\footnotesize\ttfamily \hyperlink{structmethod__info}{method\+\_\+info} $\ast$ Leitor\+::get\+Methods (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna todos os métodos. 
+
+Retorna a array contendo os métodos \begin{DoxyReturn}{Retorna}
+array do tipo \hyperlink{structmethod__info}{method\+\_\+info} 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLeitor_a1bf5bcc94ae930802de39077836d6566}\label{classLeitor_a1bf5bcc94ae930802de39077836d6566}} 
+\index{Leitor@{Leitor}!get\+Methods\+Count@{get\+Methods\+Count}}
+\index{get\+Methods\+Count@{get\+Methods\+Count}!Leitor@{Leitor}}
+\subsubsection{\texorpdfstring{get\+Methods\+Count()}{getMethodsCount()}}
+{\footnotesize\ttfamily U2 Leitor\+::get\+Methods\+Count (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o numero de methods. 
+
+Retorna o número de methods \begin{DoxyReturn}{Retorna}
+uint16\+\_\+t indicando o numero de metodos 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLeitor_a28757ad7042926102520d2f28387acfe}\label{classLeitor_a28757ad7042926102520d2f28387acfe}} 
+\index{Leitor@{Leitor}!get\+Path@{get\+Path}}
+\index{get\+Path@{get\+Path}!Leitor@{Leitor}}
+\subsubsection{\texorpdfstring{get\+Path()}{getPath()}}
+{\footnotesize\ttfamily char $\ast$ Leitor\+::get\+Path (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Pega o caminho do arquivo .class. 
+
+Verifica o caminho mais o nome do arquivo dependendo do sistema operacional \begin{DoxyReturn}{Retorna}
+Retorna a string com o caminho total do arquivo 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLeitor_a55c4c9df6771ce70388001a064f28256}\label{classLeitor_a55c4c9df6771ce70388001a064f28256}} 
+\index{Leitor@{Leitor}!get\+Status@{get\+Status}}
+\index{get\+Status@{get\+Status}!Leitor@{Leitor}}
+\subsubsection{\texorpdfstring{get\+Status()}{getStatus()}}
+{\footnotesize\ttfamily int Leitor\+::get\+Status (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o status lido, informando para o método que chamou o que aconteceu. 
+
+Retorna a variavel status que indica se houve erro na leitura do bytecode \begin{DoxyReturn}{Retorna}
+status 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLeitor_ab70e078103dc971808b62ab08cbfb4fa}\label{classLeitor_ab70e078103dc971808b62ab08cbfb4fa}} 
+\index{Leitor@{Leitor}!get\+Super\+\_\+class@{get\+Super\+\_\+class}}
+\index{get\+Super\+\_\+class@{get\+Super\+\_\+class}!Leitor@{Leitor}}
+\subsubsection{\texorpdfstring{get\+Super\+\_\+class()}{getSuper\_class()}}
+{\footnotesize\ttfamily U2 Leitor\+::get\+Super\+\_\+class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna um índice da constant pool que aponta para string com nome da superclass. 
+
+Retorna a variável que indica o super\+\_\+class \begin{DoxyReturn}{Retorna}
+uint16\+\_\+t super\+\_\+class 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLeitor_a96d06888c1e8d4a6516c5e5f36d49801}\label{classLeitor_a96d06888c1e8d4a6516c5e5f36d49801}} 
+\index{Leitor@{Leitor}!get\+This\+\_\+class@{get\+This\+\_\+class}}
+\index{get\+This\+\_\+class@{get\+This\+\_\+class}!Leitor@{Leitor}}
+\subsubsection{\texorpdfstring{get\+This\+\_\+class()}{getThis\_class()}}
+{\footnotesize\ttfamily U2 Leitor\+::get\+This\+\_\+class (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna um índice da constant pool que aponta para string com nome da class. 
+
+Retorna a variavel que indica o this\+\_\+class \begin{DoxyReturn}{Retorna}
+uint16\+\_\+t this\+\_\+class 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLeitor_a31934be87590ff3732b3117ebe96cc34}\label{classLeitor_a31934be87590ff3732b3117ebe96cc34}} 
+\index{Leitor@{Leitor}!has\+Clinit@{has\+Clinit}}
+\index{has\+Clinit@{has\+Clinit}!Leitor@{Leitor}}
+\subsubsection{\texorpdfstring{has\+Clinit()}{hasClinit()}}
+{\footnotesize\ttfamily bool Leitor\+::has\+Clinit (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Verifica se o .class tem o método $<$clinit$>$ 
+
+verifia se o metodo clinit foi encontrado \begin{DoxyReturn}{Retorna}
+booleano que indica se existe o metodo clinit 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLeitor_a737ca7d70af56cab2c01fbfca0c774f7}\label{classLeitor_a737ca7d70af56cab2c01fbfca0c774f7}} 
+\index{Leitor@{Leitor}!has\+Main@{has\+Main}}
+\index{has\+Main@{has\+Main}!Leitor@{Leitor}}
+\subsubsection{\texorpdfstring{has\+Main()}{hasMain()}}
+{\footnotesize\ttfamily bool Leitor\+::has\+Main (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Verifica se o .class possui função main. 
+
+verifia se o metodo main foi encontrado \begin{DoxyReturn}{Retorna}
+booleano que indica se existe o metodo main 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLeitor_a69b1505dbce4cfdbb9fcb7e70ca639e6}\label{classLeitor_a69b1505dbce4cfdbb9fcb7e70ca639e6}} 
+\index{Leitor@{Leitor}!load@{load}}
+\index{load@{load}!Leitor@{Leitor}}
+\subsubsection{\texorpdfstring{load()}{load()}}
+{\footnotesize\ttfamily int Leitor\+::load (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Carrega todas as informações do class file. 
+
+Carrega o class file na classe \begin{DoxyReturn}{Retorna}
+variavel status que indica se houve erro no programa 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLeitor_a61890be2d648f47fcc6817ac8c751660}\label{classLeitor_a61890be2d648f47fcc6817ac8c751660}} 
+\index{Leitor@{Leitor}!print\+General\+Information@{print\+General\+Information}}
+\index{print\+General\+Information@{print\+General\+Information}!Leitor@{Leitor}}
+\subsubsection{\texorpdfstring{print\+General\+Information()}{printGeneralInformation()}}
+{\footnotesize\ttfamily bool Leitor\+::print\+General\+Information (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime informações gerais do .class. 
+
+Exibidor do programa \begin{DoxyReturn}{Retorna}
+variavel status que indica se houve erro no programa 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLeitor_a82a5ba05f6445e0c56f15eddecef21a3}\label{classLeitor_a82a5ba05f6445e0c56f15eddecef21a3}} 
+\index{Leitor@{Leitor}!run@{run}}
+\index{run@{run}!Leitor@{Leitor}}
+\subsubsection{\texorpdfstring{run()}{run()}}
+{\footnotesize\ttfamily int Leitor\+::run (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Carrega todas as informções do class file e as imprime. 
+
+Armazenador e exibidor do programa \begin{DoxyReturn}{Retorna}
+variavel status que indica se houve erro no programa 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLeitor_a1f50a340fba40d773af019975a3ab385}\label{classLeitor_a1f50a340fba40d773af019975a3ab385}} 
+\index{Leitor@{Leitor}!show@{show}}
+\index{show@{show}!Leitor@{Leitor}}
+\subsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily bool Leitor\+::show (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Imprime todas as informações do .class. 
+
+Impressão do programa \begin{DoxyReturn}{Retorna}
+true ou false dependendo se a variavel status indicar que houve erro na leitura 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classLeitor_a64ccb4aca8b2c665b79ace09a3423b77}\label{classLeitor_a64ccb4aca8b2c665b79ace09a3423b77}} 
+\index{Leitor@{Leitor}!valid\+Extension@{valid\+Extension}}
+\index{valid\+Extension@{valid\+Extension}!Leitor@{Leitor}}
+\subsubsection{\texorpdfstring{valid\+Extension()}{validExtension()}}
+{\footnotesize\ttfamily bool Leitor\+::valid\+Extension (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Verifica se a extensão do arquivo é .class. 
+
+Lê os ultimos caracteres do arquivo pra ver se formam a extensao .class \begin{DoxyReturn}{Retorna}
+booleano que indica se existe o .class 
+\end{DoxyReturn}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{classeLeitor_8h}{classe\+Leitor.\+h}\item 
+src/classe\+Leitor.\+cpp\end{DoxyCompactItemize}

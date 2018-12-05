@@ -1,0 +1,117 @@
+\hypertarget{classLocalVariables}{}\section{Referência à classe Local\+Variables}
+\label{classLocalVariables}\index{Local\+Variables@{Local\+Variables}}
+
+
+Local variables Class.  
+
+
+
+
+{\ttfamily \#include $<$local\+Variables.\+h$>$}
+
+\subsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classLocalVariables_ae354d02f996f4f584fe857d9304161c1}{Local\+Variables} (uint16\+\_\+t)
+\begin{DoxyCompactList}\small\item\em \hyperlink{classLocalVariables}{Local\+Variables} class constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLocalVariables_aade71d244aca34815b7cab3b0fc57f27}\label{classLocalVariables_aade71d244aca34815b7cab3b0fc57f27}} 
+{\bfseries Local\+Variables} (uint16\+\_\+t, bool)
+\item 
+\mbox{\Hypertarget{classLocalVariables_aaf00f6cc3391fdd2cc0ecd2b1d31c887}\label{classLocalVariables_aaf00f6cc3391fdd2cc0ecd2b1d31c887}} 
+\hyperlink{classLocalVariables_aaf00f6cc3391fdd2cc0ecd2b1d31c887}{$\sim$\+Local\+Variables} ()
+\begin{DoxyCompactList}\small\item\em Destructor 4. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLocalVariables_a276a90a0e812a4d54601c7464dc9ee6a}\label{classLocalVariables_a276a90a0e812a4d54601c7464dc9ee6a}} 
+void \hyperlink{classLocalVariables_a276a90a0e812a4d54601c7464dc9ee6a}{printall} () const
+\begin{DoxyCompactList}\small\item\em Function to show all values. \end{DoxyCompactList}\item 
+void \hyperlink{classLocalVariables_ac48ae40b67afb74083ebb1163477a1a6}{set} (int, \hyperlink{structtypedElement__s}{typed\+Element})
+\begin{DoxyCompactList}\small\item\em Receives the typed element and inserts on past index. \end{DoxyCompactList}\item 
+\hyperlink{structtypedElement__s}{typed\+Element} \hyperlink{classLocalVariables_a4abbb4a732d7dd0f11a147b79c15ae10}{get} (int) const
+\begin{DoxyCompactList}\small\item\em Gets element on past position by index. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classLocalVariables_af8d5da296932e0ddb5fcc46fa1a1d7a3}\label{classLocalVariables_af8d5da296932e0ddb5fcc46fa1a1d7a3}} 
+int \hyperlink{classLocalVariables_af8d5da296932e0ddb5fcc46fa1a1d7a3}{get\+Max} () const
+\begin{DoxyCompactList}\small\item\em Function to know maximum size. \end{DoxyCompactList}\item 
+const \hyperlink{structtypedElement__s}{typed\+Element} \hyperlink{classLocalVariables_a6e978f3c992385f2909261e995105142}{operator\mbox{[}$\,$\mbox{]}} (const int) const
+\begin{DoxyCompactList}\small\item\em Function to allow class use like a struct\textquotesingle{}s array. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Local variables Class. 
+
+Responsible for all operations that envolves the local variables 
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classLocalVariables_ae354d02f996f4f584fe857d9304161c1}\label{classLocalVariables_ae354d02f996f4f584fe857d9304161c1}} 
+\index{Local\+Variables@{Local\+Variables}!Local\+Variables@{Local\+Variables}}
+\index{Local\+Variables@{Local\+Variables}!Local\+Variables@{Local\+Variables}}
+\subsubsection{\texorpdfstring{Local\+Variables()}{LocalVariables()}}
+{\footnotesize\ttfamily Local\+Variables\+::\+Local\+Variables (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{max\+Size }\end{DoxyParamCaption})}
+
+
+
+\hyperlink{classLocalVariables}{Local\+Variables} class constructor. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em max\+Size} & Maximum size of local variables that can be stored\\
+\hline
+{\em max\+Size} & Maximum site of local variables that can be stored \\
+\hline
+{\em slots} & Says if needs to be used two slots for all elements \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentação dos métodos}
+\mbox{\Hypertarget{classLocalVariables_a4abbb4a732d7dd0f11a147b79c15ae10}\label{classLocalVariables_a4abbb4a732d7dd0f11a147b79c15ae10}} 
+\index{Local\+Variables@{Local\+Variables}!get@{get}}
+\index{get@{get}!Local\+Variables@{Local\+Variables}}
+\subsubsection{\texorpdfstring{get()}{get()}}
+{\footnotesize\ttfamily \hyperlink{structtypedElement__s}{typed\+Element} Local\+Variables\+::get (\begin{DoxyParamCaption}\item[{int}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Gets element on past position by index. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em index} & Indicates the index that will be obtained the element \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLocalVariables_a6e978f3c992385f2909261e995105142}\label{classLocalVariables_a6e978f3c992385f2909261e995105142}} 
+\index{Local\+Variables@{Local\+Variables}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!Local\+Variables@{Local\+Variables}}
+\subsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily const \hyperlink{structtypedElement__s}{typed\+Element} Local\+Variables\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const int}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Function to allow class use like a struct\textquotesingle{}s array. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em index} & Indicates the index that must be accessed to obtain the typed element \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classLocalVariables_ac48ae40b67afb74083ebb1163477a1a6}\label{classLocalVariables_ac48ae40b67afb74083ebb1163477a1a6}} 
+\index{Local\+Variables@{Local\+Variables}!set@{set}}
+\index{set@{set}!Local\+Variables@{Local\+Variables}}
+\subsubsection{\texorpdfstring{set()}{set()}}
+{\footnotesize\ttfamily void Local\+Variables\+::set (\begin{DoxyParamCaption}\item[{int}]{index,  }\item[{\hyperlink{structtypedElement__s}{typed\+Element}}]{x }\end{DoxyParamCaption})}
+
+
+
+Receives the typed element and inserts on past index. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em index} & Says the index that will be inserted the past element \\
+\hline
+{\em x} & Typed element that will be inserted on indicated index \\
+\hline
+\end{DoxyParams}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{localVariables_8h}{local\+Variables.\+h}\item 
+src/\hyperlink{localVariables_8cpp}{local\+Variables.\+cpp}\end{DoxyCompactItemize}

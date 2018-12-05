@@ -1,0 +1,58 @@
+\hypertarget{structcode__attribute}{}\section{Referência à estrutura code\+\_\+attribute}
+\label{structcode__attribute}\index{code\+\_\+attribute@{code\+\_\+attribute}}
+
+
+Estrutura de dados para salvar atributos do tipo code.  
+
+
+
+
+{\ttfamily \#include $<$attributes.\+h$>$}
+
+
+
+Diagrama de colaboração para code\+\_\+attribute\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{structcode__attribute__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Campos de Dados}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structcode__attribute_ad8f0d9ec65c9065df510fb7313133eb0}\label{structcode__attribute_ad8f0d9ec65c9065df510fb7313133eb0}} 
+unsigned short {\bfseries max\+\_\+stack}
+\item 
+\mbox{\Hypertarget{structcode__attribute_aa5c39f7692d14498f497ac2425595dda}\label{structcode__attribute_aa5c39f7692d14498f497ac2425595dda}} 
+unsigned short {\bfseries max\+\_\+locals}
+\item 
+\mbox{\Hypertarget{structcode__attribute_a8d9bb88d00f7285dbad08ec687adfd2c}\label{structcode__attribute_a8d9bb88d00f7285dbad08ec687adfd2c}} 
+unsigned int {\bfseries code\+\_\+length}
+\item 
+\mbox{\Hypertarget{structcode__attribute_ad469a918dcfae54358813c9ccfa2b603}\label{structcode__attribute_ad469a918dcfae54358813c9ccfa2b603}} 
+unsigned char $\ast$ {\bfseries code}
+\item 
+\mbox{\Hypertarget{structcode__attribute_a52263ac885da86196b36a51e7ee5bd6e}\label{structcode__attribute_a52263ac885da86196b36a51e7ee5bd6e}} 
+unsigned short {\bfseries exception\+\_\+table\+\_\+length}
+\item 
+\mbox{\Hypertarget{structcode__attribute_a7d1657d4edf179c1596f9c102a887b3e}\label{structcode__attribute_a7d1657d4edf179c1596f9c102a887b3e}} 
+\hyperlink{structt__exception__table}{t\+\_\+exception\+\_\+table} $\ast$$\ast$ {\bfseries exception\+\_\+table}
+\item 
+\mbox{\Hypertarget{structcode__attribute_af71546c75dc3185e14b8cd5eb8cd6a24}\label{structcode__attribute_af71546c75dc3185e14b8cd5eb8cd6a24}} 
+unsigned short {\bfseries attribute\+\_\+count}
+\item 
+\mbox{\Hypertarget{structcode__attribute_a9f45491da8c177e471b75c9539bb37b2}\label{structcode__attribute_a9f45491da8c177e471b75c9539bb37b2}} 
+\hyperlink{structattribute__info}{attribute\+\_\+info} $\ast$ {\bfseries attributes}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Estrutura de dados para salvar atributos do tipo code. 
+
+Estrutura de dados para salvar atributos de tipo \char`\"{}exception\char`\"{}. 
+
+A documentação para esta estrutura foi gerada a partir do seguinte ficheiro\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{attributes_8h}{attributes.\+h}\end{DoxyCompactItemize}

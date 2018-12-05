@@ -1,0 +1,92 @@
+\hypertarget{classMethodArea}{}\section{Referência à classe Method\+Area}
+\label{classMethodArea}\index{Method\+Area@{Method\+Area}}
+
+
+Classe responsável por todas as operações que gerenciam os métodos.  
+
+
+
+
+{\ttfamily \#include $<$method\+Area.\+h$>$}
+
+\subsection*{Membros públicos estáticos}
+\begin{DoxyCompactItemize}
+\item 
+static \hyperlink{classClasseEstatica}{Classe\+Estatica} $\ast$ \hyperlink{classMethodArea_a81670949394fd7400fe8c006d010385e}{get\+Class} (string)
+\item 
+static bool \hyperlink{classMethodArea_ab67aa1b648a2dd5d78acb925501c311e}{add\+Class} (string)
+\item 
+static bool \hyperlink{classMethodArea_a8f781122a775565f9d99ec5603e4f432}{add\+Class} (\hyperlink{classLeitor}{Leitor} $\ast$)
+\item 
+static void \hyperlink{classMethodArea_af072c9b681a57a35a713b86fa61984d2}{set\+Frame\+Stack} (\hyperlink{classFrameStack}{Frame\+Stack} $\ast$)
+\end{DoxyCompactItemize}
+\subsection*{Atributos Públicos Estáticos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classMethodArea_a5fba57684c1552a65932306870b1130c}\label{classMethodArea_a5fba57684c1552a65932306870b1130c}} 
+static string {\bfseries path} = \char`\"{}\char`\"{}
+\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Classe responsável por todas as operações que gerenciam os métodos. 
+
+\subsection{Documentação dos métodos}
+\mbox{\Hypertarget{classMethodArea_ab67aa1b648a2dd5d78acb925501c311e}\label{classMethodArea_ab67aa1b648a2dd5d78acb925501c311e}} 
+\index{Method\+Area@{Method\+Area}!add\+Class@{add\+Class}}
+\index{add\+Class@{add\+Class}!Method\+Area@{Method\+Area}}
+\subsubsection{\texorpdfstring{add\+Class()}{addClass()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily bool Method\+Area\+::add\+Class (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Carrega a classe na memória
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em s} & Nome da classe \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMethodArea_a8f781122a775565f9d99ec5603e4f432}\label{classMethodArea_a8f781122a775565f9d99ec5603e4f432}} 
+\index{Method\+Area@{Method\+Area}!add\+Class@{add\+Class}}
+\index{add\+Class@{add\+Class}!Method\+Area@{Method\+Area}}
+\subsubsection{\texorpdfstring{add\+Class()}{addClass()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily bool Method\+Area\+::add\+Class (\begin{DoxyParamCaption}\item[{\hyperlink{classLeitor}{Leitor} $\ast$}]{l }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Carrega classe na memória
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em l} & informação do arquivo .class na memória \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMethodArea_a81670949394fd7400fe8c006d010385e}\label{classMethodArea_a81670949394fd7400fe8c006d010385e}} 
+\index{Method\+Area@{Method\+Area}!get\+Class@{get\+Class}}
+\index{get\+Class@{get\+Class}!Method\+Area@{Method\+Area}}
+\subsubsection{\texorpdfstring{get\+Class()}{getClass()}}
+{\footnotesize\ttfamily \hyperlink{classClasseEstatica}{Classe\+Estatica} $\ast$ Method\+Area\+::get\+Class (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Retorna referência para classe estática
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em s} & Nome da classe \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classMethodArea_af072c9b681a57a35a713b86fa61984d2}\label{classMethodArea_af072c9b681a57a35a713b86fa61984d2}} 
+\index{Method\+Area@{Method\+Area}!set\+Frame\+Stack@{set\+Frame\+Stack}}
+\index{set\+Frame\+Stack@{set\+Frame\+Stack}!Method\+Area@{Method\+Area}}
+\subsubsection{\texorpdfstring{set\+Frame\+Stack()}{setFrameStack()}}
+{\footnotesize\ttfamily void Method\+Area\+::set\+Frame\+Stack (\begin{DoxyParamCaption}\item[{\hyperlink{classFrameStack}{Frame\+Stack} $\ast$}]{new\+FS }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Atualiza a referência da pilha de frames para o próximo frame
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em new\+FS} & próximo frame \\
+\hline
+\end{DoxyParams}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+include/method\+Area.\+h\item 
+src/method\+Area.\+cpp\end{DoxyCompactItemize}

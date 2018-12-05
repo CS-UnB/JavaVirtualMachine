@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Java Virtual Machine: Referência à estrutura frame_s</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Java Virtual Machine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Campos de Dados</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência à estrutura frame_s</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Estrutura de armazenamento.  
+ <a href="structframe__s.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="frame_8h_source.html">frame.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de colaboração para frame_s:</div>
+<div class="dyncontent">
+<div class="center"><img src="structframe__s__coll__graph.png" border="0" usemap="#frame__s_coll__map" alt="Collaboration graph"/></div>
+<map name="frame__s_coll__map" id="frame__s_coll__map">
+<area shape="rect" id="node2" href="structmethod__info.html" title="method_info" alt="" coords="254,95,347,121"/>
+<area shape="rect" id="node3" href="structattribute__info.html" title="Estrutura de dados para salvar a posição do atributo na constantpool e seu tamanho. " alt="" coords="484,5,581,32"/>
+<area shape="rect" id="node5" href="structcode__attribute.html" title="Estrutura de dados para salvar atributos do tipo code. " alt="" coords="583,95,687,121"/>
+<area shape="rect" id="node4" href="uniont__info.html" title="Estrutura de dados que agrega informações sobre cada atributo lido. " alt="" coords="699,184,753,211"/>
+<area shape="rect" id="node6" href="structt__exception__table.html" title="Struct para salvar exceções identificadas. Será utilizada como componente da struct &quot;code_attribute&quot;..." alt="" coords="605,5,729,32"/>
+<area shape="rect" id="node7" href="structexception__attribute.html" title="exception_attribute" alt="" coords="712,95,844,121"/>
+<area shape="rect" id="node8" href="structconstantvalue__attribute.html" title="Struct para carregar o index dos atributos da &quot;constantpool&quot;. " alt="" coords="869,95,1026,121"/>
+<area shape="rect" id="node9" href="classLocalVariables.html" title="Local variables Class. " alt="" coords="123,95,230,121"/>
+<area shape="rect" id="node10" href="structcp__info.html" title="Possui um elemento pool de constante. " alt="" coords="35,95,99,121"/>
+<area shape="rect" id="node11" href="unionClassLoaderType.html" title="Estrutura de dados para armazenamento Union responsável por armazenar todos os tamanhos de variáveis ..." alt="" coords="5,5,129,32"/>
+<area shape="rect" id="node12" href="classPilhaOperandos.html" title="Operand Stack&#39;s Class. " alt="" coords="371,95,486,121"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legenda</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Campos de Dados</h2></td></tr>
+<tr class="memitem:a74703c716b34b0be42af1c698ef9f621"><td class="memItemLeft" align="right" valign="top"><a id="a74703c716b34b0be42af1c698ef9f621"></a>
+unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><b>pc</b></td></tr>
+<tr class="separator:a74703c716b34b0be42af1c698ef9f621"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9e281d20d1a4393e4744dd1d07de5126"><td class="memItemLeft" align="right" valign="top"><a id="a9e281d20d1a4393e4744dd1d07de5126"></a>
+<a class="el" href="structcp__info.html">cp_info</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>cp</b></td></tr>
+<tr class="separator:a9e281d20d1a4393e4744dd1d07de5126"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5377bbe53d53c855f8e11544cb26c9d2"><td class="memItemLeft" align="right" valign="top"><a id="a5377bbe53d53c855f8e11544cb26c9d2"></a>
+<a class="el" href="classPilhaOperandos.html">PilhaOperandos</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>operandos</b></td></tr>
+<tr class="separator:a5377bbe53d53c855f8e11544cb26c9d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c0fe214398d7c0b688465bbed8a36d1"><td class="memItemLeft" align="right" valign="top"><a id="a4c0fe214398d7c0b688465bbed8a36d1"></a>
+<a class="el" href="classLocalVariables.html">LocalVariables</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>locals</b></td></tr>
+<tr class="separator:a4c0fe214398d7c0b688465bbed8a36d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa771844a4dc507d1c37bfb5b378889e3"><td class="memItemLeft" align="right" valign="top"><a id="aa771844a4dc507d1c37bfb5b378889e3"></a>
+<a class="el" href="structmethod__info.html">method_info</a>&#160;</td><td class="memItemRight" valign="bottom"><b>m</b></td></tr>
+<tr class="separator:aa771844a4dc507d1c37bfb5b378889e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Estrutura de armazenamento. </p>
+<p>Responsável por todas as informações necessárias para a execução de um método. </p>
+</div><hr/>A documentação para esta estrutura foi gerada a partir do seguinte ficheiro:<ul>
+<li>include/<a class="el" href="frame_8h_source.html">frame.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

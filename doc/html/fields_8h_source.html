@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Java Virtual Machine: Código-Fonte de include/fields.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Java Virtual Machine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">fields.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="fields_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#ifndef FIELDS</span></div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#define FIELDS</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="baseTypes_8h.html">baseTypes.h</a>&quot;</span></div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="constantPool_8h.html">constantPool.h</a>&quot;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="attributes_8h.html">attributes.h</a>&quot;</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">using namespace </span><a class="code" href="namespacestd.html">std</a>;</div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div><div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="structfield__info.html">   27</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span>{</div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> accessFlags;</div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> name_index;</div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> descriptor_index;</div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">unsigned</span> <span class="keywordtype">char</span> attributes_count;</div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <a class="code" href="structattribute__info.html">attribute_info</a> *attributes;</div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;} <a class="code" href="structfield__info.html">field_info</a>;</div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keywordtype">string</span> <a class="code" href="fields_8h.html#a8b0a792b5f197e376c9f92ec12fda1d8">getFieldFlags</a> (<span class="keywordtype">unsigned</span> <span class="keywordtype">short</span> flags);</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<a class="code" href="structfield__info.html">field_info</a> <a class="code" href="fields_8h.html#a95a676570bdecf7ee0595e28472f6b4c">readField</a> (FILE* fp, <a class="code" href="structcp__info.html">cp_info</a> *cp);</div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div><div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<a class="code" href="structfield__info.html">field_info</a> *<a class="code" href="fields_8h.html#a1eb34923f335ccdf5bed84dec284d907">readFields</a> (FILE* fp, <span class="keywordtype">int</span> length,<a class="code" href="structcp__info.html">cp_info</a> *cp);</div><div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div><div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keywordtype">void</span> printField (<a class="code" href="structfield__info.html">field_info</a> f, <a class="code" href="structcp__info.html">cp_info</a> *cp, <span class="keywordtype">int</span> index);</div><div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;<span class="keywordtype">void</span> <a class="code" href="fields_8h.html#a51b92b23bc1d716b7497c2574577c563">printFields</a> (<a class="code" href="structfield__info.html">field_info</a> *f, <a class="code" href="structcp__info.html">cp_info</a> *cp, <span class="keywordtype">int</span> length);</div><div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="fields_8h_html_a1eb34923f335ccdf5bed84dec284d907"><div class="ttname"><a href="fields_8h.html#a1eb34923f335ccdf5bed84dec284d907">readFields</a></div><div class="ttdeci">field_info * readFields(FILE *fp, int length, cp_info *cp)</div><div class="ttdoc">Função que aloca field_info espaço e chama readField &quot;lenght&quot; vezes. </div><div class="ttdef"><b>Definition:</b> fields.cpp:42</div></div>
+<div class="ttc" id="attributes_8h_html"><div class="ttname"><a href="attributes_8h.html">attributes.h</a></div><div class="ttdoc">Atributos a serem usados na execuçao da JVM. </div></div>
+<div class="ttc" id="fields_8h_html_a95a676570bdecf7ee0595e28472f6b4c"><div class="ttname"><a href="fields_8h.html#a95a676570bdecf7ee0595e28472f6b4c">readField</a></div><div class="ttdeci">field_info readField(FILE *fp, cp_info *cp)</div><div class="ttdoc">Função que lê um campo. </div><div class="ttdef"><b>Definition:</b> fields.cpp:27</div></div>
+<div class="ttc" id="namespacestd_html"><div class="ttname"><a href="namespacestd.html">std</a></div></div>
+<div class="ttc" id="structattribute__info_html"><div class="ttname"><a href="structattribute__info.html">attribute_info</a></div><div class="ttdoc">Estrutura de dados para salvar a posição do atributo na constantpool e seu tamanho. </div><div class="ttdef"><b>Definition:</b> attributes.h:80</div></div>
+<div class="ttc" id="baseTypes_8h_html"><div class="ttname"><a href="baseTypes_8h.html">baseTypes.h</a></div><div class="ttdoc">Tipos Base Tipos básicos utilizados para implementarmos a JVM. </div></div>
+<div class="ttc" id="structcp__info_html"><div class="ttname"><a href="structcp__info.html">cp_info</a></div><div class="ttdoc">Possui um elemento pool de constante. </div><div class="ttdef"><b>Definition:</b> constantPool.h:22</div></div>
+<div class="ttc" id="constantPool_8h_html"><div class="ttname"><a href="constantPool_8h.html">constantPool.h</a></div><div class="ttdoc">Módulo Constant pool. </div></div>
+<div class="ttc" id="structfield__info_html"><div class="ttname"><a href="structfield__info.html">field_info</a></div><div class="ttdoc">Struct de armazenamento. </div><div class="ttdef"><b>Definition:</b> fields.h:27</div></div>
+<div class="ttc" id="fields_8h_html_a8b0a792b5f197e376c9f92ec12fda1d8"><div class="ttname"><a href="fields_8h.html#a8b0a792b5f197e376c9f92ec12fda1d8">getFieldFlags</a></div><div class="ttdeci">string getFieldFlags(unsigned short flags)</div><div class="ttdoc">Função para mostrar as flags dos campos. </div><div class="ttdef"><b>Definition:</b> fields.cpp:51</div></div>
+<div class="ttc" id="fields_8h_html_a51b92b23bc1d716b7497c2574577c563"><div class="ttname"><a href="fields_8h.html#a51b92b23bc1d716b7497c2574577c563">printFields</a></div><div class="ttdeci">void printFields(field_info *f, cp_info *cp, int length)</div><div class="ttdoc">Fuunção que chama printField o número de vezes determinado por &quot;length&quot;. </div><div class="ttdef"><b>Definition:</b> fields.cpp:21</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

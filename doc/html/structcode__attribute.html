@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Java Virtual Machine: Referência à estrutura code_attribute</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Java Virtual Machine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-attribs">Campos de Dados</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência à estrutura code_attribute</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Estrutura de dados para salvar atributos do tipo code.  
+ <a href="structcode__attribute.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="attributes_8h_source.html">attributes.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagrama de colaboração para code_attribute:</div>
+<div class="dyncontent">
+<div class="center"><img src="structcode__attribute__coll__graph.png" border="0" usemap="#code__attribute_coll__map" alt="Collaboration graph"/></div>
+<map name="code__attribute_coll__map" id="code__attribute_coll__map">
+<area shape="rect" id="node4" href="uniont__info.html" title="Estrutura de dados que agrega informações sobre cada atributo lido. " alt="" coords="260,184,315,211"/>
+<area shape="rect" id="node2" href="structt__exception__table.html" title="Struct para salvar exceções identificadas. Será utilizada como componente da struct &quot;code_attribute&quot;..." alt="" coords="341,5,465,32"/>
+<area shape="rect" id="node3" href="structattribute__info.html" title="Estrutura de dados para salvar a posição do atributo na constantpool e seu tamanho. " alt="" coords="324,273,421,300"/>
+<area shape="rect" id="node5" href="structexception__attribute.html" title="exception_attribute" alt="" coords="5,95,137,121"/>
+<area shape="rect" id="node6" href="structconstantvalue__attribute.html" title="Struct para carregar o index dos atributos da &quot;constantpool&quot;. " alt="" coords="162,95,319,121"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legenda</a>]</span></center></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Campos de Dados</h2></td></tr>
+<tr class="memitem:ad8f0d9ec65c9065df510fb7313133eb0"><td class="memItemLeft" align="right" valign="top"><a id="ad8f0d9ec65c9065df510fb7313133eb0"></a>
+unsigned short&#160;</td><td class="memItemRight" valign="bottom"><b>max_stack</b></td></tr>
+<tr class="separator:ad8f0d9ec65c9065df510fb7313133eb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa5c39f7692d14498f497ac2425595dda"><td class="memItemLeft" align="right" valign="top"><a id="aa5c39f7692d14498f497ac2425595dda"></a>
+unsigned short&#160;</td><td class="memItemRight" valign="bottom"><b>max_locals</b></td></tr>
+<tr class="separator:aa5c39f7692d14498f497ac2425595dda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d9bb88d00f7285dbad08ec687adfd2c"><td class="memItemLeft" align="right" valign="top"><a id="a8d9bb88d00f7285dbad08ec687adfd2c"></a>
+unsigned int&#160;</td><td class="memItemRight" valign="bottom"><b>code_length</b></td></tr>
+<tr class="separator:a8d9bb88d00f7285dbad08ec687adfd2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad469a918dcfae54358813c9ccfa2b603"><td class="memItemLeft" align="right" valign="top"><a id="ad469a918dcfae54358813c9ccfa2b603"></a>
+unsigned char *&#160;</td><td class="memItemRight" valign="bottom"><b>code</b></td></tr>
+<tr class="separator:ad469a918dcfae54358813c9ccfa2b603"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52263ac885da86196b36a51e7ee5bd6e"><td class="memItemLeft" align="right" valign="top"><a id="a52263ac885da86196b36a51e7ee5bd6e"></a>
+unsigned short&#160;</td><td class="memItemRight" valign="bottom"><b>exception_table_length</b></td></tr>
+<tr class="separator:a52263ac885da86196b36a51e7ee5bd6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7d1657d4edf179c1596f9c102a887b3e"><td class="memItemLeft" align="right" valign="top"><a id="a7d1657d4edf179c1596f9c102a887b3e"></a>
+<a class="el" href="structt__exception__table.html">t_exception_table</a> **&#160;</td><td class="memItemRight" valign="bottom"><b>exception_table</b></td></tr>
+<tr class="separator:a7d1657d4edf179c1596f9c102a887b3e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af71546c75dc3185e14b8cd5eb8cd6a24"><td class="memItemLeft" align="right" valign="top"><a id="af71546c75dc3185e14b8cd5eb8cd6a24"></a>
+unsigned short&#160;</td><td class="memItemRight" valign="bottom"><b>attribute_count</b></td></tr>
+<tr class="separator:af71546c75dc3185e14b8cd5eb8cd6a24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f45491da8c177e471b75c9539bb37b2"><td class="memItemLeft" align="right" valign="top"><a id="a9f45491da8c177e471b75c9539bb37b2"></a>
+<a class="el" href="structattribute__info.html">attribute_info</a> *&#160;</td><td class="memItemRight" valign="bottom"><b>attributes</b></td></tr>
+<tr class="separator:a9f45491da8c177e471b75c9539bb37b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Estrutura de dados para salvar atributos do tipo code. </p>
+<p>Estrutura de dados para salvar atributos de tipo "exception". </p>
+</div><hr/>A documentação para esta estrutura foi gerada a partir do seguinte ficheiro:<ul>
+<li>include/<a class="el" href="attributes_8h_source.html">attributes.h</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

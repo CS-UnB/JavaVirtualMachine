@@ -1,0 +1,101 @@
+\hypertarget{fields_8cpp}{}\section{Referência ao ficheiro src/fields.cpp}
+\label{fields_8cpp}\index{src/fields.\+cpp@{src/fields.\+cpp}}
+{\ttfamily \#include \char`\"{}fields.\+h\char`\"{}}\newline
+Diagrama de dependências de inclusão para fields.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{fields_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{fields_8cpp_a3bba8cdcee17336a5484fb8a9d4bcd92}\label{fields_8cpp_a3bba8cdcee17336a5484fb8a9d4bcd92}} 
+void {\bfseries print\+Field} (\hyperlink{structfield__info}{field\+\_\+info} f, \hyperlink{structcp__info}{cp\+\_\+info} $\ast$cp, int index)
+\item 
+void \hyperlink{fields_8cpp_a51b92b23bc1d716b7497c2574577c563}{print\+Fields} (\hyperlink{structfield__info}{field\+\_\+info} $\ast$f, \hyperlink{structcp__info}{cp\+\_\+info} $\ast$cp, int length)
+\begin{DoxyCompactList}\small\item\em Fuunção que chama print\+Field o número de vezes determinado por \char`\"{}length\char`\"{}. \end{DoxyCompactList}\item 
+\hyperlink{structfield__info}{field\+\_\+info} \hyperlink{fields_8cpp_a95a676570bdecf7ee0595e28472f6b4c}{read\+Field} (F\+I\+LE $\ast$fp, \hyperlink{structcp__info}{cp\+\_\+info} $\ast$cp)
+\begin{DoxyCompactList}\small\item\em Função que lê um campo. \end{DoxyCompactList}\item 
+\hyperlink{structfield__info}{field\+\_\+info} $\ast$ \hyperlink{fields_8cpp_a0a6c2187c6709928ac89c55afec60703}{read\+Fields} (F\+I\+LE $\ast$fp, int length, \hyperlink{structcp__info}{cp\+\_\+info} $\ast$cp)
+\begin{DoxyCompactList}\small\item\em Função que aloca \hyperlink{structfield__info}{field\+\_\+info} espaço e chama read\+Field \char`\"{}lenght\char`\"{} vezes. \end{DoxyCompactList}\item 
+string \hyperlink{fields_8cpp_a8b0a792b5f197e376c9f92ec12fda1d8}{get\+Field\+Flags} (unsigned short flags)
+\begin{DoxyCompactList}\small\item\em Função para mostrar as flags dos campos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Módulo responsável pela manipulação dos campos existentes no arquivo .class 
+
+\subsection{Documentação das funções}
+\mbox{\Hypertarget{fields_8cpp_a8b0a792b5f197e376c9f92ec12fda1d8}\label{fields_8cpp_a8b0a792b5f197e376c9f92ec12fda1d8}} 
+\index{fields.\+cpp@{fields.\+cpp}!get\+Field\+Flags@{get\+Field\+Flags}}
+\index{get\+Field\+Flags@{get\+Field\+Flags}!fields.\+cpp@{fields.\+cpp}}
+\subsubsection{\texorpdfstring{get\+Field\+Flags()}{getFieldFlags()}}
+{\footnotesize\ttfamily string get\+Field\+Flags (\begin{DoxyParamCaption}\item[{unsigned short}]{flags }\end{DoxyParamCaption})}
+
+
+
+Função para mostrar as flags dos campos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em flags} & Flags em haxadecimal que serão convertidas para string. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fields_8cpp_a51b92b23bc1d716b7497c2574577c563}\label{fields_8cpp_a51b92b23bc1d716b7497c2574577c563}} 
+\index{fields.\+cpp@{fields.\+cpp}!print\+Fields@{print\+Fields}}
+\index{print\+Fields@{print\+Fields}!fields.\+cpp@{fields.\+cpp}}
+\subsubsection{\texorpdfstring{print\+Fields()}{printFields()}}
+{\footnotesize\ttfamily void print\+Fields (\begin{DoxyParamCaption}\item[{\hyperlink{structfield__info}{field\+\_\+info} $\ast$}]{f,  }\item[{\hyperlink{structcp__info}{cp\+\_\+info} $\ast$}]{cp,  }\item[{int}]{length }\end{DoxyParamCaption})}
+
+
+
+Fuunção que chama print\+Field o número de vezes determinado por \char`\"{}length\char`\"{}. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em f} & Struct que contém informação dos campos. \\
+\hline
+{\em cp} & Ponteiro para pool de constantes. \\
+\hline
+{\em length} & Define o número de chamadas à print\+Field. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fields_8cpp_a95a676570bdecf7ee0595e28472f6b4c}\label{fields_8cpp_a95a676570bdecf7ee0595e28472f6b4c}} 
+\index{fields.\+cpp@{fields.\+cpp}!read\+Field@{read\+Field}}
+\index{read\+Field@{read\+Field}!fields.\+cpp@{fields.\+cpp}}
+\subsubsection{\texorpdfstring{read\+Field()}{readField()}}
+{\footnotesize\ttfamily \hyperlink{structfield__info}{field\+\_\+info} read\+Field (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{\hyperlink{structcp__info}{cp\+\_\+info} $\ast$}]{cp }\end{DoxyParamCaption})}
+
+
+
+Função que lê um campo. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em fp} & Ponteiro para arquivo .class. \\
+\hline
+{\em cp} & Ponteiro para pool de constantes. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{fields_8cpp_a0a6c2187c6709928ac89c55afec60703}\label{fields_8cpp_a0a6c2187c6709928ac89c55afec60703}} 
+\index{fields.\+cpp@{fields.\+cpp}!read\+Fields@{read\+Fields}}
+\index{read\+Fields@{read\+Fields}!fields.\+cpp@{fields.\+cpp}}
+\subsubsection{\texorpdfstring{read\+Fields()}{readFields()}}
+{\footnotesize\ttfamily \hyperlink{structfield__info}{field\+\_\+info} $\ast$ read\+Fields (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{int}]{length,  }\item[{\hyperlink{structcp__info}{cp\+\_\+info} $\ast$}]{cp }\end{DoxyParamCaption})}
+
+
+
+Função que aloca \hyperlink{structfield__info}{field\+\_\+info} espaço e chama read\+Field \char`\"{}lenght\char`\"{} vezes. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em fp} & Ponteiro para arquivo .class. \\
+\hline
+{\em cp} & Ponteiro para pool de constantes. \\
+\hline
+{\em length} & Define o número de chamadas à read\+Field. \\
+\hline
+\end{DoxyParams}

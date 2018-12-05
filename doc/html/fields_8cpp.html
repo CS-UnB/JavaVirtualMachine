@@ -1,0 +1,264 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Java Virtual Machine: Referência ao ficheiro src/fields.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Java Virtual Machine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência ao ficheiro fields.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="fields_8h_source.html">fields.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Diagrama de dependências de inclusão para fields.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="fields_8cpp__incl.png" border="0" usemap="#src_2fields_8cpp" alt=""/></div>
+<map name="src_2fields_8cpp" id="src_2fields_8cpp">
+<area shape="rect" id="node2" href="fields_8h.html" title="Classe field. " alt="" coords="456,80,520,107"/>
+<area shape="rect" id="node3" href="baseTypes_8h.html" title="Tipos Base Tipos básicos utilizados para implementarmos a JVM. " alt="" coords="349,304,446,331"/>
+<area shape="rect" id="node12" href="constantPool_8h.html" title="Módulo Constant pool. " alt="" coords="433,229,543,256"/>
+<area shape="rect" id="node13" href="attributes_8h.html" title="Atributos a serem usados na execuçao da JVM. " alt="" coords="537,155,623,181"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:a3bba8cdcee17336a5484fb8a9d4bcd92"><td class="memItemLeft" align="right" valign="top"><a id="a3bba8cdcee17336a5484fb8a9d4bcd92"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>printField</b> (<a class="el" href="structfield__info.html">field_info</a> f, <a class="el" href="structcp__info.html">cp_info</a> *cp, int index)</td></tr>
+<tr class="separator:a3bba8cdcee17336a5484fb8a9d4bcd92"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a51b92b23bc1d716b7497c2574577c563"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fields_8cpp.html#a51b92b23bc1d716b7497c2574577c563">printFields</a> (<a class="el" href="structfield__info.html">field_info</a> *f, <a class="el" href="structcp__info.html">cp_info</a> *cp, int length)</td></tr>
+<tr class="memdesc:a51b92b23bc1d716b7497c2574577c563"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fuunção que chama printField o número de vezes determinado por "length".  <a href="#a51b92b23bc1d716b7497c2574577c563">Mais...</a><br /></td></tr>
+<tr class="separator:a51b92b23bc1d716b7497c2574577c563"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95a676570bdecf7ee0595e28472f6b4c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structfield__info.html">field_info</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fields_8cpp.html#a95a676570bdecf7ee0595e28472f6b4c">readField</a> (FILE *fp, <a class="el" href="structcp__info.html">cp_info</a> *cp)</td></tr>
+<tr class="memdesc:a95a676570bdecf7ee0595e28472f6b4c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que lê um campo.  <a href="#a95a676570bdecf7ee0595e28472f6b4c">Mais...</a><br /></td></tr>
+<tr class="separator:a95a676570bdecf7ee0595e28472f6b4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a6c2187c6709928ac89c55afec60703"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structfield__info.html">field_info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fields_8cpp.html#a0a6c2187c6709928ac89c55afec60703">readFields</a> (FILE *fp, int length, <a class="el" href="structcp__info.html">cp_info</a> *cp)</td></tr>
+<tr class="memdesc:a0a6c2187c6709928ac89c55afec60703"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função que aloca <a class="el" href="structfield__info.html" title="Struct de armazenamento. ">field_info</a> espaço e chama readField "lenght" vezes.  <a href="#a0a6c2187c6709928ac89c55afec60703">Mais...</a><br /></td></tr>
+<tr class="separator:a0a6c2187c6709928ac89c55afec60703"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b0a792b5f197e376c9f92ec12fda1d8"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="fields_8cpp.html#a8b0a792b5f197e376c9f92ec12fda1d8">getFieldFlags</a> (unsigned short flags)</td></tr>
+<tr class="memdesc:a8b0a792b5f197e376c9f92ec12fda1d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Função para mostrar as flags dos campos.  <a href="#a8b0a792b5f197e376c9f92ec12fda1d8">Mais...</a><br /></td></tr>
+<tr class="separator:a8b0a792b5f197e376c9f92ec12fda1d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Módulo responsável pela manipulação dos campos existentes no arquivo .class </p>
+</div><h2 class="groupheader">Documentação das funções</h2>
+<a id="a8b0a792b5f197e376c9f92ec12fda1d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b0a792b5f197e376c9f92ec12fda1d8">&#9670;&nbsp;</a></span>getFieldFlags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string getFieldFlags </td>
+          <td>(</td>
+          <td class="paramtype">unsigned short&#160;</td>
+          <td class="paramname"><em>flags</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função para mostrar as flags dos campos. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flags</td><td>Flags em haxadecimal que serão convertidas para string. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a51b92b23bc1d716b7497c2574577c563"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a51b92b23bc1d716b7497c2574577c563">&#9670;&nbsp;</a></span>printFields()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printFields </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structfield__info.html">field_info</a> *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcp__info.html">cp_info</a> *&#160;</td>
+          <td class="paramname"><em>cp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Fuunção que chama printField o número de vezes determinado por "length". </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>Struct que contém informação dos campos. </td></tr>
+    <tr><td class="paramname">cp</td><td>Ponteiro para pool de constantes. </td></tr>
+    <tr><td class="paramname">length</td><td>Define o número de chamadas à printField. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a95a676570bdecf7ee0595e28472f6b4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95a676570bdecf7ee0595e28472f6b4c">&#9670;&nbsp;</a></span>readField()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structfield__info.html">field_info</a> readField </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcp__info.html">cp_info</a> *&#160;</td>
+          <td class="paramname"><em>cp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que lê um campo. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fp</td><td>Ponteiro para arquivo .class. </td></tr>
+    <tr><td class="paramname">cp</td><td>Ponteiro para pool de constantes. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a0a6c2187c6709928ac89c55afec60703"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a6c2187c6709928ac89c55afec60703">&#9670;&nbsp;</a></span>readFields()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structfield__info.html">field_info</a> * readFields </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcp__info.html">cp_info</a> *&#160;</td>
+          <td class="paramname"><em>cp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Função que aloca <a class="el" href="structfield__info.html" title="Struct de armazenamento. ">field_info</a> espaço e chama readField "lenght" vezes. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">fp</td><td>Ponteiro para arquivo .class. </td></tr>
+    <tr><td class="paramname">cp</td><td>Ponteiro para pool de constantes. </td></tr>
+    <tr><td class="paramname">length</td><td>Define o número de chamadas à readField. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,0 +1,12 @@
+<map id="include/localVariables.h" name="include/localVariables.h">
+<area shape="rect" id="node2" href="$localVariables_8cpp.html" title="LocalVariables.cpp. " alt="" coords="28,80,179,107"/>
+<area shape="rect" id="node3" href="$frame_8h.html" title="Contém tudo necessário para a execução de um método. " alt="" coords="203,80,313,107"/>
+<area shape="rect" id="node4" href="$frame_8cpp.html" title="src/frame.cpp" alt="" coords="5,155,108,181"/>
+<area shape="rect" id="node5" href="$methodArea_8h_source.html" title="include/methodArea.h" alt="" coords="184,155,332,181"/>
+<area shape="rect" id="node9" href="$operacoes_8h_source.html" title="include/operacoes.h" alt="" coords="307,379,446,405"/>
+<area shape="rect" id="node6" href="$classeLeitor_8h.html" title="include/classeLeitor.h" alt="" coords="77,229,225,256"/>
+<area shape="rect" id="node7" href="$classe_8h.html" title="Definição da ClasseEstatica e da ClasseInstancia. " alt="" coords="165,304,281,331"/>
+<area shape="rect" id="node8" href="$classe_8cpp.html" title="Class.cpp. " alt="" coords="39,379,146,405"/>
+<area shape="rect" id="node10" href="$heap_8h.html" title="Definição do Heap. " alt="" coords="170,379,277,405"/>
+<area shape="rect" id="node11" href="$heap_8cpp.html" title="src/heap.cpp" alt="" coords="175,453,272,480"/>
+</map>

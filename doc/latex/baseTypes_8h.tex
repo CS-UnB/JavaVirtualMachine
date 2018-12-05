@@ -1,0 +1,331 @@
+\hypertarget{baseTypes_8h}{}\section{Referência ao ficheiro include/base\+Types.h}
+\label{baseTypes_8h}\index{include/base\+Types.\+h@{include/base\+Types.\+h}}
+
+
+Tipos Base Tipos básicos utilizados para implementarmos a J\+VM.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$stdint.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$sstream$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$stdexcept$>$}\newline
+Diagrama de dependências de inclusão para base\+Types.\+h\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{baseTypes_8h__incl}
+\end{center}
+\end{figure}
+Este grafo mostra quais são os ficheiros que incluem directamente ou indirectamente este ficheiro\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{baseTypes_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Estruturas de Dados}
+\begin{DoxyCompactItemize}
+\item 
+union \hyperlink{unionClassLoaderType}{Class\+Loader\+Type}
+\begin{DoxyCompactList}\small\item\em Estrutura de dados para armazenamento Union responsável por armazenar todos os tamanhos de variáveis utilzadas na J\+VM. \end{DoxyCompactList}\item 
+union \hyperlink{unionelement__u}{element\+\_\+u}
+\begin{DoxyCompactList}\small\item\em Generalização de funções de retorno/input Union responsável pela generalização de funções de retorno e uma função de input. \end{DoxyCompactList}\item 
+struct \hyperlink{structn__array}{n\+\_\+array}
+\item 
+struct \hyperlink{structtypedElement__s}{typed\+Element\+\_\+s}
+\begin{DoxyCompactList}\small\item\em Agregador de tipos e informações. Struct responsável por juntar tipos e informações de elementos. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{baseTypes_8h_a2222d817ce6bbd243023a7471e44a5d6}\label{baseTypes_8h_a2222d817ce6bbd243023a7471e44a5d6}} 
+\#define {\bfseries Float\+\_\+\+NaN}~0x7f800001
+\item 
+\mbox{\Hypertarget{baseTypes_8h_af40742e3f905fd8d0968a3f0b5160649}\label{baseTypes_8h_af40742e3f905fd8d0968a3f0b5160649}} 
+\#define {\bfseries Float\+\_\+\+Plus\+Infinity}~0x7f800000
+\item 
+\mbox{\Hypertarget{baseTypes_8h_a8553cea1fd99855eeadf2f4ea7a3ac72}\label{baseTypes_8h_a8553cea1fd99855eeadf2f4ea7a3ac72}} 
+\#define {\bfseries Float\+\_\+\+Minus\+Infinity}~0xff800000
+\item 
+\mbox{\Hypertarget{baseTypes_8h_a30cf2596dc23460158fefbe6dc4c359e}\label{baseTypes_8h_a30cf2596dc23460158fefbe6dc4c359e}} 
+\#define {\bfseries Double\+\_\+\+NaN}~0x7ff0000000000001L
+\item 
+\mbox{\Hypertarget{baseTypes_8h_a2323042af27da372d902198570438d6d}\label{baseTypes_8h_a2323042af27da372d902198570438d6d}} 
+\#define {\bfseries Double\+\_\+\+Plus\+Infinity}~0x7ff0000000000000L
+\item 
+\mbox{\Hypertarget{baseTypes_8h_ad5fb6a3d0e63e11648c5f3ad7febb0ad}\label{baseTypes_8h_ad5fb6a3d0e63e11648c5f3ad7febb0ad}} 
+\#define {\bfseries Double\+\_\+\+Minus\+Infinity}~0xfff0000000000000L
+\item 
+\mbox{\Hypertarget{baseTypes_8h_a5a991e148e312c68d851b11b4b7be584}\label{baseTypes_8h_a5a991e148e312c68d851b11b4b7be584}} 
+\#define {\bfseries R\+T\+\_\+\+B\+Y\+TE}~1
+\item 
+\mbox{\Hypertarget{baseTypes_8h_ae0ecf90db844a032db00e19482c633d1}\label{baseTypes_8h_ae0ecf90db844a032db00e19482c633d1}} 
+\#define {\bfseries R\+T\+\_\+\+B\+O\+OL}~2
+\item 
+\mbox{\Hypertarget{baseTypes_8h_aefa4685f803fc7df5788405390df6aab}\label{baseTypes_8h_aefa4685f803fc7df5788405390df6aab}} 
+\#define {\bfseries R\+T\+\_\+\+C\+H\+AR}~3
+\item 
+\mbox{\Hypertarget{baseTypes_8h_a15a051a50ea712336d1e809ed5fe240f}\label{baseTypes_8h_a15a051a50ea712336d1e809ed5fe240f}} 
+\#define {\bfseries R\+T\+\_\+\+S\+H\+O\+RT}~4
+\item 
+\mbox{\Hypertarget{baseTypes_8h_ae8d7be4292c8262f3fe8a12a9d5012f1}\label{baseTypes_8h_ae8d7be4292c8262f3fe8a12a9d5012f1}} 
+\#define {\bfseries R\+T\+\_\+\+I\+NT}~5
+\item 
+\mbox{\Hypertarget{baseTypes_8h_a1eee60e646767c4b249177593302d237}\label{baseTypes_8h_a1eee60e646767c4b249177593302d237}} 
+\#define {\bfseries R\+T\+\_\+\+F\+L\+O\+AT}~6
+\item 
+\mbox{\Hypertarget{baseTypes_8h_a3e1ffaf0d9c3d4614139871cfea4e779}\label{baseTypes_8h_a3e1ffaf0d9c3d4614139871cfea4e779}} 
+\#define {\bfseries R\+T\+\_\+\+D\+O\+U\+B\+LE}~7
+\item 
+\mbox{\Hypertarget{baseTypes_8h_ac2620c935a093d64e17628fbb36a5e79}\label{baseTypes_8h_ac2620c935a093d64e17628fbb36a5e79}} 
+\#define {\bfseries R\+T\+\_\+\+R\+E\+F\+E\+R\+E\+N\+CE}~8
+\item 
+\mbox{\Hypertarget{baseTypes_8h_a321c0fe6e16c9d74517df8a769fa723d}\label{baseTypes_8h_a321c0fe6e16c9d74517df8a769fa723d}} 
+\#define {\bfseries R\+T\+\_\+\+L\+O\+NG}~9
+\end{DoxyCompactItemize}
+\subsection*{Definições de tipos}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{baseTypes_8h_a9bffe5bb2564f91cd90fb7d06848f9a8}\label{baseTypes_8h_a9bffe5bb2564f91cd90fb7d06848f9a8}} 
+typedef uint8\+\_\+t {\bfseries U1}
+\item 
+\mbox{\Hypertarget{baseTypes_8h_a90240657108b1b457eef9d3f76e0202e}\label{baseTypes_8h_a90240657108b1b457eef9d3f76e0202e}} 
+typedef uint16\+\_\+t {\bfseries U2}
+\item 
+\mbox{\Hypertarget{baseTypes_8h_ac6d2ba2e53dd424684ead2f40e74a8b6}\label{baseTypes_8h_ac6d2ba2e53dd424684ead2f40e74a8b6}} 
+typedef uint32\+\_\+t {\bfseries U4}
+\item 
+\mbox{\Hypertarget{baseTypes_8h_a7413c5ade8aad8440eb5086c61173de5}\label{baseTypes_8h_a7413c5ade8aad8440eb5086c61173de5}} 
+typedef union \hyperlink{unionelement__u}{element\+\_\+u} {\bfseries element}
+\item 
+\mbox{\Hypertarget{baseTypes_8h_a17b26383e038d1a85e30de17ddcb3292}\label{baseTypes_8h_a17b26383e038d1a85e30de17ddcb3292}} 
+typedef struct \hyperlink{structtypedElement__s}{typed\+Element\+\_\+s} {\bfseries typed\+Element}
+\end{DoxyCompactItemize}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+U1 \hyperlink{baseTypes_8h_a8a134c72da9699c32dbec57627955328}{read\+U1} (F\+I\+LE $\ast$fp)
+\begin{DoxyCompactList}\small\item\em Função para ler 1 byte do arquivo .class. \end{DoxyCompactList}\item 
+U2 \hyperlink{baseTypes_8h_a81f8cf10d3f1ee282c2f124ebf00b718}{read\+U2} (F\+I\+LE $\ast$fp)
+\begin{DoxyCompactList}\small\item\em Função para ler 2 bytes do arquivo .class. \end{DoxyCompactList}\item 
+U4 \hyperlink{baseTypes_8h_a836a4be80a9f428623a68e687e6c30c6}{read\+U4} (F\+I\+LE $\ast$fp)
+\begin{DoxyCompactList}\small\item\em Função para ler 4 bytes do arquivo .class. \end{DoxyCompactList}\item 
+U1 $\ast$ \hyperlink{baseTypes_8h_a1b1c1fe27d442689b07d0d54f17c44aa}{read\+U\+T\+F8} (F\+I\+LE $\ast$fp, int size)
+\begin{DoxyCompactList}\small\item\em Função para ler os bytes de uma string U\+T\+F-\/8. \end{DoxyCompactList}\item 
+string \hyperlink{baseTypes_8h_a22f1f8c2b398f9db39f18565b36986f1}{show\+U\+T\+F8} (unsigned char $\ast$s, int size)
+\begin{DoxyCompactList}\small\item\em Função para montar e mostrar a uma string U\+T\+F-\/8. \end{DoxyCompactList}\item 
+int \hyperlink{baseTypes_8h_a5acaa092b09c93a09a62a07642507b66}{check\+Float} (float)
+\begin{DoxyCompactList}\small\item\em Função para verificar NaN e infinito. \end{DoxyCompactList}\item 
+int \hyperlink{baseTypes_8h_a83beed8fe3725ef9da796d4fd5449346}{check\+Double} (double)
+\begin{DoxyCompactList}\small\item\em Função para verificar NaN e infinito. \end{DoxyCompactList}\item 
+string \hyperlink{baseTypes_8h_a2c059bd56e4f7b2f6f066c99def4c0a3}{float\+\_\+to\+\_\+string} (float)
+\begin{DoxyCompactList}\small\item\em Função para converter float para string. \end{DoxyCompactList}\item 
+string \hyperlink{baseTypes_8h_afb46c6880fb822cd896bd2365eb0f935}{double\+\_\+to\+\_\+string} (double)
+\begin{DoxyCompactList}\small\item\em Função para converter double para string. \end{DoxyCompactList}\item 
+float \hyperlink{baseTypes_8h_a0f3ffb86bcc68531d481dd68c556b086}{u4\+\_\+to\+\_\+float} (\hyperlink{unionClassLoaderType}{Class\+Loader\+Type} in)
+\begin{DoxyCompactList}\small\item\em Function to convert 4 bytes to a float. \end{DoxyCompactList}\item 
+long \hyperlink{baseTypes_8h_a5b4ee2146dd5beafbac7709a37bdbbd2}{u4\+\_\+to\+\_\+long} (\hyperlink{unionClassLoaderType}{Class\+Loader\+Type} high, \hyperlink{unionClassLoaderType}{Class\+Loader\+Type} low)
+\begin{DoxyCompactList}\small\item\em Function to convert 8 bytes to a long. \end{DoxyCompactList}\item 
+double \hyperlink{baseTypes_8h_a51bdc30e142e0a9d888eb56ce9b5484b}{u4\+\_\+to\+\_\+double} (\hyperlink{unionClassLoaderType}{Class\+Loader\+Type} high, \hyperlink{unionClassLoaderType}{Class\+Loader\+Type} low)
+\begin{DoxyCompactList}\small\item\em Function to convert 8 bytes to a double. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Tipos Base Tipos básicos utilizados para implementarmos a J\+VM. 
+
+
+
+\subsection{Documentação das funções}
+\mbox{\Hypertarget{baseTypes_8h_a83beed8fe3725ef9da796d4fd5449346}\label{baseTypes_8h_a83beed8fe3725ef9da796d4fd5449346}} 
+\index{base\+Types.\+h@{base\+Types.\+h}!check\+Double@{check\+Double}}
+\index{check\+Double@{check\+Double}!base\+Types.\+h@{base\+Types.\+h}}
+\subsubsection{\texorpdfstring{check\+Double()}{checkDouble()}}
+{\footnotesize\ttfamily int check\+Double (\begin{DoxyParamCaption}\item[{double}]{d }\end{DoxyParamCaption})}
+
+
+
+Função para verificar NaN e infinito. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em double} & Number to be checked. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{baseTypes_8h_a5acaa092b09c93a09a62a07642507b66}\label{baseTypes_8h_a5acaa092b09c93a09a62a07642507b66}} 
+\index{base\+Types.\+h@{base\+Types.\+h}!check\+Float@{check\+Float}}
+\index{check\+Float@{check\+Float}!base\+Types.\+h@{base\+Types.\+h}}
+\subsubsection{\texorpdfstring{check\+Float()}{checkFloat()}}
+{\footnotesize\ttfamily int check\+Float (\begin{DoxyParamCaption}\item[{float}]{f }\end{DoxyParamCaption})}
+
+
+
+Função para verificar NaN e infinito. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em float} & Número a ser verificado. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{baseTypes_8h_afb46c6880fb822cd896bd2365eb0f935}\label{baseTypes_8h_afb46c6880fb822cd896bd2365eb0f935}} 
+\index{base\+Types.\+h@{base\+Types.\+h}!double\+\_\+to\+\_\+string@{double\+\_\+to\+\_\+string}}
+\index{double\+\_\+to\+\_\+string@{double\+\_\+to\+\_\+string}!base\+Types.\+h@{base\+Types.\+h}}
+\subsubsection{\texorpdfstring{double\+\_\+to\+\_\+string()}{double\_to\_string()}}
+{\footnotesize\ttfamily string double\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{double}]{d }\end{DoxyParamCaption})}
+
+
+
+Função para converter double para string. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em double} & Número a ser convertido. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{baseTypes_8h_a2c059bd56e4f7b2f6f066c99def4c0a3}\label{baseTypes_8h_a2c059bd56e4f7b2f6f066c99def4c0a3}} 
+\index{base\+Types.\+h@{base\+Types.\+h}!float\+\_\+to\+\_\+string@{float\+\_\+to\+\_\+string}}
+\index{float\+\_\+to\+\_\+string@{float\+\_\+to\+\_\+string}!base\+Types.\+h@{base\+Types.\+h}}
+\subsubsection{\texorpdfstring{float\+\_\+to\+\_\+string()}{float\_to\_string()}}
+{\footnotesize\ttfamily string float\+\_\+to\+\_\+string (\begin{DoxyParamCaption}\item[{float}]{f }\end{DoxyParamCaption})}
+
+
+
+Função para converter float para string. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em float} & Número a ser convertido. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{baseTypes_8h_a8a134c72da9699c32dbec57627955328}\label{baseTypes_8h_a8a134c72da9699c32dbec57627955328}} 
+\index{base\+Types.\+h@{base\+Types.\+h}!read\+U1@{read\+U1}}
+\index{read\+U1@{read\+U1}!base\+Types.\+h@{base\+Types.\+h}}
+\subsubsection{\texorpdfstring{read\+U1()}{readU1()}}
+{\footnotesize\ttfamily U1 read\+U1 (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Função para ler 1 byte do arquivo .class. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em fp.} & Ponteiro pro arquivo .class \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{baseTypes_8h_a81f8cf10d3f1ee282c2f124ebf00b718}\label{baseTypes_8h_a81f8cf10d3f1ee282c2f124ebf00b718}} 
+\index{base\+Types.\+h@{base\+Types.\+h}!read\+U2@{read\+U2}}
+\index{read\+U2@{read\+U2}!base\+Types.\+h@{base\+Types.\+h}}
+\subsubsection{\texorpdfstring{read\+U2()}{readU2()}}
+{\footnotesize\ttfamily U2 read\+U2 (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Função para ler 2 bytes do arquivo .class. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em fp.} & Ponteiro pro arquivo .class \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{baseTypes_8h_a836a4be80a9f428623a68e687e6c30c6}\label{baseTypes_8h_a836a4be80a9f428623a68e687e6c30c6}} 
+\index{base\+Types.\+h@{base\+Types.\+h}!read\+U4@{read\+U4}}
+\index{read\+U4@{read\+U4}!base\+Types.\+h@{base\+Types.\+h}}
+\subsubsection{\texorpdfstring{read\+U4()}{readU4()}}
+{\footnotesize\ttfamily U4 read\+U4 (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Função para ler 4 bytes do arquivo .class. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em fp.} & Ponteiro pro arquivo .class \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{baseTypes_8h_a1b1c1fe27d442689b07d0d54f17c44aa}\label{baseTypes_8h_a1b1c1fe27d442689b07d0d54f17c44aa}} 
+\index{base\+Types.\+h@{base\+Types.\+h}!read\+U\+T\+F8@{read\+U\+T\+F8}}
+\index{read\+U\+T\+F8@{read\+U\+T\+F8}!base\+Types.\+h@{base\+Types.\+h}}
+\subsubsection{\texorpdfstring{read\+U\+T\+F8()}{readUTF8()}}
+{\footnotesize\ttfamily U1$\ast$ read\+U\+T\+F8 (\begin{DoxyParamCaption}\item[{F\+I\+LE $\ast$}]{fp,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Função para ler os bytes de uma string U\+T\+F-\/8. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em fp.} & Ponteiro pro arquivo .class \\
+\hline
+{\em size} & Tamanho que será alocado para a string. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{baseTypes_8h_a22f1f8c2b398f9db39f18565b36986f1}\label{baseTypes_8h_a22f1f8c2b398f9db39f18565b36986f1}} 
+\index{base\+Types.\+h@{base\+Types.\+h}!show\+U\+T\+F8@{show\+U\+T\+F8}}
+\index{show\+U\+T\+F8@{show\+U\+T\+F8}!base\+Types.\+h@{base\+Types.\+h}}
+\subsubsection{\texorpdfstring{show\+U\+T\+F8()}{showUTF8()}}
+{\footnotesize\ttfamily string show\+U\+T\+F8 (\begin{DoxyParamCaption}\item[{unsigned char $\ast$}]{s,  }\item[{int}]{size }\end{DoxyParamCaption})}
+
+
+
+Função para montar e mostrar a uma string U\+T\+F-\/8. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em s} & Ponteiro para a posição inicial de uam string Unicode. \\
+\hline
+{\em size} & Tamanho da string a ser impressa. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{baseTypes_8h_a51bdc30e142e0a9d888eb56ce9b5484b}\label{baseTypes_8h_a51bdc30e142e0a9d888eb56ce9b5484b}} 
+\index{base\+Types.\+h@{base\+Types.\+h}!u4\+\_\+to\+\_\+double@{u4\+\_\+to\+\_\+double}}
+\index{u4\+\_\+to\+\_\+double@{u4\+\_\+to\+\_\+double}!base\+Types.\+h@{base\+Types.\+h}}
+\subsubsection{\texorpdfstring{u4\+\_\+to\+\_\+double()}{u4\_to\_double()}}
+{\footnotesize\ttfamily double u4\+\_\+to\+\_\+double (\begin{DoxyParamCaption}\item[{\hyperlink{unionClassLoaderType}{Class\+Loader\+Type}}]{high,  }\item[{\hyperlink{unionClassLoaderType}{Class\+Loader\+Type}}]{low }\end{DoxyParamCaption})}
+
+
+
+Function to convert 8 bytes to a double. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em high} & Four most significant bytes to be converted. \\
+\hline
+{\em low} & Four last significant bytes to be converted. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{baseTypes_8h_a0f3ffb86bcc68531d481dd68c556b086}\label{baseTypes_8h_a0f3ffb86bcc68531d481dd68c556b086}} 
+\index{base\+Types.\+h@{base\+Types.\+h}!u4\+\_\+to\+\_\+float@{u4\+\_\+to\+\_\+float}}
+\index{u4\+\_\+to\+\_\+float@{u4\+\_\+to\+\_\+float}!base\+Types.\+h@{base\+Types.\+h}}
+\subsubsection{\texorpdfstring{u4\+\_\+to\+\_\+float()}{u4\_to\_float()}}
+{\footnotesize\ttfamily float u4\+\_\+to\+\_\+float (\begin{DoxyParamCaption}\item[{\hyperlink{unionClassLoaderType}{Class\+Loader\+Type}}]{in }\end{DoxyParamCaption})}
+
+
+
+Function to convert 4 bytes to a float. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em in} & Four bytes to be converted. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{baseTypes_8h_a5b4ee2146dd5beafbac7709a37bdbbd2}\label{baseTypes_8h_a5b4ee2146dd5beafbac7709a37bdbbd2}} 
+\index{base\+Types.\+h@{base\+Types.\+h}!u4\+\_\+to\+\_\+long@{u4\+\_\+to\+\_\+long}}
+\index{u4\+\_\+to\+\_\+long@{u4\+\_\+to\+\_\+long}!base\+Types.\+h@{base\+Types.\+h}}
+\subsubsection{\texorpdfstring{u4\+\_\+to\+\_\+long()}{u4\_to\_long()}}
+{\footnotesize\ttfamily long u4\+\_\+to\+\_\+long (\begin{DoxyParamCaption}\item[{\hyperlink{unionClassLoaderType}{Class\+Loader\+Type}}]{high,  }\item[{\hyperlink{unionClassLoaderType}{Class\+Loader\+Type}}]{low }\end{DoxyParamCaption})}
+
+
+
+Function to convert 8 bytes to a long. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em high} & Four most significant bytes to be converted. \\
+\hline
+{\em low} & Four last significant bytes to be converted. \\
+\hline
+\end{DoxyParams}

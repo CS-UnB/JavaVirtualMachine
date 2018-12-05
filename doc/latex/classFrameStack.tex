@@ -1,0 +1,97 @@
+\hypertarget{classFrameStack}{}\section{Referência à classe Frame\+Stack}
+\label{classFrameStack}\index{Frame\+Stack@{Frame\+Stack}}
+
+
+Classe de pilha de frames.  
+
+
+
+
+{\ttfamily \#include $<$frame.\+h$>$}
+
+\subsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classFrameStack_aaa727d2a58e24e6f02f1cd358a804981}{Frame\+Stack} (\hyperlink{classLeitor}{Leitor} $\ast$)
+\begin{DoxyCompactList}\small\item\em Contrutor da pilha de frame. \end{DoxyCompactList}\item 
+void \hyperlink{classFrameStack_af06f3e125bea380e017afd14fb6b14a3}{set\+Arguments} (std\+::vector$<$ \hyperlink{structtypedElement__s}{typed\+Element} $>$)
+\begin{DoxyCompactList}\small\item\em Configura os argumentos. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFrameStack_a9ad510705082a0055eb03e9cbea295f3}\label{classFrameStack_a9ad510705082a0055eb03e9cbea295f3}} 
+void \hyperlink{classFrameStack_a9ad510705082a0055eb03e9cbea295f3}{execute} ()
+\begin{DoxyCompactList}\small\item\em Executa o método atual e os métodos chamados. \end{DoxyCompactList}\item 
+void \hyperlink{classFrameStack_aefe44d87f18ddf549ca64416569f7a40}{add\+Frame} (\hyperlink{structmethod__info}{method\+\_\+info}, \hyperlink{structcp__info}{cp\+\_\+info} $\ast$)
+\begin{DoxyCompactList}\small\item\em Adiciona um frame no topo da pilha. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{classFrameStack_a84bdb9bfff23f213df4948bcba469a89}\label{classFrameStack_a84bdb9bfff23f213df4948bcba469a89}} 
+void {\bfseries add\+Frame} (\hyperlink{structmethod__info}{method\+\_\+info} $\ast$, \hyperlink{structcp__info}{cp\+\_\+info} $\ast$)
+\item 
+\mbox{\Hypertarget{classFrameStack_a7da31bde9fe2f7cf6a4e2497445223a5}\label{classFrameStack_a7da31bde9fe2f7cf6a4e2497445223a5}} 
+void \hyperlink{classFrameStack_a7da31bde9fe2f7cf6a4e2497445223a5}{pop} ()
+\begin{DoxyCompactList}\small\item\em Dá um pop no método atual. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Classe de pilha de frames. 
+
+Responsável por todas as operações que usam o frame. 
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classFrameStack_aaa727d2a58e24e6f02f1cd358a804981}\label{classFrameStack_aaa727d2a58e24e6f02f1cd358a804981}} 
+\index{Frame\+Stack@{Frame\+Stack}!Frame\+Stack@{Frame\+Stack}}
+\index{Frame\+Stack@{Frame\+Stack}!Frame\+Stack@{Frame\+Stack}}
+\subsubsection{\texorpdfstring{Frame\+Stack()}{FrameStack()}}
+{\footnotesize\ttfamily Frame\+Stack\+::\+Frame\+Stack (\begin{DoxyParamCaption}\item[{\hyperlink{classLeitor}{Leitor} $\ast$}]{l }\end{DoxyParamCaption})}
+
+
+
+Contrutor da pilha de frame. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em l} & O que é lido do arquivo .class. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentação dos métodos}
+\mbox{\Hypertarget{classFrameStack_aefe44d87f18ddf549ca64416569f7a40}\label{classFrameStack_aefe44d87f18ddf549ca64416569f7a40}} 
+\index{Frame\+Stack@{Frame\+Stack}!add\+Frame@{add\+Frame}}
+\index{add\+Frame@{add\+Frame}!Frame\+Stack@{Frame\+Stack}}
+\subsubsection{\texorpdfstring{add\+Frame()}{addFrame()}}
+{\footnotesize\ttfamily void Frame\+Stack\+::add\+Frame (\begin{DoxyParamCaption}\item[{\hyperlink{structmethod__info}{method\+\_\+info}}]{m,  }\item[{\hyperlink{structcp__info}{cp\+\_\+info} $\ast$}]{cp }\end{DoxyParamCaption})}
+
+
+
+Adiciona um frame no topo da pilha. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em m} & Método no qual o frame será criado. \\
+\hline
+{\em cp} & Um ponteiro para o pool de constantes.\\
+\hline
+{\em m} & Ponteiro para o método no qual o frame será criado. \\
+\hline
+{\em cp} & Um ponteiro para o pool de constantes. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classFrameStack_af06f3e125bea380e017afd14fb6b14a3}\label{classFrameStack_af06f3e125bea380e017afd14fb6b14a3}} 
+\index{Frame\+Stack@{Frame\+Stack}!set\+Arguments@{set\+Arguments}}
+\index{set\+Arguments@{set\+Arguments}!Frame\+Stack@{Frame\+Stack}}
+\subsubsection{\texorpdfstring{set\+Arguments()}{setArguments()}}
+{\footnotesize\ttfamily void Frame\+Stack\+::set\+Arguments (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \hyperlink{structtypedElement__s}{typed\+Element} $>$}]{param }\end{DoxyParamCaption})}
+
+
+
+Configura os argumentos. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em Vetor} & com os argumentos a serem copiados para o vetor de variáveis locais \\
+\hline
+\end{DoxyParams}
+
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{frame_8h}{frame.\+h}\item 
+src/\hyperlink{frame_8cpp}{frame.\+cpp}\end{DoxyCompactItemize}

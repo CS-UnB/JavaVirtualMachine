@@ -1,0 +1,10 @@
+<map id="include/heap.h" name="include/heap.h">
+<area shape="rect" id="node2" href="$heap_8cpp.html" title="src/heap.cpp" alt="" coords="26,80,123,107"/>
+<area shape="rect" id="node3" href="$classe_8h.html" title="Definição da ClasseEstatica e da ClasseInstancia. " alt="" coords="147,80,263,107"/>
+<area shape="rect" id="node4" href="$classe_8cpp.html" title="Class.cpp. " alt="" coords="5,155,112,181"/>
+<area shape="rect" id="node5" href="$operacoes_8h_source.html" title="include/operacoes.h" alt="" coords="73,229,212,256"/>
+<area shape="rect" id="node8" href="$methodArea_8h_source.html" title="include/methodArea.h" alt="" coords="187,155,335,181"/>
+<area shape="rect" id="node6" href="$frame_8h.html" title="Contém tudo necessário para a execução de um método. " alt="" coords="206,304,317,331"/>
+<area shape="rect" id="node7" href="$frame_8cpp.html" title="src/frame.cpp" alt="" coords="210,379,313,405"/>
+<area shape="rect" id="node9" href="$classeLeitor_8h.html" title="include/classeLeitor.h" alt="" coords="311,229,459,256"/>
+</map>

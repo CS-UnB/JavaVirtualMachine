@@ -1,0 +1,155 @@
+\hypertarget{classClasseInstancia}{}\section{Referência à classe Classe\+Instancia}
+\label{classClasseInstancia}\index{Classe\+Instancia@{Classe\+Instancia}}
+
+
+Class instantiation.  
+
+
+
+
+{\ttfamily \#include $<$classe.\+h$>$}
+
+\subsection*{Membros públicos}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classClasseInstancia_a312ab86623aeb82cef61d34a9b8ec73c}{Classe\+Instancia} (\hyperlink{classClasseEstatica}{Classe\+Estatica} $\ast$)
+\begin{DoxyCompactList}\small\item\em Construtor. \end{DoxyCompactList}\item 
+\hyperlink{classClasseEstatica}{Classe\+Estatica} $\ast$ \hyperlink{classClasseInstancia_afd5b88bd863678ab6744641ed96a1107}{get\+Static} ()
+\begin{DoxyCompactList}\small\item\em Retorna referência para a classe estatica. \end{DoxyCompactList}\item 
+\hyperlink{structtypedElement__s}{typed\+Element} \hyperlink{classClasseInstancia_ac7a68540fbd5c6f17b0f77a21fc37bf7}{get\+Field} (string)
+\begin{DoxyCompactList}\small\item\em Retorna field instanciado. \end{DoxyCompactList}\item 
+bool \hyperlink{classClasseInstancia_a468e473bc4fc726d72d0824ca92d5504}{set\+Field} (string, \hyperlink{structtypedElement__s}{typed\+Element})
+\begin{DoxyCompactList}\small\item\em Defina um valor para um field da \hyperlink{classClasseInstancia}{Classe\+Instancia}. \end{DoxyCompactList}\item 
+bool \hyperlink{classClasseInstancia_ae315a47206bcc946ad7accb8cd09ab44}{set\+Finals} (string, \hyperlink{structtypedElement__s}{typed\+Element})
+\begin{DoxyCompactList}\small\item\em Define to final field da Classe Instância. \end{DoxyCompactList}\item 
+void \hyperlink{classClasseInstancia_abcc9bebdd4ac09f7b77969ee4a16f2d6}{show} ()
+\begin{DoxyCompactList}\small\item\em Mostra todas as classes instanciadas. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Class instantiation. 
+
+Lida com operações que lidam com uma instância da classe 
+
+\subsection{Documentação dos Construtores \& Destrutor}
+\mbox{\Hypertarget{classClasseInstancia_a312ab86623aeb82cef61d34a9b8ec73c}\label{classClasseInstancia_a312ab86623aeb82cef61d34a9b8ec73c}} 
+\index{Classe\+Instancia@{Classe\+Instancia}!Classe\+Instancia@{Classe\+Instancia}}
+\index{Classe\+Instancia@{Classe\+Instancia}!Classe\+Instancia@{Classe\+Instancia}}
+\subsubsection{\texorpdfstring{Classe\+Instancia()}{ClasseInstancia()}}
+{\footnotesize\ttfamily Classe\+Instancia\+::\+Classe\+Instancia (\begin{DoxyParamCaption}\item[{\hyperlink{classClasseEstatica}{Classe\+Estatica} $\ast$}]{c }\end{DoxyParamCaption})}
+
+
+
+Construtor. 
+
+Lida com operações que manipulam a instância da classe
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em c} & Referência para a classe estática \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Documentação dos métodos}
+\mbox{\Hypertarget{classClasseInstancia_ac7a68540fbd5c6f17b0f77a21fc37bf7}\label{classClasseInstancia_ac7a68540fbd5c6f17b0f77a21fc37bf7}} 
+\index{Classe\+Instancia@{Classe\+Instancia}!get\+Field@{get\+Field}}
+\index{get\+Field@{get\+Field}!Classe\+Instancia@{Classe\+Instancia}}
+\subsubsection{\texorpdfstring{get\+Field()}{getField()}}
+{\footnotesize\ttfamily \hyperlink{structtypedElement__s}{typed\+Element} Classe\+Instancia\+::get\+Field (\begin{DoxyParamCaption}\item[{string}]{s }\end{DoxyParamCaption})}
+
+
+
+Retorna field instanciado. 
+
+Retorna o field instanciado \begin{DoxyReturn}{Retorna}
+struct typed\+Element que contém informações sobre nome do tipo e valor
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parâmetros}
+{\em Nome} & do field. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classClasseInstancia_afd5b88bd863678ab6744641ed96a1107}\label{classClasseInstancia_afd5b88bd863678ab6744641ed96a1107}} 
+\index{Classe\+Instancia@{Classe\+Instancia}!get\+Static@{get\+Static}}
+\index{get\+Static@{get\+Static}!Classe\+Instancia@{Classe\+Instancia}}
+\subsubsection{\texorpdfstring{get\+Static()}{getStatic()}}
+{\footnotesize\ttfamily \hyperlink{classClasseEstatica}{Classe\+Estatica} $\ast$ Classe\+Instancia\+::get\+Static (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna referência para a classe estatica. 
+
+Retorna referência a classe estática \begin{DoxyReturn}{Retorna}
+ponteiro para a classe estática 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classClasseInstancia_a468e473bc4fc726d72d0824ca92d5504}\label{classClasseInstancia_a468e473bc4fc726d72d0824ca92d5504}} 
+\index{Classe\+Instancia@{Classe\+Instancia}!set\+Field@{set\+Field}}
+\index{set\+Field@{set\+Field}!Classe\+Instancia@{Classe\+Instancia}}
+\subsubsection{\texorpdfstring{set\+Field()}{setField()}}
+{\footnotesize\ttfamily bool Classe\+Instancia\+::set\+Field (\begin{DoxyParamCaption}\item[{string}]{s,  }\item[{\hyperlink{structtypedElement__s}{typed\+Element}}]{e }\end{DoxyParamCaption})}
+
+
+
+Defina um valor para um field da \hyperlink{classClasseInstancia}{Classe\+Instancia}. 
+
+Define um field da \hyperlink{classClasseInstancia}{Classe\+Instancia} 
+\begin{DoxyParams}{Parâmetros}
+{\em s} & nome do field \\
+\hline
+{\em e} & novo tipo que será atribuido ao field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+booleano indicado se o field foi definido
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parâmetros}
+{\em s} & Nome do field. \\
+\hline
+{\em e} & Valor que será colocado \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classClasseInstancia_ae315a47206bcc946ad7accb8cd09ab44}\label{classClasseInstancia_ae315a47206bcc946ad7accb8cd09ab44}} 
+\index{Classe\+Instancia@{Classe\+Instancia}!set\+Finals@{set\+Finals}}
+\index{set\+Finals@{set\+Finals}!Classe\+Instancia@{Classe\+Instancia}}
+\subsubsection{\texorpdfstring{set\+Finals()}{setFinals()}}
+{\footnotesize\ttfamily bool Classe\+Instancia\+::set\+Finals (\begin{DoxyParamCaption}\item[{string}]{s,  }\item[{\hyperlink{structtypedElement__s}{typed\+Element}}]{e }\end{DoxyParamCaption})}
+
+
+
+Define to final field da Classe Instância. 
+
+Marca Field como final 
+\begin{DoxyParams}{Parâmetros}
+{\em s} & nome do field desejado \\
+\hline
+{\em novo} & tipo para o field \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Retorna}
+booleano que indica se o field foi setado com o novo tipo ou não
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parâmetros}
+{\em s} & Nome da classe \\
+\hline
+{\em e} & Valor a ser definido \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classClasseInstancia_abcc9bebdd4ac09f7b77969ee4a16f2d6}\label{classClasseInstancia_abcc9bebdd4ac09f7b77969ee4a16f2d6}} 
+\index{Classe\+Instancia@{Classe\+Instancia}!show@{show}}
+\index{show@{show}!Classe\+Instancia@{Classe\+Instancia}}
+\subsubsection{\texorpdfstring{show()}{show()}}
+{\footnotesize\ttfamily void Classe\+Instancia\+::show (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Mostra todas as classes instanciadas. 
+
+Mostra todas as classes instanciadas 
+
+A documentação para esta classe foi gerada a partir dos seguintes ficheiros\+:\begin{DoxyCompactItemize}
+\item 
+include/\hyperlink{classe_8h}{classe.\+h}\item 
+src/\hyperlink{classe_8cpp}{classe.\+cpp}\end{DoxyCompactItemize}

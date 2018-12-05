@@ -1,0 +1,12 @@
+<map id="include/fields.h" name="include/fields.h">
+<area shape="rect" id="node2" href="$fields_8cpp.html" title="src/fields.cpp" alt="" coords="5,80,105,107"/>
+<area shape="rect" id="node3" href="$classeLeitor_8h.html" title="include/classeLeitor.h" alt="" coords="129,80,277,107"/>
+<area shape="rect" id="node4" href="$classe_8h.html" title="Definição da ClasseEstatica e da ClasseInstancia. " alt="" coords="221,155,337,181"/>
+<area shape="rect" id="node7" href="$frame_8h.html" title="Contém tudo necessário para a execução de um método. " alt="" coords="411,304,521,331"/>
+<area shape="rect" id="node9" href="$methodArea_8h_source.html" title="include/methodArea.h" alt="" coords="248,379,396,405"/>
+<area shape="rect" id="node5" href="$classe_8cpp.html" title="Class.cpp. " alt="" coords="522,229,629,256"/>
+<area shape="rect" id="node6" href="$operacoes_8h_source.html" title="include/operacoes.h" alt="" coords="359,229,498,256"/>
+<area shape="rect" id="node10" href="$heap_8h.html" title="Definição do Heap. " alt="" coords="178,229,285,256"/>
+<area shape="rect" id="node8" href="$frame_8cpp.html" title="src/frame.cpp" alt="" coords="420,379,523,405"/>
+<area shape="rect" id="node11" href="$heap_8cpp.html" title="src/heap.cpp" alt="" coords="183,304,280,331"/>
+</map>

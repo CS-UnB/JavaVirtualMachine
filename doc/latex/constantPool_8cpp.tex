@@ -1,0 +1,86 @@
+\hypertarget{constantPool_8cpp}{}\section{Referência ao ficheiro src/constant\+Pool.cpp}
+\label{constantPool_8cpp}\index{src/constant\+Pool.\+cpp@{src/constant\+Pool.\+cpp}}
+{\ttfamily \#include \char`\"{}constant\+Pool.\+h\char`\"{}}\newline
+Diagrama de dependências de inclusão para constant\+Pool.\+cpp\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{constantPool_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Funções}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{constantPool_8cpp_aeed51c70547d5b043643766a20b34127}{load\+Constant\+Pool} (\hyperlink{structcp__info}{cp\+\_\+info} $\ast$constant\+Pool, int length\+CP, F\+I\+LE $\ast$fp)
+\begin{DoxyCompactList}\small\item\em Carrega o pool de constantes. \end{DoxyCompactList}\item 
+string \hyperlink{constantPool_8cpp_a3b41d9a03a7d0060e40c3135a4d341b9}{dereference\+Index} (\hyperlink{structcp__info}{cp\+\_\+info} $\ast$cp, U2 index)
+\begin{DoxyCompactList}\small\item\em Retorna os dados no índice. \end{DoxyCompactList}\item 
+void \hyperlink{constantPool_8cpp_a885fc96896e2694a220fb936c97b929f}{print\+Constant\+Pool} (\hyperlink{structcp__info}{cp\+\_\+info} $\ast$constant\+Pool, int length\+CP)
+\begin{DoxyCompactList}\small\item\em Imprime o pool de constantes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Descrição detalhada}
+Este módulo contém as funções necessárias para a manipulação do pool de constantes. 
+
+\subsection{Documentação das funções}
+\mbox{\Hypertarget{constantPool_8cpp_a3b41d9a03a7d0060e40c3135a4d341b9}\label{constantPool_8cpp_a3b41d9a03a7d0060e40c3135a4d341b9}} 
+\index{constant\+Pool.\+cpp@{constant\+Pool.\+cpp}!dereference\+Index@{dereference\+Index}}
+\index{dereference\+Index@{dereference\+Index}!constant\+Pool.\+cpp@{constant\+Pool.\+cpp}}
+\subsubsection{\texorpdfstring{dereference\+Index()}{dereferenceIndex()}}
+{\footnotesize\ttfamily string dereference\+Index (\begin{DoxyParamCaption}\item[{\hyperlink{structcp__info}{cp\+\_\+info} $\ast$}]{cp,  }\item[{U2}]{index }\end{DoxyParamCaption})}
+
+
+
+Retorna os dados no índice. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em cp} & -\/ um ponteiro para o pool de contantes \\
+\hline
+{\em index} & -\/ um índice para a posição no pool de constantes \\
+\hline
+\end{DoxyParams}
+\hypertarget{constantPool_8cpp_desc}{}\subsection{Descrição}\label{constantPool_8cpp_desc}
+Função responsável por obter os dados correspondentes ao índice informado \mbox{\Hypertarget{constantPool_8cpp_aeed51c70547d5b043643766a20b34127}\label{constantPool_8cpp_aeed51c70547d5b043643766a20b34127}} 
+\index{constant\+Pool.\+cpp@{constant\+Pool.\+cpp}!load\+Constant\+Pool@{load\+Constant\+Pool}}
+\index{load\+Constant\+Pool@{load\+Constant\+Pool}!constant\+Pool.\+cpp@{constant\+Pool.\+cpp}}
+\subsubsection{\texorpdfstring{load\+Constant\+Pool()}{loadConstantPool()}}
+{\footnotesize\ttfamily int load\+Constant\+Pool (\begin{DoxyParamCaption}\item[{\hyperlink{structcp__info}{cp\+\_\+info} $\ast$}]{constant\+Pool,  }\item[{int}]{length\+CP,  }\item[{F\+I\+LE $\ast$}]{fp }\end{DoxyParamCaption})}
+
+
+
+Carrega o pool de constantes. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em constant\+Pool} & -\/ um ponteiro para o pool de contantes \\
+\hline
+{\em length\+CP} & -\/ o tamanho do pool de constantes \\
+\hline
+{\em fp} & -\/ ponteiro para o arquivo .class \\
+\hline
+\end{DoxyParams}
+\hypertarget{constantPool_8cpp_desc}{}\subsection{Descrição}\label{constantPool_8cpp_desc}
+Função responsável por carregar o pool de constantes e todos os campos a ele relacionados \begin{DoxyReturn}{Retorna}
+o número de elementos do pool de constantes 
+\end{DoxyReturn}
+\mbox{\Hypertarget{constantPool_8cpp_a885fc96896e2694a220fb936c97b929f}\label{constantPool_8cpp_a885fc96896e2694a220fb936c97b929f}} 
+\index{constant\+Pool.\+cpp@{constant\+Pool.\+cpp}!print\+Constant\+Pool@{print\+Constant\+Pool}}
+\index{print\+Constant\+Pool@{print\+Constant\+Pool}!constant\+Pool.\+cpp@{constant\+Pool.\+cpp}}
+\subsubsection{\texorpdfstring{print\+Constant\+Pool()}{printConstantPool()}}
+{\footnotesize\ttfamily void print\+Constant\+Pool (\begin{DoxyParamCaption}\item[{\hyperlink{structcp__info}{cp\+\_\+info} $\ast$}]{constant\+Pool,  }\item[{int}]{length\+CP }\end{DoxyParamCaption})}
+
+
+
+Imprime o pool de constantes. 
+
+
+\begin{DoxyParams}{Parâmetros}
+{\em constant\+Pool} & -\/ um ponteiro para o pool de contantes \\
+\hline
+{\em length\+CP} & -\/ o tamanho do pool de constantes \\
+\hline
+\end{DoxyParams}
+\hypertarget{constantPool_8cpp_desc}{}\subsection{Descrição}\label{constantPool_8cpp_desc}
+Função responsável por imprimir na tela o pool de constantes e todos os campos a ele relacionados 

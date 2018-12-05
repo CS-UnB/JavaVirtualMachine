@@ -1,0 +1,204 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Java Virtual Machine: Referência à classe FrameStack</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Java Virtual Machine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Membros públicos</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência à classe FrameStack</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p>Classe de pilha de frames.  
+ <a href="classFrameStack.html#details">Mais...</a></p>
+
+<p><code>#include &lt;<a class="el" href="frame_8h_source.html">frame.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Membros públicos</h2></td></tr>
+<tr class="memitem:aaa727d2a58e24e6f02f1cd358a804981"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFrameStack.html#aaa727d2a58e24e6f02f1cd358a804981">FrameStack</a> (<a class="el" href="classLeitor.html">Leitor</a> *)</td></tr>
+<tr class="memdesc:aaa727d2a58e24e6f02f1cd358a804981"><td class="mdescLeft">&#160;</td><td class="mdescRight">Contrutor da pilha de frame.  <a href="#aaa727d2a58e24e6f02f1cd358a804981">Mais...</a><br /></td></tr>
+<tr class="separator:aaa727d2a58e24e6f02f1cd358a804981"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af06f3e125bea380e017afd14fb6b14a3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFrameStack.html#af06f3e125bea380e017afd14fb6b14a3">setArguments</a> (std::vector&lt; <a class="el" href="structtypedElement__s.html">typedElement</a> &gt;)</td></tr>
+<tr class="memdesc:af06f3e125bea380e017afd14fb6b14a3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Configura os argumentos.  <a href="#af06f3e125bea380e017afd14fb6b14a3">Mais...</a><br /></td></tr>
+<tr class="separator:af06f3e125bea380e017afd14fb6b14a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9ad510705082a0055eb03e9cbea295f3"><td class="memItemLeft" align="right" valign="top"><a id="a9ad510705082a0055eb03e9cbea295f3"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFrameStack.html#a9ad510705082a0055eb03e9cbea295f3">execute</a> ()</td></tr>
+<tr class="memdesc:a9ad510705082a0055eb03e9cbea295f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Executa o método atual e os métodos chamados. <br /></td></tr>
+<tr class="separator:a9ad510705082a0055eb03e9cbea295f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aefe44d87f18ddf549ca64416569f7a40"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFrameStack.html#aefe44d87f18ddf549ca64416569f7a40">addFrame</a> (<a class="el" href="structmethod__info.html">method_info</a>, <a class="el" href="structcp__info.html">cp_info</a> *)</td></tr>
+<tr class="memdesc:aefe44d87f18ddf549ca64416569f7a40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Adiciona um frame no topo da pilha.  <a href="#aefe44d87f18ddf549ca64416569f7a40">Mais...</a><br /></td></tr>
+<tr class="separator:aefe44d87f18ddf549ca64416569f7a40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a84bdb9bfff23f213df4948bcba469a89"><td class="memItemLeft" align="right" valign="top"><a id="a84bdb9bfff23f213df4948bcba469a89"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>addFrame</b> (<a class="el" href="structmethod__info.html">method_info</a> *, <a class="el" href="structcp__info.html">cp_info</a> *)</td></tr>
+<tr class="separator:a84bdb9bfff23f213df4948bcba469a89"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7da31bde9fe2f7cf6a4e2497445223a5"><td class="memItemLeft" align="right" valign="top"><a id="a7da31bde9fe2f7cf6a4e2497445223a5"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classFrameStack.html#a7da31bde9fe2f7cf6a4e2497445223a5">pop</a> ()</td></tr>
+<tr class="memdesc:a7da31bde9fe2f7cf6a4e2497445223a5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dá um pop no método atual. <br /></td></tr>
+<tr class="separator:a7da31bde9fe2f7cf6a4e2497445223a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Descrição detalhada</h2>
+<div class="textblock"><p>Classe de pilha de frames. </p>
+<p>Responsável por todas as operações que usam o frame. </p>
+</div><h2 class="groupheader">Documentação dos Construtores &amp; Destrutor</h2>
+<a id="aaa727d2a58e24e6f02f1cd358a804981"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaa727d2a58e24e6f02f1cd358a804981">&#9670;&nbsp;</a></span>FrameStack()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">FrameStack::FrameStack </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classLeitor.html">Leitor</a> *&#160;</td>
+          <td class="paramname"><em>l</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Contrutor da pilha de frame. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">l</td><td>O que é lido do arquivo .class. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<h2 class="groupheader">Documentação dos métodos</h2>
+<a id="aefe44d87f18ddf549ca64416569f7a40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aefe44d87f18ddf549ca64416569f7a40">&#9670;&nbsp;</a></span>addFrame()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FrameStack::addFrame </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmethod__info.html">method_info</a>&#160;</td>
+          <td class="paramname"><em>m</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcp__info.html">cp_info</a> *&#160;</td>
+          <td class="paramname"><em>cp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Adiciona um frame no topo da pilha. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">m</td><td>Método no qual o frame será criado. </td></tr>
+    <tr><td class="paramname">cp</td><td>Um ponteiro para o pool de constantes.</td></tr>
+    <tr><td class="paramname">m</td><td>Ponteiro para o método no qual o frame será criado. </td></tr>
+    <tr><td class="paramname">cp</td><td>Um ponteiro para o pool de constantes. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="af06f3e125bea380e017afd14fb6b14a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af06f3e125bea380e017afd14fb6b14a3">&#9670;&nbsp;</a></span>setArguments()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void FrameStack::setArguments </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structtypedElement__s.html">typedElement</a> &gt;&#160;</td>
+          <td class="paramname"><em>param</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Configura os argumentos. </p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">Vetor</td><td>com os argumentos a serem copiados para o vetor de variáveis locais </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<hr/>A documentação para esta classe foi gerada a partir dos seguintes ficheiros:<ul>
+<li>include/<a class="el" href="frame_8h_source.html">frame.h</a></li>
+<li>src/<a class="el" href="frame_8cpp.html">frame.cpp</a></li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

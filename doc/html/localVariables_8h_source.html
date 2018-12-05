@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Java Virtual Machine: Código-Fonte de include/localVariables.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Java Virtual Machine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">localVariables.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="localVariables_8h.html">Ir para a documentação deste ficheiro.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;</div><div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef LOCALVARIABLES</span></div><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#define LOCALVARIABLES</span></div><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div><div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#include &lt;stack&gt;</span></div><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="preprocessor">#include &lt;sstream&gt;</span></div><div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">#include &lt;cstdlib&gt;</span></div><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="baseTypes_8h.html">baseTypes.h</a>&quot;</span></div><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">//to test if addresses are 32 or 64 bits</span></div><div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#define BITS (sizeof(int*) == 8)</span></div><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div><div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#define INVALID 99</span></div><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#define TYPE_NOT_SET 0</span></div><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#define TYPE_INT 1</span></div><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#define TYPE_FLOAT 2</span></div><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#define TYPE_LONG 3</span></div><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#define TYPE_DOUBLE 4</span></div><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#define TYPE_BOOL 5</span></div><div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor">#define TYPE_REFERENCE 6</span></div><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div><div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classLocalVariables.html">   40</a></span>&#160;<span class="keyword">class </span><a class="code" href="classLocalVariables.html">LocalVariables</a> </div><div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;{</div><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="keyword">private</span>:</div><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">//array to values</span></div><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    uint32_t *elements;</div><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="comment">//array to types</span></div><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    uint8_t *types;</div><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="comment">//maximum slots quantity </span></div><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keyword">const</span> uint16_t max;</div><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">const</span> uint16_t realMax;</div><div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="comment">//says if types occupy 2 slots (used to simulate arrays)</span></div><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">bool</span> dois;</div><div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="keyword">public</span>:</div><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="classLocalVariables.html#ae354d02f996f4f584fe857d9304161c1">LocalVariables</a>(uint16_t);</div><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div><div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <a class="code" href="classLocalVariables.html#ae354d02f996f4f584fe857d9304161c1">LocalVariables</a>(uint16_t, <span class="keywordtype">bool</span>);</div><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <a class="code" href="classLocalVariables.html#aaf00f6cc3391fdd2cc0ecd2b1d31c887">~LocalVariables</a>();</div><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classLocalVariables.html#a276a90a0e812a4d54601c7464dc9ee6a">printall</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">void</span> <span class="keyword">set</span>(int, <a class="code" href="structtypedElement__s.html">typedElement</a>);</div><div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div><div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    <a class="code" href="structtypedElement__s.html">typedElement</a> <span class="keyword">get</span>(int) <span class="keyword">const</span>;</div><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classLocalVariables.html#af8d5da296932e0ddb5fcc46fa1a1d7a3">getMax</a>() <span class="keyword">const</span>;</div><div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;</div><div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">//function to allow class use like a struct&#39;s array</span></div><div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment"></span>    <span class="keyword">const</span> <a class="code" href="structtypedElement__s.html">typedElement</a> <a class="code" href="classLocalVariables.html#a6e978f3c992385f2909261e995105142">operator[] </a>(<span class="keyword">const</span> <span class="keywordtype">int</span>) <span class="keyword">const</span>;</div><div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div><div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;};</div><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div><div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">#endif</span></div><div class="ttc" id="classLocalVariables_html_a6e978f3c992385f2909261e995105142"><div class="ttname"><a href="classLocalVariables.html#a6e978f3c992385f2909261e995105142">LocalVariables::operator[]</a></div><div class="ttdeci">const typedElement operator[](const int) const</div><div class="ttdoc">Function to allow class use like a struct&amp;#39;s array. </div><div class="ttdef"><b>Definition:</b> localVariables.cpp:120</div></div>
+<div class="ttc" id="classLocalVariables_html"><div class="ttname"><a href="classLocalVariables.html">LocalVariables</a></div><div class="ttdoc">Local variables Class. </div><div class="ttdef"><b>Definition:</b> localVariables.h:40</div></div>
+<div class="ttc" id="structtypedElement__s_html"><div class="ttname"><a href="structtypedElement__s.html">typedElement_s</a></div><div class="ttdoc">Agregador de tipos e informações. Struct responsável por juntar tipos e informações de elementos...</div><div class="ttdef"><b>Definition:</b> baseTypes.h:84</div></div>
+<div class="ttc" id="baseTypes_8h_html"><div class="ttname"><a href="baseTypes_8h.html">baseTypes.h</a></div><div class="ttdoc">Tipos Base Tipos básicos utilizados para implementarmos a JVM. </div></div>
+<div class="ttc" id="classLocalVariables_html_aaf00f6cc3391fdd2cc0ecd2b1d31c887"><div class="ttname"><a href="classLocalVariables.html#aaf00f6cc3391fdd2cc0ecd2b1d31c887">LocalVariables::~LocalVariables</a></div><div class="ttdeci">~LocalVariables()</div><div class="ttdoc">Destructor 4. </div><div class="ttdef"><b>Definition:</b> localVariables.cpp:20</div></div>
+<div class="ttc" id="classLocalVariables_html_af8d5da296932e0ddb5fcc46fa1a1d7a3"><div class="ttname"><a href="classLocalVariables.html#af8d5da296932e0ddb5fcc46fa1a1d7a3">LocalVariables::getMax</a></div><div class="ttdeci">int getMax() const</div><div class="ttdoc">Function to know maximum size. </div><div class="ttdef"><b>Definition:</b> localVariables.cpp:115</div></div>
+<div class="ttc" id="classLocalVariables_html_ae354d02f996f4f584fe857d9304161c1"><div class="ttname"><a href="classLocalVariables.html#ae354d02f996f4f584fe857d9304161c1">LocalVariables::LocalVariables</a></div><div class="ttdeci">LocalVariables(uint16_t)</div><div class="ttdoc">LocalVariables class constructor. </div><div class="ttdef"><b>Definition:</b> localVariables.cpp:8</div></div>
+<div class="ttc" id="classLocalVariables_html_a276a90a0e812a4d54601c7464dc9ee6a"><div class="ttname"><a href="classLocalVariables.html#a276a90a0e812a4d54601c7464dc9ee6a">LocalVariables::printall</a></div><div class="ttdeci">void printall() const</div><div class="ttdoc">Function to show all values. </div><div class="ttdef"><b>Definition:</b> localVariables.cpp:79</div></div>
+</div><!-- fragment --></div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>
