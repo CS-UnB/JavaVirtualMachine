@@ -195,11 +195,8 @@ void PilhaOperandos::push(double x)
 		this->tiposReais.push(RT_DOUBLE);
 	}
 
-	//Empilha 32 bits inferiores do valor 
 	this->elementos.push(aux.i);
-	//Traz os 32 bits superiores para baixo
 	aux.l >>= 32;
-	//Empilha 32 bits inferiores do valor (superiores)
 	this->elementos.push(aux.i);
 	
 
@@ -225,11 +222,8 @@ void PilhaOperandos::push(int64_t _x)
 		this->tiposReais.push(RT_LONG);
 	}
 
-	//Empilha 32 bits inferiores do valor
 	this->elementos.push(x);
-	//Traz os 32 bits superiores para baixo
 	x >>= 32;
-	//Empilha 32 bits inferiores do valor (superiores)
 	this->elementos.push(x);
 
 	typePushed = false;
