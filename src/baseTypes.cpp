@@ -1,6 +1,6 @@
 /*!
  * \file
- * \brief Basetypes.cpp
+ * \brief basetypes.cpp
  */
 
 #include "baseTypes.h"

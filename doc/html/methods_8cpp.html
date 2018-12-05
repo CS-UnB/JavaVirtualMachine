@@ -1,0 +1,334 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Java Virtual Machine: Referência ao ficheiro src/methods.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">Java Virtual Machine
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Gerado por Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'Localizar');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','Localizar');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_68267d1309a1af8e8297ef4c3efbcdba.html">src</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#func-members">Funções</a>  </div>
+  <div class="headertitle">
+<div class="title">Referência ao ficheiro methods.cpp</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;methods.h&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+Diagrama de dependências de inclusão para methods.cpp:</div>
+<div class="dyncontent">
+<div class="center"><img src="methods_8cpp__incl.png" border="0" usemap="#src_2methods_8cpp" alt=""/></div>
+<map name="src_2methods_8cpp" id="src_2methods_8cpp">
+<area shape="rect" id="node2" href="methods_8h_source.html" title="methods.h" alt="" coords="447,80,529,107"/>
+<area shape="rect" id="node3" href="baseTypes_8h.html" title="Tipos Base Tipos básicos utilizados para implementarmos a JVM. " alt="" coords="349,304,446,331"/>
+<area shape="rect" id="node12" href="constantPool_8h.html" title="Módulo Constant pool. " alt="" coords="433,229,543,256"/>
+<area shape="rect" id="node13" href="attributes_8h.html" title="Atributos a serem usados na execuçao da JVM. " alt="" coords="537,155,623,181"/>
+</map>
+</div>
+</div><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+Funções</h2></td></tr>
+<tr class="memitem:aac664da42de7a35286a7a65785a1b131"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmethod__info.html">method_info</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="methods_8cpp.html#aac664da42de7a35286a7a65785a1b131">read_Method</a> (FILE *fp, <a class="el" href="structcp__info.html">cp_info</a> *cp)</td></tr>
+<tr class="separator:aac664da42de7a35286a7a65785a1b131"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a302c4b0e2e0353ac27394dc2b4b4e5d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structmethod__info.html">method_info</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="methods_8cpp.html#a302c4b0e2e0353ac27394dc2b4b4e5d8">read_Methods</a> (FILE *fp, int length, <a class="el" href="structcp__info.html">cp_info</a> *cp)</td></tr>
+<tr class="separator:a302c4b0e2e0353ac27394dc2b4b4e5d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2930f20a33cd240d1ff74e2e6a5c94d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="methods_8cpp.html#ae2930f20a33cd240d1ff74e2e6a5c94d">printMethod</a> (<a class="el" href="structmethod__info.html">method_info</a> f, <a class="el" href="structcp__info.html">cp_info</a> *cp)</td></tr>
+<tr class="separator:ae2930f20a33cd240d1ff74e2e6a5c94d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d3c8f600b6ae12145f5efb625284033"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="methods_8cpp.html#a8d3c8f600b6ae12145f5efb625284033">printMethod</a> (<a class="el" href="structmethod__info.html">method_info</a> f, <a class="el" href="structcp__info.html">cp_info</a> *cp, int index)</td></tr>
+<tr class="separator:a8d3c8f600b6ae12145f5efb625284033"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abea5c808ee0cfbda57b80c8433003119"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="methods_8cpp.html#abea5c808ee0cfbda57b80c8433003119">printMethods</a> (<a class="el" href="structmethod__info.html">method_info</a> *f, <a class="el" href="structcp__info.html">cp_info</a> *cp, int length)</td></tr>
+<tr class="separator:abea5c808ee0cfbda57b80c8433003119"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6f0da5275a37af91a66e57918a31f186"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="methods_8cpp.html#a6f0da5275a37af91a66e57918a31f186">get_Method_Flags</a> (uint16_t flags)</td></tr>
+<tr class="separator:a6f0da5275a37af91a66e57918a31f186"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">Documentação das funções</h2>
+<a id="a6f0da5275a37af91a66e57918a31f186"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6f0da5275a37af91a66e57918a31f186">&#9670;&nbsp;</a></span>get_Method_Flags()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">string get_Method_Flags </td>
+          <td>(</td>
+          <td class="paramtype">uint16_t&#160;</td>
+          <td class="paramname"><em>flags</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Obtém as access flags dos métodos para print</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">flags</td><td>dos métodos dado method_info.access_flags </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ae2930f20a33cd240d1ff74e2e6a5c94d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2930f20a33cd240d1ff74e2e6a5c94d">&#9670;&nbsp;</a></span>printMethod() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printMethod </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmethod__info.html">method_info</a>&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcp__info.html">cp_info</a> *&#160;</td>
+          <td class="paramname"><em>cp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Mostra um método do arquivo .class</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>contém as informações do método </td></tr>
+    <tr><td class="paramname">*cp</td><td>ponteiro para as informações do pool de constantes </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a8d3c8f600b6ae12145f5efb625284033"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8d3c8f600b6ae12145f5efb625284033">&#9670;&nbsp;</a></span>printMethod() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printMethod </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmethod__info.html">method_info</a>&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcp__info.html">cp_info</a> *&#160;</td>
+          <td class="paramname"><em>cp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>index</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Mostra um método do arquivo .class</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">f</td><td>contém as informações do método </td></tr>
+    <tr><td class="paramname">*cp</td><td>ponteiro para as informações do pool de constantes </td></tr>
+    <tr><td class="paramname">index</td><td>índice do método a ser mostrado </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="abea5c808ee0cfbda57b80c8433003119"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abea5c808ee0cfbda57b80c8433003119">&#9670;&nbsp;</a></span>printMethods()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void printMethods </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structmethod__info.html">method_info</a> *&#160;</td>
+          <td class="paramname"><em>f</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcp__info.html">cp_info</a> *&#160;</td>
+          <td class="paramname"><em>cp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Mostra todos os métodos do arquivo .class</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*f</td><td>ponteiro para as informações do método </td></tr>
+    <tr><td class="paramname">*cp</td><td>ponteiro para as informações do pool de constantes </td></tr>
+    <tr><td class="paramname">length</td><td>quantidade de métodos a serem mostrados </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="aac664da42de7a35286a7a65785a1b131"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac664da42de7a35286a7a65785a1b131">&#9670;&nbsp;</a></span>read_Method()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmethod__info.html">method_info</a> read_Method </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcp__info.html">cp_info</a> *&#160;</td>
+          <td class="paramname"><em>cp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Lê um método do arquivo .class</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*fp</td><td>ponteiro para o arquivo .class </td></tr>
+    <tr><td class="paramname">*cp</td><td>ponteiro para as informações do pool de constantes </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a302c4b0e2e0353ac27394dc2b4b4e5d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a302c4b0e2e0353ac27394dc2b4b4e5d8">&#9670;&nbsp;</a></span>read_Methods()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structmethod__info.html">method_info</a>* read_Methods </td>
+          <td>(</td>
+          <td class="paramtype">FILE *&#160;</td>
+          <td class="paramname"><em>fp</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>length</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structcp__info.html">cp_info</a> *&#160;</td>
+          <td class="paramname"><em>cp</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Lê os métodos do arquivo .class</p>
+<dl class="params"><dt>Parâmetros</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">*fp</td><td>ponteiro para o arquivo .class </td></tr>
+    <tr><td class="paramname">*cp</td><td>ponteiro para as informações do pool de constantes </td></tr>
+    <tr><td class="paramname">length</td><td>quantidade de métodos presente </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+Gerado por &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

@@ -1,3 +1,7 @@
+/*!
+ * \file methodAread.cpp
+ * \brief 
+ */
 #include "methodArea.h"
 
 map<string, ClasseEstatica*> MethodArea::classes;

@@ -1,6 +1,6 @@
 /*!
- * \file
- * \brief LocalVariables.cpp
+ * \file localVariables.cpp
+ * \brief 
  */
 
 #include "localVariables.h"
