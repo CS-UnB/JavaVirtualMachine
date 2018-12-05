@@ -1,3 +1,8 @@
+/*!
+ * \file
+ * \brief classeLeitor.cpp
+ */
+
 /* 
 	Classe que irá realizar a leitura do bytecode e salvar as informações do class file
 */

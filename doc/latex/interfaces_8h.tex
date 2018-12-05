@@ -8,16 +8,14 @@ Interfaces.
 {\ttfamily \#include $<$iostream$>$}\newline
 {\ttfamily \#include \char`\"{}constant\+Pool.\+h\char`\"{}}\newline
 {\ttfamily \#include \char`\"{}base\+Types.\+h\char`\"{}}\newline
-Diagrama de dependÃªncias de inclusÃ£o para interfaces.\+h\+:
-\nopagebreak
+Diagrama de dependÃªncias de inclusÃ£o para interfaces.\+h\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{interfaces_8h__incl}
 \end{center}
 \end{figure}
-Este grafo mostra quais sÃ£o os ficheiros que incluem directamente ou indirectamente este ficheiro\+:
-\nopagebreak
+Este grafo mostra quais sÃ£o os ficheiros que incluem directamente ou indirectamente este ficheiro\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -28,13 +26,13 @@ Este grafo mostra quais sÃ£o os ficheiros que incluem directamente ou indirectam
 \begin{DoxyCompactItemize}
 \item 
 unsigned short $\ast$ \hyperlink{interfaces_8h_ae922cb6cdd2af5a0da3f039d03b230c7}{read\+Interfaces} (F\+I\+LE $\ast$fp, int length)
-\begin{DoxyCompactList}\small\item\em Load the interfaces to the memory. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Carrega as interfaces na memória a partir do arquivo class. \end{DoxyCompactList}\item 
 void \hyperlink{interfaces_8h_a6ec7de60877b4db37aecdb7cf818c863}{print\+Interfaces} (unsigned short $\ast$interfaces, \hyperlink{structcp__info}{cp\+\_\+info} $\ast$cp, int length)
-\begin{DoxyCompactList}\small\item\em Show all interfaces from the file. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Mostra todas as interfaces do arquivo. \end{DoxyCompactList}\item 
 void \hyperlink{interfaces_8h_aac94a426e29da5419540d2e54e96f7fa}{print\+Interface} (unsigned short interface, \hyperlink{structcp__info}{cp\+\_\+info} $\ast$cp)
-\begin{DoxyCompactList}\small\item\em Show information from a especific interface. \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Mostra informações de uma interface específica. \end{DoxyCompactList}\item 
 void \hyperlink{interfaces_8h_aecd49471b21a9c29d2f88f757b1734ad}{print\+Interface} (unsigned short interface, \hyperlink{structcp__info}{cp\+\_\+info} $\ast$cp, int index)
-\begin{DoxyCompactList}\small\item\em Show information from a especific interface with the interface index. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Mostra informação de uma interface específica com o índice da interface. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{DescriÃ§Ã£o detalhada}
@@ -51,13 +49,13 @@ Manipula as informações de interface do .class
 
 
 
-Show information from a especific interface. 
+Mostra informações de uma interface específica. 
 
 
 \begin{DoxyParams}{ParÃ¢metros}
-{\em interface} & Index of the constant pool. \\
+{\em interface} & Indice do constantpool. \\
 \hline
-{\em cp} & Pointer to the constant pool. \\
+{\em cp} & Ponteiro para a constantpool. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{interfaces_8h_aecd49471b21a9c29d2f88f757b1734ad}\label{interfaces_8h_aecd49471b21a9c29d2f88f757b1734ad}} 
@@ -68,15 +66,15 @@ Show information from a especific interface.
 
 
 
-Show information from a especific interface with the interface index. 
+Mostra informação de uma interface específica com o índice da interface. 
 
 
 \begin{DoxyParams}{ParÃ¢metros}
-{\em interface} & Index of the constant pool. \\
+{\em interface} & Indice do constantpool. \\
 \hline
-{\em cp} & Pointer to the constant pool. \\
+{\em cp} & Ponteiro para o constantpool. \\
 \hline
-{\em index} & Index of the specific interface. \\
+{\em index} & Indice da interface específica. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{interfaces_8h_a6ec7de60877b4db37aecdb7cf818c863}\label{interfaces_8h_a6ec7de60877b4db37aecdb7cf818c863}} 
@@ -87,15 +85,15 @@ Show information from a especific interface with the interface index.
 
 
 
-Show all interfaces from the file. 
+Mostra todas as interfaces do arquivo. 
 
 
 \begin{DoxyParams}{ParÃ¢metros}
-{\em interfaces} & Array of interfaces. \\
+{\em interfaces} & Array de interfaces. \\
 \hline
-{\em cp} & Pointer to the constant pool. \\
+{\em cp} & Ponteiro para a constantpool. \\
 \hline
-{\em length} & Number of interfaces. \\
+{\em length} & Número de interfaces. \\
 \hline
 \end{DoxyParams}
 \mbox{\Hypertarget{interfaces_8h_ae922cb6cdd2af5a0da3f039d03b230c7}\label{interfaces_8h_ae922cb6cdd2af5a0da3f039d03b230c7}} 
@@ -106,12 +104,14 @@ Show all interfaces from the file.
 
 
 
-Load the interfaces to the memory. 
+Carrega as interfaces na memória a partir do arquivo class. 
 
 
 \begin{DoxyParams}{ParÃ¢metros}
-{\em fp} & Pointer to the .class file \\
+{\em flags} & Flags em haxadecimal que serão convertidas para string. \\
 \hline
-{\em length} & Number of interfaces \\
+{\em fp} & Ponteiro para o arquivo class. \\
+\hline
+{\em length} & Numero de interfaces a serem lidas. \\
 \hline
 \end{DoxyParams}

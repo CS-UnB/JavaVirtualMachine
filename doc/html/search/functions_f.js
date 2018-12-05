@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_7elocalvariables',['~LocalVariables',['../classLocalVariables.html#aaf00f6cc3391fdd2cc0ecd2b1d31c887',1,'LocalVariables']]]
+  ['validextension',['validExtension',['../classLeitor.html#a64ccb4aca8b2c665b79ace09a3423b77',1,'Leitor']]]
 ];

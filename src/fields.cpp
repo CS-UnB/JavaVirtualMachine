@@ -1,3 +1,7 @@
+/*!
+ * \file
+ * \brief fields.cpp
+ */
 /**
  * @file fields.cpp
  * @details Módulo responsável pela manipulação dos campos existentes no arquivo .class

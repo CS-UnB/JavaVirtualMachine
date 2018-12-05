@@ -1,3 +1,7 @@
+/*!
+ * \file methods.cpp
+ * \brief 
+ */
 #include "methods.h"
 
 /**

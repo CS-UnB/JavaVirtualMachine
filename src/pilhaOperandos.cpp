@@ -1,5 +1,5 @@
 /*!
- * \file PilhaOperandos.cpp
+ * \file pilhaOperandos.cpp
  * \brief Pilha de operandos
  */
 #include "pilhaOperandos.h"
@@ -36,7 +36,7 @@ element PilhaOperandos::top_value()
 	//Pega primeiro valor da pilha de valores
 	ret.i = this->elementos.top();
 
-	//Se o tipo do valor empilhado é maior que 32bits, concatena os dois primeiros elementos da pilha na variavel de retorno.
+	//Se o tipo do valor empilhado ï¿½ maior que 32bits, concatena os dois primeiros elementos da pilha na variavel de retorno.
 	if (this->tipos.top() == TYPE_LONG || this->tipos.top() == TYPE_DOUBLE || (this->tipos.top() == TYPE_REFERENCE && bits64))
 	{
 		uint32_t aux = ret.i;
@@ -130,7 +130,7 @@ std::string PilhaOperandos::getString ()
 */
 void PilhaOperandos::push(int x)
 {
-	//Se chegou no limite da pilha, não empilha
+	//Se chegou no limite da pilha, nï¿½o empilha
 	if (this->size() == max)
 	{
 		throw std::out_of_range("Excedeu o limite maximo da pilha!");
@@ -154,7 +154,7 @@ void PilhaOperandos::push(int x)
 */
 void PilhaOperandos::push(float x)
 {
-	//Se chegou no limite da pilha, não empilha
+	//Se chegou no limite da pilha, nï¿½o empilha
 	if (this->size() == max)
 	{
 		throw std::out_of_range("Excedeu o limite maximo da pilha!");
@@ -179,7 +179,7 @@ void PilhaOperandos::push(float x)
 */
 void PilhaOperandos::push(double x)
 {
-	//Se não houver 2 espaços disponíveis na pilha, não empilha
+	//Se nï¿½o houver 2 espaï¿½os disponï¿½veis na pilha, nï¿½o empilha
 	if (this->size()+1 >= max)
 	{
 		throw std::out_of_range("Excedeu o limite maximo da pilha!");
@@ -212,7 +212,7 @@ void PilhaOperandos::push(double x)
 void PilhaOperandos::push(int64_t _x)
 {
 	uint64_t x = _x;
-	//Se não houver 2 espaços disponíveis na pilha, não empilha
+	//Se nï¿½o houver 2 espaï¿½os disponï¿½veis na pilha, nï¿½o empilha
 	if (this->size()+1 >= max)
 	{
 		throw std::out_of_range("Excedeu o limite maximo da pilha!");
@@ -240,7 +240,7 @@ void PilhaOperandos::push(int64_t _x)
 */
 void PilhaOperandos::push(bool x)
 {
-	//Se chegou no limite da pilha, não empilha
+	//Se chegou no limite da pilha, nï¿½o empilha
 	if (this->size() == max)
 	{
 		throw std::out_of_range("Excedeu o limite maximo da pilha!");
@@ -267,7 +267,7 @@ void PilhaOperandos::push(bool x)
 */
 void PilhaOperandos::push(int *x)
 {
-	//Se chegou no limite da pilha, não empilha
+	//Se chegou no limite da pilha, nï¿½o empilha
 	if (this->size()+bits64 >= max)
 	{
 		throw std::out_of_range("Passou do limite maximo da pilha!");
@@ -307,7 +307,7 @@ void PilhaOperandos::push(typedElement te)
 }
 
 /**
-* Chama a função para empilhar de acordo com o tipo do elemento recebido
+* Chama a funï¿½ï¿½o para empilhar de acordo com o tipo do elemento recebido
 */
 void PilhaOperandos::push(element x, uint8_t tipo) {
 	switch (tipo)
@@ -336,7 +336,7 @@ void PilhaOperandos::push(element x, uint8_t tipo) {
 }
 
 /**
-* Retorna valor máximo da pilha de operandos
+* Retorna valor mï¿½ximo da pilha de operandos
 */
 int PilhaOperandos::getMaxSize()
 {
@@ -372,7 +372,7 @@ void PilhaOperandos::printALL()
 
 
 /**
-* returna 1 se a pilha de valores estiver vazia, 0 caso contrário
+* returna 1 se a pilha de valores estiver vazia, 0 caso contrï¿½rio
 */
 bool PilhaOperandos::empty()
 {

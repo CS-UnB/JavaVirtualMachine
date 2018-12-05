@@ -1,6 +1,6 @@
 /*!
  * \file
- * \brief Class.cpp
+ * \brief classe.cpp
  */
 
 #include "classe.h"
